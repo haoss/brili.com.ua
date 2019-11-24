@@ -1,0 +1,26 @@
+// Header
+header.header
+  .container
+    
+    .header__logo
+      a(href="index.html")
+        img(src="./img/logo.png", alt="")
+  
+    a(href="#!").header__search
+      +iconSearch
+
+    button.header__btn.hamburger.hamburger--3dxy(type='button')
+          span.hamburger-box
+            span.hamburger-inner
+
+    nav.header__nav
+      ul
+        li: a(href="enter-to-profile.html") Вход в кабинет
+        li: a(href="add-advert.html") подать объявление
+        li: a(href="#!") распродажа
+        li: a(href="manual.html") Справочник фирм
+        li: a(href="calendar.html") календарь выставок
+        li: a(href="help.html") помощь
+        li: a(href="blog.html") блог
+
+.header-separator

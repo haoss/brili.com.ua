@@ -1,0 +1,111 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Блог' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Блог' + ' - Brilicom' //title страницы для генерации верстки  
+  -var header = 'profile 2'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        .content__wrapper
+          
+          .settings
+            .settings__title Настройки
+            .settings__wrapper
+              form(action="#")
+                .row
+                  .row__col-6
+                    .settings__wrapper-left
+                      fieldset
+                        legend Персональные данные
+                        
+                        .settings__wrapper-row
+                          div
+                            .settings__image
+                              input.settings__file-upload(type="file" accept="image/*")
+                              .settings__image-div
+                                img(src="./img/icons/icon-user.svg", alt="").settings__picture
+                              a(href="#!").settings__file-link Загрузить фото
+                          div
+                            .settings__data
+                              .form-group
+                                label Контактное лицо
+                                input#inputName(value="Вован Молодец" name="name").form-control
+                                .hidden
+                                  .clear12
+                                  button#button1(type="button").btn.btn--color Сохранить имя
+                              .form-group
+                                label.hidden Местоположение
+                                .form-checkbox.form-checkbox--color
+                                  input(type="checkbox")#checkbox1
+                                  span
+                                    +iconCheck
+                                  label(for="checkbox1") Определять местоположение автоматически
+                                .clear5
+                                input(value="Харьков, Харьковская обл." name="name").form-control
+                                .clear8
+                                a(href="#!") Уточнить местоположение
+                              .form-group
+                                p.no--m Электронная почта: te***@com.ua
+                                a(href="#!")#btn-email-edit Изменить
+                                .hidden
+                                  label Новый адрес
+                                  input(type="email" value="" name="address").form-control
+                                  .clear12
+                                  button#button2(type="button").btn.btn--color Сохранить адрес
+                              .form-group
+                                p.no--m Номер телефона: +380 **** * ** 75
+                                a(href="#!")#btn-phone-edit Изменить
+                                .hidden
+                                  label Новый номер
+                                  input(type="text" value="" name="phone").form-control.onlyNumber
+                                  .clear12
+                                  button#button3(type="button").btn.btn--color Сохранить номер
+                        
+                  .row__col-6
+                    .settings__wrapper-right
+                      fieldset
+                        legend Уведомления
+                        
+                        .form-group
+                          p.no--m
+                            strong Ответы: 
+                          label Сообщения о новых ответах на объявления
+                          
+                          label.form-checkbox.form-checkbox--toggle
+                            input(type="checkbox")#checkbox22221
+                            span
+                          
+                        .form-group
+                          p.no--m
+                            strong Cкидка на товар:  
+                          label Уведомление о снижении цены на товар в Избранных
+            
+                          label.form-checkbox.form-checkbox--toggle
+                            input(type="checkbox")#checkbox22222
+                            span
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    //- script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

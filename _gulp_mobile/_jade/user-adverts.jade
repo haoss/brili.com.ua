@@ -1,0 +1,84 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Объявления пользователя' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Объявления пользователя' + ' - Brilicom' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      .content
+        .container-fluid
+          
+          .content__head.content__head--back
+            div
+              a(href="#!").btn.btn--default
+                +iconArrowLeft2
+                | Назад
+            div
+              a(href="#!").btn.btn--default
+                +iconMenus
+          
+          .content__separator
+              
+          .product__profile
+            .product__profile-icon
+              img(src="./img/icons/icon-user.svg", alt="")
+            .product__profile-title Людмила
+            .product__profile-date.no--m-bottom На BRILI с сентября 2017
+          
+          .content__separator.no--m-bottom
+          
+          .catalog
+            .catalog__wrapper
+              .catalog__head
+                div
+                  a(href="#filter-sorting")
+                    span Сортировать
+                    +iconSort
+                div
+                  a(href="#filter-filter")
+                    span Фильтр
+                    +iconFilter
+            
+            .catalog__wrapper
+              
+              +catalogBlock('Бриллиант 0,53 карата (3/7) НЕЛЕЧЕННЫЙ!!!', '7 950', 'б/у', true, './img/catalog/catalog-11-6.png')
+              +catalogBlock('Бриллиант натуральный 0,07ct S1 H', '6 150', 'новое', true, './img/catalog/catalog-21.png')
+              +catalogBlock('ЗОЛОТОЙ ПЕРСТЕНЬ С РУБИНОМ', '3 750', 'б/у', false, './img/catalog/catalog-11-6.png')
+              +catalogBlock('Бриллиант 0,53 карата (3/7) НЕЛЕЧЕННЫЙ !!!', '4 480', 'новое', true, false)
+                              
+              +catalogBlock('БРИЛЛИАНТ 0.58CT', '30 000', 'б/у', true, './img/catalog/catalog-11-6.png')
+              +catalogBlock('Ожерелье', '1 100', 'новое', true, './img/catalog/catalog-21.png')
+              +catalogBlock('Ожерелье оникс', '900', 'б/у', true, './img/catalog/catalog-11-6.png')
+              +catalogBlock('Бусики кораловые', '2 200', 'новое', true, './img/catalog/catalog-21.png')
+                  
+              +catalogBlock('Комплект серебро серьги и кольцо', '1 200', 'б/у', true, './img/catalog/catalog-11-6.png')
+              +catalogBlock('Кольцо серебро с камнем', '1 200', 'новое', true, './img/catalog/catalog-21.png')
+              +catalogBlock('Кольцо', '1 100', 'б/у', true, './img/catalog/catalog-11-6.png')
+              +catalogBlock('Перстень и сержки с вензелями', '2 200', 'новое', true, './img/catalog/catalog-21.png')
+                  
+              +catalogBlock('Брошка кулон', '8 000', 'б/у', true, './img/catalog/catalog-11-6.png')
+              +catalogBlock('Кольцо', '1 200', 'новое', true, './img/catalog/catalog-21.png')
+              +catalogBlock('Кольцо с сердоликом', '1 200', 'б/у', true, './img/catalog/catalog-11-6.png')
+              +catalogBlock('Часы Fossil', '2 200', 'новое', true, './img/catalog/catalog-21.png')
+          
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

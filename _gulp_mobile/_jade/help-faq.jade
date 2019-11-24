@@ -1,0 +1,57 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Часто задаваемые вопросы' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Часто задаваемые вопросы' + ' - Brilicom' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      .content.no--p-top
+        .container-fluid
+          
+          .content__separator.content__separator--thin
+          
+          .content__head.content__head--back
+            div
+              a(href="help.html").btn.btn--default
+                +iconArrowLeft2
+                | Назад
+            div
+              a(href="#!").btn.btn--default
+                +iconMenus
+          
+          hr.hr--100pec
+            
+          h1 Часто задаваемые вопросы
+          
+          .faq
+            .faq__block
+              .faq__block-title Как продавать на вашем сайте?
+                +iconArrowUp 
+              .faq__block-answer
+                p Тут все просто: укажите параметры поиска и …. выбирайте! Так же можно воспользоваться фильтрами. После того, как вы найдете, что искали, свяжитесь с продавцом и обсудите с ним условия сделки.
+            .faq__block
+              .faq__block-title Как покупать лоты?
+                +iconArrowUp
+              .faq__block-answer
+                p Тут все просто: укажите параметры поиска и …. выбирайте! Так же можно воспользоваться фильтрами. После того, как вы найдете, что искали, свяжитесь с продавцом и обсудите с ним условия сделки.
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

@@ -1,0 +1,66 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Блог' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Блог' + ' - Brilicom' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      .content.no--p-top
+        .container-fluid
+          
+          .content__separator.content__separator--thin
+            
+          .content__head.content__head--back
+            div
+              a(href="#!").btn.btn--default
+                +iconArrowLeft2
+                | Назад
+            div
+              a(href="#!").btn.btn--default
+                +iconMenus
+          
+          .blog__document-img
+            img(src="./img/document/document.png", alt="").img-responsive
+          
+          p
+            small 23 апреля 2018
+          .h1 Синтетические алмазы
+          
+          hr
+                
+          p В начале 50х годов ХХ века шведской компанией ASEA впервые были получены синтетические алмазы. Этот материал получил важное промышленное значение. В 1954 году американская компания General Electric повторила этот успех. В 1955 году были получены кристаллы синтетических алмазов в 
+          p По докладу DTS (Diamond trading Company) - аналитической и маркетинговой компании, изучающей рынок бриллиантов, ежегодно в ювелирную индустрию поступает около 200 тонн синтетических алмазов и бриллиантов! Рынок цветных бриллиантов весом до 1 карата на 99% состоит из синтетических камней, так как коммерчески они уже намного выгоднее, чем облагороженные облученные природные бриллианты.
+          p Тем не менее, исследования показывают, что синтетические бриллианты не смогут вытеснить природные. Спрос на натуральные бриллианты с высокими характеристиками стабильно растет. Покупатели предпочитают натуральные бриллианты синтетическим аналогам, как в качестве памятных, эмоциональных подарков, так и в качестве инвестиций. А для того, чтобы ваши приобретения были безопасными, выбирайте бриллианты с сертификатом геммологичекой лаборатории.
+          p Натуральные, природные бриллианты с высокими характеристиками и сертификатами вы можете найти на бриллиантовой illiant.html
+
+          .clear
+          .content__document-share
+            div
+              a.link.link--black.link--reverse(href='blog.html')
+                +iconArrowLeft
+                | Назад
+            div
+              a(href='#!', style='display: inline-block; vertical-align: middle')
+                +iconShare('24', '24')
+
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

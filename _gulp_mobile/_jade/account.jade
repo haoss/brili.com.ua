@@ -1,0 +1,74 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Аккаунт' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Аккаунт' + ' - Brilicom' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      .content.no--p-top
+        .container-fluid
+          
+          .content__separator.content__separator--thin
+          
+          .account__list
+            .account__list-title Мои объявления
+            ul
+              li: a(href="add-advert.html") Подать объявление
+                +iconArrowRight2
+              li: a(href="all-advert.html") Все объявления
+                +iconArrowRight2
+              li: a(href="#!") Архив объявлений
+                +iconArrowRight2
+              
+            .content__separator
+            
+            .account__list-title Мои сообщения
+            ul
+              li: a(href="message.html") Полученные
+                +iconArrowRight2
+              li: a(href="#!") Отправленные
+                +iconArrowRight2
+              li: a(href="#!") В архиве
+                +iconArrowRight2
+                
+            .content__separator
+            
+            .account__list-title Информация аккаунта
+            ul
+              li: a(href="#!") Платежи и счет
+                +iconArrowRight2
+              li: a(href="#!") Настройки
+                +iconArrowRight2
+              li: a(href="#!") Условия использования
+                +iconArrowRight2
+                
+            .content__separator
+            
+            .account__list-title Вы вошли под именем
+            
+            hr
+              
+            .account__list-name Nick Name
+            
+            a(href="#!").btn.btn--block.btn--center Выйти из аккаунта
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

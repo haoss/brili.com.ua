@@ -1,0 +1,278 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Каталог' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Каталог' + ' - Brilicom' //title страницы для генерации верстки  
+  -var header = 'profile 0'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        .content__wrapper
+          
+          .breadcrumbs.breadcrumbs--document
+            ul
+              li: a(href="index.html") Главная
+              li: span Бриллианты
+          
+          .row
+            .row__col-3
+              
+              .content__row-left
+                
+                .content__head
+                  .h1 Фильтр
+                
+                .filter
+                  form(action="#!")
+                    
+                    .filter__block.is-hidden
+                      .filter__block-head
+                        .span Категории продаж
+                          +iconArrowFilter
+                        .div
+                          img(src="./img/category/category-1.svg", alt="")
+                          span Бриллианты
+                          
+                      .filter__block-wrapper
+                        ul
+                          li.filter__block-li: a(href="catalog.html")
+                            img(src="./img/category/category-1.svg", alt="")
+                            span Бриллианты
+                          li.filter__block-li: a(href="catalog.html")
+                            img(src="./img/category/category-3.svg", alt="")
+                            span Драгоценный камень
+                          li.filter__block-li: a(href="catalog.html")
+                            img(src="./img/category/category-4.svg", alt="")
+                            span Бриллиант в изделии
+                          li.filter__block-li: a(href="catalog.html")
+                            img(src="./img/category/category-5.svg", alt="")
+                            span Драгоценный камень в изделии
+                          li.filter__block-li: a(href="catalog.html")
+                            img(src="./img/category/category-6.svg", alt="")
+                            span Ювелирные изделия без камней
+                          li.filter__block-li: a(href="catalog.html")
+                            img(src="./img/category/category-7.svg", alt="")
+                            span Часы
+                          li.filter__block-li: a(href="catalog.html")
+                            img(src="./img/category/category-12.svg", alt="")
+                            span Бижутерия
+                          li.filter__block-li: a(href="catalog.html")
+                            img(src="./img/category/category-11.svg", alt="")
+                            span Серебряные изделия
+                          li.filter__block-li: a(href="catalog.html")
+                            img(src="./img/category/category-8.svg", alt="")
+                            span Эксклюзивные подарки
+                          li.filter__block-li: a(href="catalog.html")
+                            img(src="./img/category/category-10.svg", alt="")
+                            span Старинные украшения
+                          li.filter__block-li: a(href="catalog.html")
+                            img(src="./img/category/category-13.svg", alt="")
+                            span Брендовые изделия
+                          li.filter__block-li: a(href="catalog.html")
+                            img(src="./img/category/category-9.svg", alt="")
+                            span Монеты и слитки
+                    
+                    .filter__block
+                      .filter__block-head Цена
+                      .filter__block-wrapper
+                        .filter__block-range
+                          #filter__range
+                        .filter__block-price
+                          div
+                            input#priceMin(type='text', value='5000')
+                          div
+                            input#priceMax(type='text', value='15000')
+                              
+                    .filter__block.is-hidden
+                      .filter__block-head
+                        .span По региону
+                          +iconArrowFilter
+                      .filter__block-wrapper
+                        .has-hide
+                          .form-checkbox.form-checkbox--no-checkbox
+                            input(type="checkbox")#checkbox31
+                            span
+                              +iconCheck
+                            label(for="checkbox31") Киев
+                            sup 1280
+                          .form-checkbox.form-checkbox--no-checkbox
+                            input(type="checkbox")#checkbox32
+                            span
+                              +iconCheck
+                            label(for="checkbox32") Львов
+                            sup 580
+                          .form-checkbox.form-checkbox--no-checkbox
+                            input(type="checkbox")#checkbox33
+                            span
+                              +iconCheck
+                            label(for="checkbox33") Днепр
+                            sup 510
+                          .form-checkbox.form-checkbox--no-checkbox
+                            input(type="checkbox")#checkbox34
+                            span
+                              +iconCheck
+                            label(for="checkbox34") Харьков
+                            sup 450
+                          .form-checkbox.form-checkbox--no-checkbox
+                            input(type="checkbox")#checkbox35
+                            span
+                              +iconCheck
+                            label(for="checkbox35") Одесса
+                            sup 80
+                          .form-checkbox.form-checkbox--no-checkbox
+                            input(type="checkbox")#checkbox36
+                            span
+                              +iconCheck
+                            label(for="checkbox36") Николаев
+                            sup 56
+                          .form-checkbox.form-checkbox--no-checkbox
+                            input(type="checkbox")#checkbox37
+                            span
+                              +iconCheck
+                            label(for="checkbox37") Ужгород
+                            sup 48
+                          .form-checkbox.form-checkbox--no-checkbox
+                            input(type="checkbox")#checkbox38
+                            span
+                              +iconCheck
+                            label(for="checkbox38") Запорожье
+                            sup 45
+                          .form-checkbox.form-checkbox--no-checkbox
+                            input(type="checkbox")#checkbox39
+                            span
+                              +iconCheck
+                            label(for="checkbox39") Сумы
+                            sup 32
+                          .form-checkbox.form-checkbox--no-checkbox
+                            input(type="checkbox")#checkbox391
+                            span
+                              +iconCheck
+                            label(for="checkbox391") Чернигов
+                            sup 31
+                          .form-checkbox.form-checkbox--no-checkbox
+                            input(type="checkbox")#checkbox392
+                            span
+                              +iconCheck
+                            label(for="checkbox392") Полтава
+                            sup 28
+                          .form-checkbox.form-checkbox--no-checkbox
+                            input(type="checkbox")#checkbox393
+                            span
+                              +iconCheck
+                            label(for="checkbox393") Кременчуг
+                            sup 25
+                          .form-checkbox.form-checkbox--no-checkbox
+                            input(type="checkbox")#checkbox394
+                            span
+                              +iconCheck
+                            label(for="checkbox394") Херсон
+                            sup 21
+                          .form-checkbox.form-checkbox--no-checkbox
+                            input(type="checkbox")#checkbox395
+                            span
+                              +iconCheck
+                            label(for="checkbox395") Тернополь
+                            sup 5
+                          
+                    .filter__block.is-hidden
+                      .filter__block-head
+                        .span Категории
+                          +iconArrowFilter
+                      .filter__block-wrapper
+                        .form-checkbox.form-checkbox--color
+                          input(type="checkbox")#checkbox41
+                          span
+                            +iconCheck
+                          label(for="checkbox41") Серьги
+                        .form-checkbox.form-checkbox--color
+                          input(type="checkbox")#checkbox42
+                          span
+                            +iconCheck
+                          label(for="checkbox42") Кольцо
+                        .form-checkbox.form-checkbox--color
+                          input(type="checkbox")#checkbox43
+                          span
+                            +iconCheck
+                          label(for="checkbox43") Колье
+                        .form-checkbox.form-checkbox--color
+                          input(type="checkbox")#checkbox44
+                          span
+                            +iconCheck
+                          label(for="checkbox44") Кулоны
+                        .form-checkbox.form-checkbox--color
+                          input(type="checkbox")#checkbox45
+                          span
+                            +iconCheck
+                          label(for="checkbox45") Браслеты
+                        .form-checkbox.form-checkbox--color
+                          input(type="checkbox")#checkbox46
+                          span
+                            +iconCheck
+                          label(for="checkbox46") Цепи
+                        .form-checkbox.form-checkbox--color
+                          input(type="checkbox")#checkbox47
+                          span
+                            +iconCheck
+                          label(for="checkbox47") Другое
+                          
+                    .filter__block.is-hidden
+                      .filter__block-head
+                        .span Опции
+                          +iconArrowFilter
+                      .filter__block-wrapper
+                        .form-checkbox.form-checkbox--color
+                          input(type="checkbox")#checkbox51
+                          span
+                            +iconCheck
+                          label(for="checkbox51") Со скидкой
+                        .form-checkbox.form-checkbox--color
+                          input(type="checkbox")#checkbox52
+                          span
+                            +iconCheck
+                          label(for="checkbox52") Новое
+                        .form-checkbox.form-checkbox--color
+                          input(type="checkbox")#checkbox53
+                          span
+                            +iconCheck
+                          label(for="checkbox53") С пробегом
+                
+            .row__col-9
+              
+              .content__row-center
+                
+                .content__head
+                  .h1 Бриллианты
+              
+                .catalog__not-found
+                  +iconCatalogNotFound
+                  .h2 Вы пробывали найти чего нет на сайте
+                  p Пожалуйста 
+                    a(href="#!") попробуйте еще раз 
+                    br
+                    | или перейдите на 
+                    a(href="index.html") главную страницу
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    //- script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

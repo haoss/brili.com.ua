@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Справочник фирм - Brilicom</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=1176, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
+        <div id="popup" class="popup mfp-hide">
+            <div class="popup__header">
+                <div class="popup__close">
+                            <svg viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg" class="iconClose">
+                                <path d="M7.071 21.213L21.213 7.071M7.071 7.071l14.142 14.142" class="path-stroke"></path>
+                            </svg>
+                </div>
+            </div>
+            <div class="popup__wrapper text-center">
+                <div class="popup__wrapper-title">Войдите, чтобы наблюдать за понравившимся <br>Вам товарами</div><a href="enter-to-profile.html" class="btn btn--color">Авторизация</a>
+                <div class="clear55"></div>
+                <p>Или создать <a href="enter-to-profile.html">учетную запись</a></p>
+            </div>
+            <div class="popup__footer"><a href="index.html">Нет спасибо</a></div>
+        </div>
+        <!-- Header-->
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <ul>
+                        <li><a href="help.html">помощь</a></li>
+                        <li><a href="blog.html">блог</a></li>
+                        <li><a href="manual.html">справочник фирм</a></li>
+                        <li><a href="calendar.html">календарь выставок</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="header__wrapper">
+                    <div>
+                        <div class="header__logo"><a href="index.html"><img src="./img/logo.png" alt=""></a></div>
+                    </div>
+                    <div>
+                        <div class="header__profile">
+                            <div class="header__profile-icon">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="iconUser">
+                                            <path d="M12 1c6.1 0 11 4.9 11 11s-4.9 11-11 11S1 18.1 1 12 5.9 1 12 1zm0-1C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0z" class="path-fill"></path>
+                                            <path d="M21 19.1c-.2-.1-.3-.2-.5-.2-.5-.1-3.5-1.1-3.6-1.2-.1 0-1.9-1.9-2-2-.4-.4-.1-.7.3-1 .4-.3.5-1.3.7-1.9 0-.1.1-.3.3-.3.1 0 .2-.1.3-.2.1-.4.6-2.4.6-2.5 0-.2-.1-.3-.2-.3s-.2-.1-.2-.3c0-.5 0-2.6-.2-3.2-.3-.7-.9-1.1-1.6-1.5-.6-.3-1.2-.4-1.8-.6-1.3-.3-2.4 0-3.4.9-.2 0-.2.1-.3.2-.1.3-.3.5-.5.6-.8.5-.4 3-.4 3.3 0 .2 0 .3-.2.4-.2 0-.3.2-.3.4s.7 2.7.9 2.8c.1 0 .2.1.2.3 0 .2.4 1.6.7 1.9.3.3.7.7 0 1.3-.1.1-1.9 1.8-2.3 1.9-.2.1-3.8 1.1-4.4 1.6" class="path-stroke"></path>
+                                        </svg>
+                            </div><a href="enter-to-profile.html" class="header__profile-link">Авторизация</a>
+                        </div>
+                    </div>
+                    <div><a href="add-advert-26102018.html" class="btn btn--color">добавить объявление</a></div>
+                    <div>
+                        <div class="header__search">
+                            <div class="header__search-btn">
+                                        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="iconSearch">
+                                            <path d="M7.48 1c1.8 0 3.6.8 4.8 2.1 2.4 2.6 2.3 6.8-.4 9.2-1.2 1.1-2.8 1.7-4.4 1.7-1.8 0-3.6-.8-4.8-2.1-2.4-2.6-2.2-6.7.4-9.2C4.28 1.6 5.88 1 7.48 1zm0-1c-1.8 0-3.6.7-5.1 2-3 2.8-3.2 7.6-.4 10.6 1.5 1.6 3.5 2.4 5.5 2.4 1.8 0 3.6-.7 5.1-2 3-2.8 3.2-7.6.4-10.6C11.48.8 9.48 0 7.48 0z" class="path-fill"></path>
+                                            <path d="M12.28 11.9l-.8.7 6.8 7.4.8-.7-6.8-7.4z" class="path-stroke"></path>
+                                        </svg>
+                            </div>
+                            <div class="header__search-form">
+                                <form method="post">
+                                    <input type="text" placeholder="Что вы ищите?" class="header__search-input">
+                                    <button type="button" class="hidden">Найти</button>
+                                </form>
+                                <div class="header__search-btn">
+                                            <svg viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg" class="iconClose">
+                                                <path d="M7.071 21.213L21.213 7.071M7.071 7.071l14.142 14.142" class="path-stroke"></path>
+                                            </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="container">
+                <div class="content__wrapper">
+                    <div class="breadcrumbs breadcrumbs--document">
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><span>Другие объявления пользователя</span></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="row__col-3">
+                            <div class="content__row-left">
+                                <div class="product__profile">
+                                    <div class="product__profile-icon"><img src="./img/icons/icon-user.svg" alt=""></div>
+                                    <div class="product__profile-title">Людмила</div>
+                                    <div class="product__profile-date">На BRILI с сентября 2017</div>
+                                </div>
+                                <div class="product__about-btn">
+                                    <div class="product__phone">
+                                                <svg viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg" class="iconPhone">
+                                                    <path d="M3.3356 1.223l1.6678 3.1592-.834.8152c-.2084.102-.3126.3058-.3126.5096-.1043.102-.1043.3057-.1043.4077v.2038c.1043.3057.2085.7134.417 1.121.1042.3057.417.7134.7296 1.121.3128.4077.7297.9172 1.3551 1.4268.5212.6114 1.0424 1.0191 1.5636 1.3248.417.3057.8339.6115 1.1466.7134.417.2038.6254.3057.9381.3057h.417c.1042 0 .3127 0 .4169-.1019.2085-.1019.417-.2038.5212-.3057l.9381-.9172.2085.1019 2.9187 1.6306-2.0848 2.0382-.1042.1019c-.1043 0-.1043 0-.2085.1019H12.7169c-.1042 0-.3127 0-.9381-.1019-.417-.1019-.9381-.2038-1.5636-.5096-.6254-.3057-1.4593-.7133-2.2932-1.2229-.8339-.5096-1.772-1.3248-2.7101-2.242-.7297-.7134-1.4594-1.4268-1.8763-2.1402-.5212-.5095-.9381-1.121-1.2509-1.7325-.3127-.5095-.5211-1.019-.6254-1.5286-.2085-.4077-.3127-.8153-.3127-1.121-.1042-.3058-.1042-.5096-.1042-.6115V3.465s0-.102.1042-.2038c0-.102.1042-.102.1042-.102L3.3357 1.223zm0-1.223c-.2085 0-.417.102-.5212.2038L.5212 2.5478c-.2085.1019-.3127.2038-.3127.4076C.1042 3.0574 0 3.2612 0 3.3631v.3057c0 .2038 0 .5095.1042.8153.1043.4076.2085.8153.3127 1.3248.2085.5096.417 1.0191.7297 1.6306.3127.6115.7297 1.223 1.2509 2.0382.5211.7134 1.2508 1.4268 1.9805 2.242 1.0423 1.0192 1.9805 1.8344 2.9186 2.344.9381.6115 1.772 1.0191 2.3975 1.3248.7296.3058 1.355.5096 1.772.5096C11.9873 16 12.3 16 12.5085 16h.3127c.2084 0 .3127-.1019.5212-.2038.2084-.1019.3127-.2038.4169-.3058l2.2932-2.242c.2085-.2038.3127-.4076.2085-.7134 0-.2038-.2085-.4076-.417-.6114l-3.1271-1.7325c-.1042-.1019-.3127-.1019-.5212-.1019-.3127 0-.5211.1019-.7296.3057l-1.0424 1.0191s-.1042 0-.1042.1019h-.3127c-.1043 0-.3127-.1019-.6255-.2038-.3127-.1019-.6254-.3057-1.0423-.6115-.417-.3057-.834-.7133-1.3551-1.2229-.5212-.7134-.9382-1.121-1.2509-1.5287-.3127-.4076-.5211-.7133-.6254-1.019-.2085-.3058-.3127-.5096-.3127-.8153v-.102c0-.1019 0-.1019.1042-.1019l.834-.8153c.1042-.1019.2084-.3057.3126-.5095 0-.2038 0-.4077-.1042-.6115L4.0653.4076 3.7524.102C3.6483 0 3.5441 0 3.3355 0z" class="path-fill"></path>
+                                                </svg><span data-phone="063 555 55 55">06x xxx xx xx</span><a href="#!">показать</a>
+                                    </div><a href="#!" class="btn btn--color">
+                                                <svg viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg" class="iconMail">
+                                                    <path d="M1 1.5L8 7l7-5.5" class="path-stroke"></path>
+                                                    <rect x=".5" y=".5" width="15" height="12" rx="1.5" class="path-stroke"></rect>
+                                                </svg>Написать автору</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row__col-9">
+                            <div class="content__row-center">
+                                <div class="content__head">
+                                    <div class="h1">Объявления пользователя</div>
+                                </div>
+                                <div class="sorting">
+                                    <div><span class="sorting__span">Сортировать:</span></div>
+                                    <div><a href="#!" class="sorting__link is-active">дешевые</a></div>
+                                    <div><a href="#!" class="sorting__link">дорогие</a></div>
+                                    <div><a href="#!" class="sorting__link">популярные</a></div>
+                                </div>
+                                <div class="catalog no--p">
+                                    <div class="catalog__wrapper catalog__wrapper--row4">
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-no-photo.png" alt="Кольцо с бриллиантами">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Кольцо с бриллиантами</a></div>
+                                                        <div class="catalog__block-price">10 000 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-13.png" alt="Серебрянные Шармы Пандора, S925">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Серебрянные Шармы Пандора, S925</a></div>
+                                                        <div class="catalog__block-price">7 999 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-14.png" alt="Pandora браслет,оригинал">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Pandora браслет,оригинал</a></div>
+                                                        <div class="catalog__block-price">11 000 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-no-photo.png" alt="Бриллиант">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Бриллиант</a></div>
+                                                        <div class="catalog__block-price">1 грн.</div>
+                                                    </div>
+                                                </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div>
+                        <div class="footer__logo"><img src="./img/footer-logo.png" alt=""></div>
+                        <div class="social"><a href="#!" target="_blank">
+                                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                            <style>.st1{fill:#fff}</style>
+                                            <g id="Background_1_">
+                                                <radialgradient id="SVGID_1_" cx="50.158" cy="15.105" gradientTransform="matrix(.05234 -.9986 .8488 .04449 12 498.8)" gradientUnits="userSpaceOnUse" r="684.445">
+                                                    <stop offset="0" stop-color="#fed576"></stop>
+                                                    <stop offset=".263" stop-color="#f47133"></stop>
+                                                    <stop offset=".609" stop-color="#bc3081"></stop>
+                                                    <stop offset="1" stop-color="#4c63d2"></stop>
+                                                </radialgradient>
+                                                <path d="M18.8 250.1v12.8C22.1 385.3 120.7 483.6 238 492.8h36.1c118-9.3 214.9-108.5 218.1-230.1v-12.6C489 126.3 388.7 25.9 267.9 19.7c-130-6.6-245.5 97.7-249.1 230.4z" fill="url(#SVGID_1_)"></path>
+                                            </g>
+                                            <g id="Symbol">
+                                                <path d="M256.6 138.3c37.7 0 42.2.1 57.1.8 13.8.6 21.2 3 26.2 4.9 6.6 2.6 11.3 5.7 16.2 10.7 4.9 5 8 9.8 10.6 16.5 1.9 5.1 4.2 12.7 4.9 26.7.7 15.2.8 19.7.8 58.1s-.1 42.9-.8 58.1c-.6 14-2.9 21.6-4.9 26.7-2.6 6.7-5.6 11.5-10.6 16.5-4.9 5-9.6 8.1-16.2 10.7-5 2-12.5 4.3-26.2 4.9-14.9.7-19.4.8-57.1.8s-42.2-.1-57.1-.8c-13.8-.6-21.2-3-26.2-4.9-6.6-2.6-11.3-5.7-16.2-10.7-4.9-5-8-9.8-10.6-16.5-1.9-5.1-4.2-12.7-4.9-26.7-.7-15.2-.8-19.7-.8-58.1s.1-42.9.8-58.1c.6-14 2.9-21.6 4.9-26.7 2.6-6.7 5.6-11.5 10.6-16.5 4.9-5 9.6-8.1 16.2-10.7 5-2 12.5-4.3 26.2-4.9 14.9-.6 19.4-.8 57.1-.8m0-25.9c-38.4 0-43.2.2-58.2.9s-25.3 3.1-34.3 6.7c-9.3 3.7-17.2 8.6-25 16.6-7.9 8-12.7 16-16.3 25.5-3.5 9.1-5.9 19.6-6.6 34.9-.7 15.3-.8 20.2-.8 59.2s.2 43.9.8 59.2c.7 15.3 3.1 25.7 6.6 34.9 3.6 9.4 8.4 17.5 16.3 25.5s15.7 12.9 25 16.6c9 3.6 19.3 6 34.3 6.7 15.1.7 19.9.9 58.2.9s43.2-.2 58.2-.9 25.3-3.1 34.3-6.7c9.3-3.7 17.2-8.6 25-16.6 7.9-8 12.7-16 16.3-25.5 3.5-9.1 5.9-19.6 6.6-34.9.7-15.3.8-20.2.8-59.2s-.2-43.9-.8-59.2c-.7-15.3-3.1-25.7-6.6-34.9-3.6-9.4-8.4-17.5-16.3-25.5s-15.7-12.9-25-16.6c-9-3.6-19.3-6-34.3-6.7-15-.7-19.9-.9-58.2-.9z" class="st1"></path>
+                                                <path d="M256.6 182.3c-40.1 0-72.5 33-72.5 73.8s32.5 73.8 72.5 73.8 72.5-33 72.5-73.8-32.5-73.8-72.5-73.8zm0 121.7c-26 0-47.1-21.4-47.1-47.9s21.1-47.9 47.1-47.9 47.1 21.4 47.1 47.9-21.1 47.9-47.1 47.9z" class="st1"></path>
+                                                <ellipse cx="332" cy="179.4" rx="16.9" ry="17.2" class="st1"></ellipse>
+                                            </g>
+                                        </svg></a><a href="#!" target="_blank">
+                                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-rule="evenodd" fill-rule="evenodd">
+                                                <path d="M256.23 512C396.81 512 512 396.81 512 256.23 512 115.184 396.81 0 256.23 0 115.184 0 0 115.184 0 256.23 0 396.81 115.184 512 256.23 512z" fill="#3A5BA2"></path>
+                                                <path d="M224.023 160.085c0-35.372 28.575-63.946 63.938-63.946h48.072v63.946h-32.199c-8.608 0-15.873 7.257-15.873 15.873v32.192h48.072v63.938h-48.072v144.22h-63.938v-144.22h-48.065V208.15h48.065v-48.065z" fill="#FFF"></path>
+                                            </g>
+                                        </svg></a><a href="#!" target="_blank">
+                                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-rule="evenodd" fill-rule="evenodd">
+                                                <path d="M256.23 512C396.81 512 512 396.81 512 256.23 512 115.184 396.81 0 256.23 0 115.184 0 0 115.184 0 256.23 0 396.81 115.184 512 256.23 512z" fill="#1EBEF0"></path>
+                                                <path d="M276.635 137.407c-9.077 6.351-15.873 15.42-20.865 25.396l-2.265 5.898c-1.359 4.077-2.273 8.163-2.726 12.241-.453 2.265-.453 4.085-.906 5.898v3.625l.453 5.898.906 7.71H246.247c-22.224-.453-43.987-5.445-63.04-14.061l-11.334-5.437c-2.265-.914-4.078-2.273-6.351-3.632-12.694-7.257-24.028-16.78-34.012-27.208-6.343-6.804-12.241-14.061-17.232-21.771-5.438 10.437-8.616 22.677-8.616 35.379 0 4.531.453 9.069 1.359 13.6 0 2.265.453 4.085.914 5.898 4.078 13.6 11.334 25.849 21.31 34.918l4.992 4.539-6.351-1.367c-8.163-2.266-16.326-4.984-24.036-8.164.906 16.327 7.257 31.293 17.232 43.089 9.522 11.327 22.224 19.951 36.73 24.028l-16.779.906-14.054-.453c10.429 25.403 34.465 43.995 63.033 46.261-26.302 19.498-58.955 30.388-93.873 30.388 25.849 15.873 55.33 25.841 87.521 27.653h20.865c99.31-5.438 177.77-87.522 177.77-188.199v-9.522c3.625-3.171 7.25-6.343 10.89-9.975 8.608-7.71 16.326-16.78 22.67-26.302-10.437 6.804-22.67 10.429-36.277 10.429h-.906.453c12.232-8.163 21.763-20.404 26.747-34.465-9.515 4.992-20.404 8.616-31.294 11.796l-1.359.453-8.155 1.812c-11.795-12.702-28.575-20.865-47.167-20.865h-1.358c-4.984 0-9.983.453-14.968 1.367-7.249 1.812-14.514 4.984-20.404 8.616l-4.532 3.623z" fill="#FFF"></path>
+                                            </g>
+                                        </svg></a></div>
+                    </div>
+                    <div>
+                        <nav class="footer__nav">
+                            <ul>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Бриллиант</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Сток бриллиантов</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Бриллиант в изделии</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Драгоценный камень</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Драгоценный камень в изделии</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div>
+                        <nav class="footer__nav">
+                            <ul>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Часы</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Бижутерия</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Серебряные изделия</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Эксклюзивные подарки</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Ювелирные изделия без камней</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div>
+                        <nav class="footer__nav">
+                            <ul>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Старинные украшения</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Брендовые изделия</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Монеты и слитки</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Распродажа</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="footer__center">
+                    <nav class="footer__links">
+                        <ul>
+                            <li><a href="#!">Оферта</a></li>
+                            <li><a href="#!">Как продавать и покупать</a></li>
+                            <li><a href="help.html">Помощь</a></li>
+                            <li><a href="#!">Реквизиты</a></li>
+                            <li><a href="blog.html">Блог</a></li>
+                            <li><a href="calendar.html">Календарь выставок</a></li>
+                            <li><a href="manual.html">Справочник</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__copyright">Copyright © 2018 Brilicom</div>
+                    <div class="footer__development">Разработка сайта - <a href="#!" target="_blank">DARTC</a></div>
+                </div>
+            </div>
+        </footer><a href="#!" id="link__up" class="link__up">
+                    <svg viewBox="0 0 28 17" xmlns="http://www.w3.org/2000/svg" class="iconArrowUp">
+                        <path d="M2 14.5L14 2l11.5 12.5" class="path-stroke"></path>
+                    </svg></a>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Load Scripts-->
+        <!-- Footer js-->
+        <script type="application/javascript" src="./js/libs/jquery/jquery-3.3.1.min.js"></script>
+        <script type="application/javascript" src="./js/libs/jquery/jquery-migrate-3.0.1.min.js"></script>
+        <script type="application/javascript" src="./js/libs/plugins-scroll/plugins-scroll.js"></script>
+        <script type="application/javascript" src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script type="application/javascript" src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script type="application/javascript" src="./js/libs/parallax/parallax.min.js"></script>
+        <script type="application/javascript" src="./js/libs/hideShowPassword/hideShowPassword.min.js"></script>
+        <script type="application/javascript" src="./js/libs/slick/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.1/readmore.min.js"></script>
+        <script src="./js/common.js"></script>
+    </body>
+</html>

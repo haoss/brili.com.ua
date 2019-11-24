@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Добавить объявление - Brilicom</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=1176, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
+        <div id="popup" class="popup mfp-hide">
+            <div class="popup__header">
+                <div class="popup__close">
+                            <svg viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg" class="iconClose">
+                                <path d="M7.071 21.213L21.213 7.071M7.071 7.071l14.142 14.142" class="path-stroke"></path>
+                            </svg>
+                </div>
+            </div>
+            <div class="popup__wrapper text-center">
+                <div class="popup__wrapper-title">Войдите, чтобы наблюдать за понравившимся <br>Вам товарами</div><a href="enter-to-profile.html" class="btn btn--color">Авторизация</a>
+                <div class="clear55"></div>
+                <p>Или создать <a href="enter-to-profile.html">учетную запись</a></p>
+            </div>
+            <div class="popup__footer"><a href="index.html">Нет спасибо</a></div>
+        </div>
+        <!-- Header-->
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <ul>
+                        <li><a href="help.html">помощь</a></li>
+                        <li><a href="blog.html">блог</a></li>
+                        <li><a href="manual.html">справочник фирм</a></li>
+                        <li><a href="calendar.html">календарь выставок</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="header__wrapper">
+                    <div>
+                        <div class="header__logo"><a href="index.html"><img src="./img/logo.png" alt=""></a></div>
+                    </div>
+                    <div><a href="favorites.html" class="header__favorites">
+                                    <svg viewBox="0 0 27 25" xmlns="http://www.w3.org/2000/svg" class="iconHeart">
+                                        <path clip-rule="evenodd" d="M13.5 5.31A6.85 6.85 0 0 0 7.25 1C3.72 1 1 3.78 1 7.47c0 5.07 5.27 9 12.5 16.53C20.73 16.46 26 12.54 26 7.47 26 3.77 23.28 1 19.75 1a6.85 6.85 0 0 0-6.25 4.31z" class="path-stroke"></path>
+                                    </svg><i>125</i><span>Избранное</span></a></div>
+                    <div>
+                        <div class="header__profile">
+                            <div class="header__profile-wrapper">
+                                <div>
+                                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="iconUser">
+                                                <path d="M12 1c6.1 0 11 4.9 11 11s-4.9 11-11 11S1 18.1 1 12 5.9 1 12 1zm0-1C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0z" class="path-fill"></path>
+                                                <path d="M21 19.1c-.2-.1-.3-.2-.5-.2-.5-.1-3.5-1.1-3.6-1.2-.1 0-1.9-1.9-2-2-.4-.4-.1-.7.3-1 .4-.3.5-1.3.7-1.9 0-.1.1-.3.3-.3.1 0 .2-.1.3-.2.1-.4.6-2.4.6-2.5 0-.2-.1-.3-.2-.3s-.2-.1-.2-.3c0-.5 0-2.6-.2-3.2-.3-.7-.9-1.1-1.6-1.5-.6-.3-1.2-.4-1.8-.6-1.3-.3-2.4 0-3.4.9-.2 0-.2.1-.3.2-.1.3-.3.5-.5.6-.8.5-.4 3-.4 3.3 0 .2 0 .3-.2.4-.2 0-.3.2-.3.4s.7 2.7.9 2.8c.1 0 .2.1.2.3 0 .2.4 1.6.7 1.9.3.3.7.7 0 1.3-.1.1-1.9 1.8-2.3 1.9-.2.1-3.8 1.1-4.4 1.6" class="path-stroke"></path>
+                                            </svg>
+                                </div>
+                                <div><span class="header__profile-link"><span>Вован Молодец</span>
+                                                <svg viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg" class="iconArrowFilter">
+                                                    <path d="M7 7l-.707.707a1 1 0 0 0 1.414 0L7 7zM.293 1.707l6 6 1.414-1.414-6-6L.293 1.707zm7.414 6l6-6L12.293.293l-6 6 1.414 1.414z" class="path-fill"></path>
+                                                </svg></span></div>
+                            </div>
+                            <div class="header__profile-popup">
+                                <ul>
+                                    <li><a href="admin-1.html">Мои объявления</a></li>
+                                    <li><a href="admin-1.html">Мои сообщения</a></li>
+                                    <li><a href="admin-1.html">Мои организации</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="#!">Платежи</a></li>
+                                    <li><a href="settings.html">Настройки</a></li>
+                                    <li class="separator"></li>
+                                    <li><a href="#!" class="link">
+                                                    <svg viewBox="0 0 19 24" xmlns="http://www.w3.org/2000/svg" class="iconExit">
+                                                        <path d="M17 23H1V1h16v6h1V0H0v24h18v-7h-1v6z" class="path-fill"></path>
+                                                        <path d="M19 12l-4-3v2H5v2h10v2l4-3z" class="path-fill"></path>
+                                                    </svg><span>Выйти</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="container">
+                <div class="content__profile content__profile--width100per no--m">
+                    <div class="content__profile-head">
+                        <ul class="nav-tab nav-tab--v2">
+                            <li class="active"><span>1. Категория</span></li>
+                            <li><span>2. Описание и контакты</span></li>
+                        </ul>
+                    </div>
+                    <div class="content__profile-wrapper">
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <p class="text--upper">Вид объявления:</p>
+                                <div class="advert__wrapper-head">
+                                    <div>
+                                        <div class="div-table">
+                                            <div class="div-table-cell">
+                                                <div class="form-radio">
+                                                    <input type="radio" name="name11" checked id="radio111-input"><span></span>
+                                                    <label for="radio111-input">Объявление о продаже</label>
+                                                </div>
+                                            </div>
+                                            <div class="div-table-cell">
+                                                <div class="form-radio">
+                                                    <input type="radio" name="name11" id="radio112-input"><span></span>
+                                                    <label for="radio112-input">Бизнес объявление</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="radio-div1">
+                                    <p class="text--upper">категории:</p>
+                                    <div class="category category--tab">
+                                        <ul>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-1.svg" alt=""><span>Бриллианты</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-3.svg" alt=""><span>Драгоценный камень</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-4.svg" alt=""><span>Бриллиант в изделии</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-5.svg" alt=""><span>Драгоценный камень в изделии</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-6.svg" alt=""><span>Ювелирные изделия без камней</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-7.svg" alt=""><span>Часы</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-12.svg" alt=""><span>Бижутерия</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-11.svg" alt=""><span>Серебряные изделия</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-8.svg" alt=""><span>Эксклюзивные подарки</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-10.svg" alt=""><span>Старинные украшения</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-13.svg" alt=""><span>Брендовые изделия</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-9.svg" alt=""><span>Монеты и слитки</span></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="radio-div2" class="hidden">
+                                    <p class="text--upper">Тип организации:</p>
+                                    <div class="category category--tab">
+                                        <ul>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-1.svg" alt=""><span>Ломбард</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-15.svg" alt=""><span>Скупка</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-16.svg" alt=""><span>Ювелирный магазин</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-17.svg" alt=""><span>Ювелирный производитель</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-18.svg" alt=""><span>Ювелирная мастерская</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-19.svg" alt=""><span>Ювелирный мастер</span></span></a></li>
+                                            <li class="category__li"><a href="#!"><span><img src="./img/category/category-20.svg" alt=""><span>Оценка</span></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear50"></div>
+                <div class="content__profile content__profile--width100per no--m">
+                    <div class="content__profile-head">
+                        <ul class="nav-tab nav-tab--v2">
+                            <li class="active"><span class="color--black">1. Категория</span></li>
+                            <li class="active"><span>2. Описание и контакты</span></li>
+                        </ul>
+                    </div>
+                    <div class="content__profile-wrapper">
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <form action="#">
+                                    <div class="row row--m30">
+                                        <div class="row__col-1">&nbsp;</div>
+                                        <div class="row__col-5">
+                                            <fieldset>
+                                                <div class="form-group">
+                                                    <label>Заголовок</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Состояние изделия</label>
+                                                    <div class="clear10"></div>
+                                                    <div class="div-table">
+                                                        <div class="div-table-cell">
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="name11" checked id="radio111"><span></span>
+                                                                <label for="radio111">Новое</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="div-table-cell">
+                                                            <div class="form-radio">
+                                                                <input type="radio" name="name11" checked id="radio112"><span></span>
+                                                                <label for="radio112">С пробегом</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="div-table width--100perc">
+                                                    <div class="div-table-cell">
+                                                        <div class="form-group">
+                                                            <label>Цена</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="div-table-cell width--165px">
+                                                        <div class="form-group">
+                                                            <label>Скидка</label>
+                                                            <select class="form-control width--165px">
+                                                                <option>0%</option>
+                                                                <option>5%</option>
+                                                                <option>10%</option>
+                                                                <option>15%</option>
+                                                                <option>20%</option>
+                                                                <option>25%</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="div-table div-table--w100perc">
+                                                    <div class="div-table-cell">
+                                                        <div class="form-group">
+                                                            <label>Масса бриллианта(ов), <br>в каратах</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="div-table-cell width--165px">
+                                                        <div class="form-group">
+                                                            <label>Диаметр <br>бриллианта (мм.)</label>
+                                                            <input type="text" class="form-control width--165px">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="div-table">
+                                                    <div class="div-table-cell width--165px">
+                                                        <div class="form-group">
+                                                            <label>Количество <br>входящих изделий</label>
+                                                            <input type="text" class="form-control width--165px">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Описание</label>
+                                                    <textarea rows="8" placeholder="Введите описание..." class="form-control"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Фотографии (Первое фото титульное)</label><a href="#!"><img src="./img/add-files.png" alt=""></a>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="row__col-1">&nbsp;</div>
+                                        <div class="row__col-4">
+                                            <fieldset>
+                                                <div class="div-table">
+                                                    <div valign="top" class="div-table-cell width--100perc">
+                                                        <div class="form-group">
+                                                            <label>Сертификат изделия <br>(если есть)</label><a href="#!"><img src="./img/add-file.png" alt=""></a>
+                                                        </div>
+                                                    </div>
+                                                    <div valign="top" class="div-table-cell">
+                                                        <div class="form-group">
+                                                            <label>Наличие сертификата качества</label>
+                                                            <select class="form-control width--165px">
+                                                                <option>Отсутствует</option>
+                                                                <option>Присутствует</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h2>Характеристики бриллианта</h2>
+                                                <div class="div-table">
+                                                    <div valign="top" class="div-table-cell width--100perc">
+                                                        <div class="form-group">
+                                                            <label>Форма огранки/Shape</label>
+                                                            <select class="form-control">
+                                                                <option selected disabled>Выберите</option>
+                                                                <option>Круглый бриллиант</option>
+                                                                <option>Маркиз</option>
+                                                                <option>Груша </option>
+                                                                <option>Овал </option>
+                                                                <option>Принцесса </option>
+                                                                <option>Изумруд </option>
+                                                                <option>Ашер  </option>
+                                                                <option>Радиант   </option>
+                                                                <option>Сердце    </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div valign="top" class="div-table-cell">
+                                                        <div class="form-group">
+                                                            <label>Цвет</label>
+                                                            <select class="form-control width--165px">
+                                                                <option selected disabled>Выберите</option>
+                                                                <option>Красный</option>
+                                                                <option>Синий</option>
+                                                                <option>Зеленый</option>
+                                                                <option>Пурпурный</option>
+                                                                <option>Черный</option>
+                                                                <option>Коричневый</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="div-table">
+                                                    <div valign="top" class="div-table-cell width--100perc">
+                                                        <div class="form-group">
+                                                            <label>Color</label>
+                                                            <select class="form-control">
+                                                                <option selected disabled>Выберите</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div valign="top" class="div-table-cell">
+                                                        <div class="form-group">
+                                                            <label>Качество</label>
+                                                            <select class="form-control width--165px">
+                                                                <option selected disabled>Выберите</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="div-table">
+                                                    <div valign="top" class="div-table-cell width--100perc">
+                                                        <div class="form-group">
+                                                            <label>Clarity</label>
+                                                            <select class="form-control">
+                                                                <option selected disabled>Выберите</option>
+                                                                <option>Круглый бриллиант</option>
+                                                                <option>Маркиз</option>
+                                                                <option>Груша </option>
+                                                                <option>Овал </option>
+                                                                <option>Принцесса </option>
+                                                                <option>Изумруд </option>
+                                                                <option>Ашер  </option>
+                                                                <option>Радиант   </option>
+                                                                <option>Сердце    </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div valign="top" class="div-table-cell">
+                                                        <div class="form-group">
+                                                            <label>Группа огранки</label>
+                                                            <select class="form-control width--165px">
+                                                                <option selected disabled>Выберите</option>
+                                                                <option>Красный</option>
+                                                                <option>Синий</option>
+                                                                <option>Зеленый</option>
+                                                                <option>Пурпурный</option>
+                                                                <option>Черный</option>
+                                                                <option>Коричневый</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="div-table">
+                                                    <div valign="top" class="div-table-cell">
+                                                        <div class="form-group">
+                                                            <label>Cut grade</label>
+                                                            <select class="form-control">
+                                                                <option selected disabled>Выберите</option>
+                                                                <option>Круглый бриллиант</option>
+                                                                <option>Маркиз</option>
+                                                                <option>Груша </option>
+                                                                <option>Овал </option>
+                                                                <option>Принцесса </option>
+                                                                <option>Изумруд </option>
+                                                                <option>Ашер  </option>
+                                                                <option>Радиант   </option>
+                                                                <option>Сердце    </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div valign="top" class="div-table-cell">
+                                                        <div class="width--165px"></div>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <div class="clear"></div>
+                                            <fieldset>
+                                                <div class="form-group">
+                                                    <label>Месторасположение</label>
+                                                    <select class="form-control">
+                                                        <option>Выберите город</option>
+                                                        <option>Выберите город</option>
+                                                        <option>Выберите город</option>
+                                                        <option>Выберите город</option>
+                                                        <option>Выберите город</option>
+                                                        <option>Выберите город</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Имя продавца</label>
+                                                    <input type="text" placeholder="Иван Иванович Петров" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Email адрес продавца</label>
+                                                    <input type="text" placeholder="test@test.ru" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Номер телефона </label>
+                                                    <input type="text" placeholder="+38050 485 24 15" class="form-control">
+                                                </div>
+                                            </fieldset>
+                                            <button type="button" class="btn btn--color">разместить объявление</button>
+                                        </div>
+                                        <div class="row__col-1">&nbsp;</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear25"></div>
+                <div class="clear-hr"></div>
+                <div class="clear25"></div>
+                <div class="content__profile content__profile--width100per no--m">
+                    <div class="content__profile-head">
+                        <ul class="nav-tab nav-tab--v2">
+                            <li class="active"><span class="color--black">1. Категория</span></li>
+                            <li class="active"><span>2. Описание и контакты</span></li>
+                        </ul>
+                    </div>
+                    <div class="content__profile-wrapper">
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <form action="#">
+                                    <div class="row row--m30">
+                                        <div class="row__col-1">&nbsp;</div>
+                                        <div class="row__col-5">
+                                            <fieldset>
+                                                <div class="form-group">
+                                                    <label>Заголовок</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Подраздел</label>
+                                                    <select class="form-control">
+                                                        <option>Драгоценные металлы</option>
+                                                        <option>Драгоценные металлы</option>
+                                                        <option>Драгоценные металлы</option>
+                                                        <option>Драгоценные металлы</option>
+                                                        <option>Драгоценные металлы</option>
+                                                        <option>Драгоценные металлы</option>
+                                                        <option>Драгоценные металлы</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Месторасположение</label>
+                                                    <select class="form-control">
+                                                        <option selected>Укажите месторасположение</option>
+                                                        <option>Месторасположение</option>
+                                                        <option>Месторасположение</option>
+                                                        <option>Месторасположение</option>
+                                                        <option>Месторасположение</option>
+                                                    </select>
+                                                    <div class="clear10"></div>
+                                                    <p class="form-group__text">Расположение определяется автоматически исходя из ваших настроек профиля. Если расположение определилось не правильно укажите его вручную</p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Описание</label>
+                                                    <textarea rows="14" placeholder="Введите описание..." class="form-control"></textarea>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="row__col-1">&nbsp;</div>
+                                        <div class="row__col-4">
+                                            <fieldset>
+                                                <div class="form-group">
+                                                    <label>Изображение</label>
+                                                    <div class="div-table">
+                                                        <div valign="top" class="div-table-cell width--100perc"><a href="#!"><img src="./img/add-file.png" alt=""></a></div>
+                                                        <div valign="top" class="div-table-cell">
+                                                            <p class="form-group__text width--165px">Изображение должно быть качественным, соответствовать тексту объявления и содержимому.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p style="margin-bottom: 13px;">Контактные данные заполняются автоматически исходя из ваших параметров профиля. Для их переопределения в данном объявлении просто укажите необходимые данные в полях ниже:</p>
+                                                <div class="form-group">
+                                                    <label>Имя продавца</label>
+                                                    <input type="text" placeholder="Иван Иванович Петров" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Email адрес продавца</label>
+                                                    <input type="text" placeholder="test@test.ru" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Номер телефона </label>
+                                                    <input type="text" placeholder="+38050 485 24 15" class="form-control">
+                                                </div>
+                                                <button type="button" class="btn btn--color">разместить объявление</button>
+                                            </fieldset>
+                                        </div>
+                                        <div class="row__col-1">&nbsp;</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear50"></div>
+                <!-- Активация пароля-->
+                <div class="content__profile">
+                    <div class="content__profile-head">
+                        <ul class="nav-tab nav-tab--once">
+                            <li role="presentation"><span>Спасибо за публикацию объявления,<br>оно скоро появится на сервисе после модерации.</span></li>
+                        </ul>
+                    </div>
+                    <div class="content__profile-wrapper">
+                        <div class="tab-content">
+                            <div class="tab-pane active text-center">
+                                <p>Подать <a href="add-advert-26102018.html">еще объявление</a></p>
+                                <p class="no--m">Назад на <a href="index.html">главную страницу</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div>
+                        <div class="footer__logo"><img src="./img/footer-logo.png" alt=""></div>
+                        <div class="social"><a href="#!" target="_blank">
+                                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                            <style>.st1{fill:#fff}</style>
+                                            <g id="Background_1_">
+                                                <radialgradient id="SVGID_1_" cx="50.158" cy="15.105" gradientTransform="matrix(.05234 -.9986 .8488 .04449 12 498.8)" gradientUnits="userSpaceOnUse" r="684.445">
+                                                    <stop offset="0" stop-color="#fed576"></stop>
+                                                    <stop offset=".263" stop-color="#f47133"></stop>
+                                                    <stop offset=".609" stop-color="#bc3081"></stop>
+                                                    <stop offset="1" stop-color="#4c63d2"></stop>
+                                                </radialgradient>
+                                                <path d="M18.8 250.1v12.8C22.1 385.3 120.7 483.6 238 492.8h36.1c118-9.3 214.9-108.5 218.1-230.1v-12.6C489 126.3 388.7 25.9 267.9 19.7c-130-6.6-245.5 97.7-249.1 230.4z" fill="url(#SVGID_1_)"></path>
+                                            </g>
+                                            <g id="Symbol">
+                                                <path d="M256.6 138.3c37.7 0 42.2.1 57.1.8 13.8.6 21.2 3 26.2 4.9 6.6 2.6 11.3 5.7 16.2 10.7 4.9 5 8 9.8 10.6 16.5 1.9 5.1 4.2 12.7 4.9 26.7.7 15.2.8 19.7.8 58.1s-.1 42.9-.8 58.1c-.6 14-2.9 21.6-4.9 26.7-2.6 6.7-5.6 11.5-10.6 16.5-4.9 5-9.6 8.1-16.2 10.7-5 2-12.5 4.3-26.2 4.9-14.9.7-19.4.8-57.1.8s-42.2-.1-57.1-.8c-13.8-.6-21.2-3-26.2-4.9-6.6-2.6-11.3-5.7-16.2-10.7-4.9-5-8-9.8-10.6-16.5-1.9-5.1-4.2-12.7-4.9-26.7-.7-15.2-.8-19.7-.8-58.1s.1-42.9.8-58.1c.6-14 2.9-21.6 4.9-26.7 2.6-6.7 5.6-11.5 10.6-16.5 4.9-5 9.6-8.1 16.2-10.7 5-2 12.5-4.3 26.2-4.9 14.9-.6 19.4-.8 57.1-.8m0-25.9c-38.4 0-43.2.2-58.2.9s-25.3 3.1-34.3 6.7c-9.3 3.7-17.2 8.6-25 16.6-7.9 8-12.7 16-16.3 25.5-3.5 9.1-5.9 19.6-6.6 34.9-.7 15.3-.8 20.2-.8 59.2s.2 43.9.8 59.2c.7 15.3 3.1 25.7 6.6 34.9 3.6 9.4 8.4 17.5 16.3 25.5s15.7 12.9 25 16.6c9 3.6 19.3 6 34.3 6.7 15.1.7 19.9.9 58.2.9s43.2-.2 58.2-.9 25.3-3.1 34.3-6.7c9.3-3.7 17.2-8.6 25-16.6 7.9-8 12.7-16 16.3-25.5 3.5-9.1 5.9-19.6 6.6-34.9.7-15.3.8-20.2.8-59.2s-.2-43.9-.8-59.2c-.7-15.3-3.1-25.7-6.6-34.9-3.6-9.4-8.4-17.5-16.3-25.5s-15.7-12.9-25-16.6c-9-3.6-19.3-6-34.3-6.7-15-.7-19.9-.9-58.2-.9z" class="st1"></path>
+                                                <path d="M256.6 182.3c-40.1 0-72.5 33-72.5 73.8s32.5 73.8 72.5 73.8 72.5-33 72.5-73.8-32.5-73.8-72.5-73.8zm0 121.7c-26 0-47.1-21.4-47.1-47.9s21.1-47.9 47.1-47.9 47.1 21.4 47.1 47.9-21.1 47.9-47.1 47.9z" class="st1"></path>
+                                                <ellipse cx="332" cy="179.4" rx="16.9" ry="17.2" class="st1"></ellipse>
+                                            </g>
+                                        </svg></a><a href="#!" target="_blank">
+                                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-rule="evenodd" fill-rule="evenodd">
+                                                <path d="M256.23 512C396.81 512 512 396.81 512 256.23 512 115.184 396.81 0 256.23 0 115.184 0 0 115.184 0 256.23 0 396.81 115.184 512 256.23 512z" fill="#3A5BA2"></path>
+                                                <path d="M224.023 160.085c0-35.372 28.575-63.946 63.938-63.946h48.072v63.946h-32.199c-8.608 0-15.873 7.257-15.873 15.873v32.192h48.072v63.938h-48.072v144.22h-63.938v-144.22h-48.065V208.15h48.065v-48.065z" fill="#FFF"></path>
+                                            </g>
+                                        </svg></a><a href="#!" target="_blank">
+                                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-rule="evenodd" fill-rule="evenodd">
+                                                <path d="M256.23 512C396.81 512 512 396.81 512 256.23 512 115.184 396.81 0 256.23 0 115.184 0 0 115.184 0 256.23 0 396.81 115.184 512 256.23 512z" fill="#1EBEF0"></path>
+                                                <path d="M276.635 137.407c-9.077 6.351-15.873 15.42-20.865 25.396l-2.265 5.898c-1.359 4.077-2.273 8.163-2.726 12.241-.453 2.265-.453 4.085-.906 5.898v3.625l.453 5.898.906 7.71H246.247c-22.224-.453-43.987-5.445-63.04-14.061l-11.334-5.437c-2.265-.914-4.078-2.273-6.351-3.632-12.694-7.257-24.028-16.78-34.012-27.208-6.343-6.804-12.241-14.061-17.232-21.771-5.438 10.437-8.616 22.677-8.616 35.379 0 4.531.453 9.069 1.359 13.6 0 2.265.453 4.085.914 5.898 4.078 13.6 11.334 25.849 21.31 34.918l4.992 4.539-6.351-1.367c-8.163-2.266-16.326-4.984-24.036-8.164.906 16.327 7.257 31.293 17.232 43.089 9.522 11.327 22.224 19.951 36.73 24.028l-16.779.906-14.054-.453c10.429 25.403 34.465 43.995 63.033 46.261-26.302 19.498-58.955 30.388-93.873 30.388 25.849 15.873 55.33 25.841 87.521 27.653h20.865c99.31-5.438 177.77-87.522 177.77-188.199v-9.522c3.625-3.171 7.25-6.343 10.89-9.975 8.608-7.71 16.326-16.78 22.67-26.302-10.437 6.804-22.67 10.429-36.277 10.429h-.906.453c12.232-8.163 21.763-20.404 26.747-34.465-9.515 4.992-20.404 8.616-31.294 11.796l-1.359.453-8.155 1.812c-11.795-12.702-28.575-20.865-47.167-20.865h-1.358c-4.984 0-9.983.453-14.968 1.367-7.249 1.812-14.514 4.984-20.404 8.616l-4.532 3.623z" fill="#FFF"></path>
+                                            </g>
+                                        </svg></a></div>
+                    </div>
+                    <div>
+                        <nav class="footer__nav">
+                            <ul>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Бриллиант</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Сток бриллиантов</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Бриллиант в изделии</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Драгоценный камень</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Драгоценный камень в изделии</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div>
+                        <nav class="footer__nav">
+                            <ul>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Часы</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Бижутерия</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Серебряные изделия</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Эксклюзивные подарки</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Ювелирные изделия без камней</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div>
+                        <nav class="footer__nav">
+                            <ul>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Старинные украшения</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Брендовые изделия</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Монеты и слитки</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Распродажа</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="footer__center">
+                    <nav class="footer__links">
+                        <ul>
+                            <li><a href="#!">Оферта</a></li>
+                            <li><a href="#!">Как продавать и покупать</a></li>
+                            <li><a href="help.html">Помощь</a></li>
+                            <li><a href="#!">Реквизиты</a></li>
+                            <li><a href="blog.html">Блог</a></li>
+                            <li><a href="calendar.html">Календарь выставок</a></li>
+                            <li><a href="manual.html">Справочник</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__copyright">Copyright © 2018 Brilicom</div>
+                    <div class="footer__development">Разработка сайта - <a href="#!" target="_blank">DARTC</a></div>
+                </div>
+            </div>
+        </footer><a href="#!" id="link__up" class="link__up">
+                    <svg viewBox="0 0 28 17" xmlns="http://www.w3.org/2000/svg" class="iconArrowUp">
+                        <path d="M2 14.5L14 2l11.5 12.5" class="path-stroke"></path>
+                    </svg></a>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Load Scripts-->
+        <!-- Footer js-->
+        <script type="application/javascript" src="./js/libs/jquery/jquery-3.3.1.min.js"></script>
+        <script type="application/javascript" src="./js/libs/jquery/jquery-migrate-3.0.1.min.js"></script>
+        <script type="application/javascript" src="./js/libs/plugins-scroll/plugins-scroll.js"></script>
+        <script type="application/javascript" src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script type="application/javascript" src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script type="application/javascript" src="./js/libs/parallax/parallax.min.js"></script>
+        <script type="application/javascript" src="./js/libs/hideShowPassword/hideShowPassword.min.js"></script>
+        <script type="application/javascript" src="./js/libs/slick/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.1/readmore.min.js"></script>
+        <script src="./js/common.js"></script>
+    </body>
+</html>

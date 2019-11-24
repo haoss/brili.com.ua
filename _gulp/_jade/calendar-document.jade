@@ -1,0 +1,70 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Календарь' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Календарь' + ' - Brilicom' //title страницы для генерации верстки  
+  -var header = 'profile 0'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        .content__wrapper
+          
+          .content__close
+            a(href="calendar.html")
+              +iconClose
+          
+          .breadcrumbs.breadcrumbs--document
+            ul
+              li: a(href="index.html") Главная
+              li: a(href="calendar.html") Календарь выставок
+              li: span Istanbul Jewelry Show 2018
+          
+          .content__document
+            h1 Istanbul Jewelry Show 2018
+            img(src="./img/document/document-2.png", alt="")
+            small 11-14 октября 2018 / Стамбул, Турция 
+            p Выставка Vicenzaoro SEPTEMBER 2018 проводится c 22 по 26 сентября в городе Виченца, Италия.
+            p Это одно из мероприятий Vicenzaoro - серии ювелирных выставок, проходящих в разные времена года, освещая тем самым новые тенденции сезона. Благодаря большому количеству наименований и близости к рождественскому праздничному сезону выставка-продажа ювелирных изделий является одной из самых крупных в своем роде. Вот и в этом году лучшие мировые производители драгоценностей получат шанс продемонстрировать свои новинки, а посетители смогут получить всю необходимую информацию о товаре и тут же сделать удачную покупку.
+            p Участники выставки Vicenzaoro - это лучшие мировые компании, производящие драгоценности, добывающие драгоценные камни, а так же производящие сопутствующее ювелирным товарам предметы и материалы. Салон представляет как серийные изделия, изготовленные промышленным способом, так и драгоценности ручной работы потрясающего качества исполнения от лучших мастеров старого и нового света. Кроме непосредственно драгоценностей будет представлено промышленное оборудование для их изготовления, а так же тематическая пресса.
+            p На выставке VICENZAORO будут представлены:
+            p ювелирные изделия из золота ювелирные изделия из серебра ювелирные изделия из платины ювелирные изделия с бриллиантами драгоценные камни: изумруд, рубин, сапфир, янтарь и др. украшения с драгоценными камнями жемчуг, ювелирные изделия из жемчуга полудрагоценные камни и украшения синтетические ювелирные камни наручные часы антикварные часы упаковка, футляры ювелирные  антикварные изделия оборудование и инструменты для производства, обработки ювелирных изделий аксессуары и др.
+              br
+              | Выставвка VICENZAORO ориентирована только на специалистов ювелирной индустрии.
+            p Требуется обязательная предварительная регистрация. 
+            p https://www.vicenzaoro.com/it/settembre
+            
+            .clear15
+            
+            .content__document-share
+              div
+                a(href="calendar.html").link.link--black.link--reverse
+                  +iconArrowLeft
+                  | Назад к календарю выставок
+              div
+                a(href="#!" style="display: inline-block; vertical-align: middle")
+                  +iconShare('24px', '24px')
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    //- script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

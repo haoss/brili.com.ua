@@ -1,0 +1,124 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Добавить фирму в каталог' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Добавить фирму в каталог' + ' - Brilicom' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      .content.no--p-top
+        .container-fluid
+          
+          .content__separator.content__separator--thin
+            
+          .content__head.content__head--back
+            div
+              a(href="account.html").btn.btn--default.btn--f16
+                +iconArrowLeft2
+                | Добавить фирму в каталог
+            div
+              a(href="#!").btn.btn--default
+                +iconMenus
+          
+          .content__separator
+            
+          form(action="#!")
+            .filter__wrapper.filter__wrapper--advert
+              .filter__body
+                
+                .filter__body-wrapper
+                  .filter__block.is-hidden
+                    .filter__block-head
+                      .span Категории
+                        +iconArrowFilter
+                        
+                    .filter__block-wrapper
+                      p Какой-то список
+                  
+                  hr.filter__separator.no--m-bottom
+                  
+                  .filter__block.is-hidden
+                    .filter__block-head
+                      .span Подкатегории
+                        +iconArrowFilter
+                        
+                    .filter__block-wrapper
+                      p Какой-то список
+            
+                  .content__separator
+
+                  .filter__block.no--p-bottom
+                    .filter__block-title
+                      .span Описание
+                    .filter__block-wrapper
+                      .form-group
+                        label.label Наименование фирмы
+                        input(type="text").form-control
+                    
+                  .filter__block.no--p-bottom
+                    .filter__block-wrapper
+                      .form-group
+                        label.label Краткое описание
+                        textarea(rows="8" placeholder="Введите описание...").form-control
+                    
+                  .filter__block.no--p-bottom
+                    .filter__block-wrapper
+                      
+                      .form-group
+                        label.label Адрес
+                        input(type="text" placeholder="Укажите месторасположение").form-control
+                        .clear10
+                        p.form-group__text Расположение определяется автоматически исходя из ваших настроек профиля. Если расположение определилось не правильно укажите его вручную
+                        
+                  .content__separator
+                    
+                  .filter__block.no--p-bottom
+                    .filter__block-title
+                      .span Контакты
+                    .filter__block-wrapper
+                      
+                      .form-group
+                        label.label Контактное лицо
+                        input(type="text" placeholder="Иван Иванович Петров").form-control
+                        
+                      .form-group
+                        label.label Контактный телефон
+                        input(type="text" placeholder="+38050 485 24 15").form-control
+                        
+                      .form-group
+                        label.label Email адрес 
+                        input(type="text" placeholder="test@test.ru").form-control
+                        
+                      .form-group
+                        label.label Веб сайт фирмы (если есть)
+                        input(type="text" placeholder="").form-control
+    
+                  .content__separator
+                    
+                  p.form-group__text.text-center
+                    a(href="#!").link.link--black
+                      +iconEye
+                      | Предварительный просмотр карточки фирмы
+                  
+                  .clear11
+                  button(type="button").btn.btn--color.btn--block.btn--center разместить в каталоге
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

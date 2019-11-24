@@ -1,0 +1,59 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Входящие сообщения' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Входящие сообщения' + ' - Brilicom' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      .content.no--p-top
+        .container-fluid
+          
+          .content__separator.content__separator--thin
+            
+          .content__head.content__head--back
+            div
+              a(href="account.html").btn.btn--default.btn--f16
+                +iconArrowLeft2
+                | Входящие сообщения
+          
+          hr.hr--100pec.no--m-bottom
+            
+          ul.message__list
+            li
+              a(href="#!")
+                span.message__list-time 6 мая, 13:12
+                span.message__list-name Николай, Я
+                span.message__list-text здравствуйте куплю за 10 00. Пришлите номер карты приват банка
+                +iconArrowRight2
+            li
+              a(href="#!")
+                span.message__list-time 12 ноября, 16:00
+                span.message__list-name Я, Nik-Net
+                span.message__list-text Добрый день. Хотелось бы глянуть на товар в живую... Давайте встретимся
+                +iconArrowRight2
+          
+          p.message__bottom
+            a(href="#!") Очистить сообщения
+            br
+            | Простите, но если Вы удалите все сообщения- они будут потеряны безвозратно
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

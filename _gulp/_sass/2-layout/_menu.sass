@@ -1,0 +1,177 @@
+/* menu */
+[role="navigation"]
+  ul
+    margin: 0
+    padding: 0
+    li
+        list-style: none
+        margin: 0
+
+.navigation
+  &>.container
+    position: relative
+  nav
+    background:
+      color: $color-black
+      position: bottom center
+      image: url('../img/navigation.png')
+      repeat: no-repeat
+    height: 540px
+    font-size: 16px
+    font-family: $font-lato-m
+    padding-right: 362px
+    overflow: hidden
+    position: relative
+    ul
+      margin: 0
+      padding: 0
+  &__li
+    margin: 0
+    padding: 0
+    list-style: none
+    float: left
+    width: 25%
+    height: 181px
+    border-right: 1px solid #2F2F2F
+    border-bottom: 1px solid #2F2F2F
+    margin-bottom: -1px
+    &>a
+      height: 100%
+      display: block
+      color: $color-white
+      text-align: center
+      text-decoration: none
+      display: flex
+      justify-content: center
+      align-items: center
+      &:hover
+        color: $link-color
+      &>span
+        img
+          display: block
+          margin: 20px auto 8px
+          width: 39px
+          height: 30px
+        &>span
+          display: inline-block
+          height: 47px
+          padding: 0 15px
+    &--sale
+      position: absolute
+      width: 362px
+      right: 0
+      bottom: 0
+      border: 0
+      border-top: 1px solid #2F2F2F
+    &--stock
+      position: absolute
+      width: 362px
+      height: 360px
+      right: 0
+      top: 0
+      border: 0
+
+.nav
+  &-tab
+    margin: 0
+    padding: 0
+    font-size: 24px
+    font-family: $font-lato-m
+    display: flex
+    justify-content: center
+    li
+      list-style: none
+      margin: 0
+      flex-grow: 1
+      &+li
+        border-left: 1px solid #CECDCD
+      &>a, &>span
+        display: block
+        height: 65px
+        line-height: 61px
+        text-align: center
+        color: $color-black
+        text-decoration: none
+        border-top: 4px solid transparent
+        border-bottom: 1px solid #CECDCD
+      &.active
+        &>a, &>span
+          border-top-color: $link-color
+          border-bottom-color: transparent
+    &--links
+      justify-content: flex-start
+      font-size: 16px
+      font-family: $font-lato-r
+      margin: -40px -30px 20px -30px
+      padding: 0 30px
+      border-bottom: 1px solid #CECDCD
+      li
+        flex-grow: 0
+        border: 0
+        position: relative
+        &+li
+          border: 0
+          &::before
+            content: ''
+            position: absolute
+            left: 0
+            top: 30px
+            height: 13px
+            width: 1px
+            background: #CECDCD
+        &>a, &>span
+          border: 0
+          padding-left: 20px
+          padding-right: 20px
+          color: $color-black
+          line-height: 75px
+          position: relative
+          &::after
+            content: ''
+            width: 12px
+            height: 12px
+            display: block
+            position: absolute
+            transform-origin: 50% 50%
+            left: 50%
+            top: 100%
+            background: $color-gray
+            border-bottom: 1px solid #CECDCD
+            border-left: 1px solid #CECDCD
+            transform: translate(-50%, -6px) rotate(-45deg)
+            display: none
+        &.active
+          &>a, &>span
+            color: $link-color
+            &::after
+              display: block
+    &--once
+      padding-top: 37px
+      li
+        &>span
+          line-height: 24px
+          height: auto
+          border: 0
+    &--v2
+      li
+        position: relative
+        &>span
+          border-bottom-width: 4px
+          border-top: 0
+          color: #CECDCD
+          line-height: 66px
+        &.active
+          &>span
+            border-top-color: transparent
+            border-bottom-color: $link-color
+            color: $link-color
+        &+li
+          border-left: 0
+          &::before
+            content: ''
+            position: absolute
+            width: 1px
+            height: 24px
+            background: #CECDCD
+            left: 0
+            top: 19px

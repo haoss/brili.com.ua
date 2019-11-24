@@ -1,0 +1,174 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Бизнес объявление' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Бизнес объявление' + ' - Brilicom' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      .content.no--p-top
+        .container-fluid
+          
+          .content__separator.content__separator--thin
+          
+          .content__head.content__head--advert
+            div
+              a(href="#!").btn.btn--default
+                +iconArrowLeft2
+                | Бизнес объявление
+            div
+              a(href="#!").btn.btn--default
+                +iconMenus
+          
+          .content__separator
+            
+          form(action="#!")
+            .filter__wrapper.filter__wrapper--advert
+              .filter__body
+                
+                .filter__body-wrapper
+                  .filter__block.is-hidden
+                    .filter__block-head
+                      .span Категории
+                        +iconArrowFilter
+                        
+                    .filter__block-wrapper
+                      ul
+                        li.filter__block-li: a(href="#!")
+                          span
+                            img(src="./img/category/category-1.svg", alt="")
+                            span Ломбард
+                        li.filter__block-li: a(href="#!")
+                          span
+                            img(src="./img/category/category-15.svg", alt="")
+                            span Скупка
+                        li.filter__block-li: a(href="#!")
+                          span
+                            img(src="./img/category/category-16.svg", alt="")
+                            span Ювелирный магазин
+                        li.filter__block-li: a(href="#!")
+                          span
+                            img(src="./img/category/category-17.svg", alt="")
+                            span Ювелирный производитель
+                        li.filter__block-li: a(href="#!")
+                          span
+                            img(src="./img/category/category-18.svg", alt="")
+                            span Ювелирная мастерская
+                        li.filter__block-li: a(href="#!")
+                          span
+                            img(src="./img/category/category-19.svg", alt="")
+                            span Ювелирный мастер
+                        li.filter__block-li: a(href="#!")
+                          span
+                            img(src="./img/category/category-20.svg", alt="")
+                            span Оценка
+            
+                  .content__separator
+
+                  .filter__block.no--p-bottom
+                    .filter__block-title
+                      .span Описание
+                    .filter__block-wrapper
+                      .form-group
+                        label.label Заголовок
+                        input(type="text").form-control
+                      
+                  hr.filter__separator
+                  
+                  .filter__block.no--p-bottom
+                    .filter__block-wrapper
+                      .form-group
+                        label.label Изображение
+                        a(href="#!")
+                          img(src="./img/add-photo.png", alt="")
+                        
+                        .clear10
+                        p.form-group__text Изображение должно быть качественным, соответствовать тексту объявления и содержимому.
+                      
+                  hr.filter__separator
+                    
+                  .filter__block.no--p-bottom
+                    .filter__block-wrapper
+                      .form-group
+                        label.label Подраздел
+                        select.form-control
+                          option Драгоценные металлы
+                          option Драгоценные металлы
+                          option Драгоценные металлы
+                          option Драгоценные металлы
+                          option Драгоценные металлы
+                          option Драгоценные металлы
+                          option Драгоценные металлы
+                          
+                  hr.filter__separator
+                  
+                  .filter__block.no--p-bottom
+                    .filter__block-wrapper
+                      .form-group
+                        label.label Месторасположение
+                        select.form-control
+                          option(selected) Укажите месторасположение
+                          option Месторасположение
+                          option Месторасположение
+                          option Месторасположение
+                          option Месторасположение
+                        .clear10
+                        p.form-group__text Расположение определяется автоматически исходя из ваших настроек профиля. Если расположение определилось не правильно укажите его вручную
+                        
+                  hr.filter__separator
+                    
+                  .filter__block.no--p-bottom
+                    .filter__block-wrapper
+                      .form-group
+                        label.label Описание
+                        textarea(rows="8" placeholder="Введите описание...").form-control
+    
+                  hr.filter__separator.no--m-bottom
+                    
+                  .filter__block.no--p-bottom
+                    .filter__block-title.no--border.no--m
+                      .span Контакты
+                    .filter__block-wrapper
+                      p Контактные данные заполняются автоматически исходя из ваших параметров профиля. Для их переопределения в данном объявлении просто укажите необходимые данные в полях ниже:
+                      
+                      .form-group
+                        label.label Имя продавца
+                        input(type="text" placeholder="Иван Иванович Петров").form-control
+                        
+                        .clear16
+                        label.label Email адрес продавца
+                        input(type="text" placeholder="test@test.ru").form-control
+                        
+                        .clear16
+                        label.label Номер телефона 
+                        input(type="text" placeholder="+38050 485 24 15").form-control
+    
+                  .content__separator
+                    
+                  p.form-group__text.text-center
+                    a(href="#!").link.link--black
+                      +iconEye
+                      | Предварительный просмотр объявление
+                  
+                  .clear11
+                  button(type="button").btn.btn--color.btn--block.btn--center разместить объявление
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

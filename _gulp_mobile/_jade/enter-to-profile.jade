@@ -1,0 +1,49 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Вход в панель пользователя' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Вход в панель пользователя' + ' - Brilicom' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      .content
+        .container-fluid
+          
+          form(method="post", action="#!")
+            .form-group
+              label.label E-mail или номер телефона
+              input(type="text" value="" placeholder="").form-control
+            .form-group.form-group--password
+              label.label Ваш текущий пароль
+              input(type="password", placeholder="").form-control
+              button(type="button") Показать
+            
+            .clear6
+            button(type="button").btn.btn--color.btn--block.btn--center ВОЙТИ
+            
+            .clear16
+            .form-group.form-group--remember
+              div
+                a(href="password-recovery.html").link.link--black Не можете войти?
+              div.text-right
+                a(href="#!").link.link--black Регистрация
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

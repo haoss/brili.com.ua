@@ -1,0 +1,608 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Админ панель' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Админ панель' + ' - Brilicom' //title страницы для генерации верстки  
+  -var header = 'profile 2'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        .content__profile.content__profile--width100per.no--m
+          .content__profile-head
+            ul.nav-tab
+              li.active(role='presentation')
+                a(href='#tab1', aria-controls='tab1', role='tab', data-toggle='tab') Мои объявления
+              li(role='presentation')
+                a(href='#tab2', aria-controls='tab2', role='tab', data-toggle='tab') Мои сообщения
+              li(role='presentation')
+                a(href='#tab3', aria-controls='tab3', role='tab', data-toggle='tab') Мои организации
+
+          .content__profile-wrapper
+            .tab-content
+              #tab1.tab-pane.active
+                
+                ul.nav-tab.nav-tab--links
+                  li.active(role='presentation')
+                    a(href='#tab11', aria-controls='tab11', role='tab', data-toggle='tab') Все объявления
+                  li(role='presentation')
+                    a(href='#tab12', aria-controls='tab12', role='tab', data-toggle='tab') Архив (3)
+                  li(role='presentation')
+                    a(href='#tab13', aria-controls='tab13', role='tab', data-toggle='tab') Не прошли модерацию (2)
+                      
+                .tab-content
+                  #tab11.tab-pane.active
+                    
+                    .advert__add
+                      +iconAdvertAdd
+                      .advert__add-text Вы еще не добавляли объявлений
+                      a(href="#!").btn.btn--color добавить объявление о продаже
+                      .clear20
+                      span или
+                      .clear20
+                      a(href="#!").btn.btn--color добавить бизнес объявление
+
+                    hr
+                  
+                    .advert__wrapper
+                      form(method="post", action="")
+                        .advert__wrapper-head
+                          div
+                            .div-table
+                              .div-table-cell
+                                .form-radio
+                                  input(type="radio" name="name11" checked)#radio111
+                                  span
+                                  label(for="radio111") Все объявление
+                              .div-table-cell
+                                .form-radio
+                                  input(type="radio" name="name11")#radio112
+                                  span
+                                  label(for="radio112") Объявление о продаже
+                              .div-table-cell
+                                .form-radio
+                                  input(type="radio" name="name11")#radio113
+                                  span
+                                  label(for="radio113") Бизнес объявление
+                          div
+                            a(href="#!").link.link--black.link--reverse Удалить все объявления
+                        .advert__block
+                          div
+                            .advert__block-img
+                              a(href="#!")
+                              img(src="./img/catalog/catalog-27.png", alt="")
+                          div
+                            .advert__block-content
+                              .advert__block-close
+                                +iconClose
+                              .advert__block-info
+                                .advert__block-info__row1
+                                  div
+                                    .advert__block-title 
+                                      a(href="#!") Браслет золотой с бриллиантами
+                                  div
+                                    .advert__block-price 10 780 грн.
+                                .advert__block-info__row2
+                                  .advert__block-info__date C 1 мая по 31 мая 2018 года
+                                  .advert__block-info__links
+                                    div
+                                      a(href="#!").link.link--black
+                                        +iconEdit
+                                        | Редактировать
+                                    div
+                                      a(href="#!").link.link--black
+                                        +iconEye
+                                        | Просмотреть объявление
+                                    div
+                                      a(href="#!").link
+                                        +iconArrowUp2
+                                        | Поднять на верх
+                              .advert__block-statistic
+                                div
+                                  span Статистика:
+                                div
+                                  span 19 просмотров
+                                  span |
+                                  span 5 раз добавлено в избранное
+                                  span |
+                                  span Тел. 
+                                    a(href="tel:") +38 (099) 755 86 95
+                        .advert__block
+                          div
+                            .advert__block-img
+                              a(href="#!")
+                              img(src="./img/catalog/catalog-26.png", alt="")
+                          div
+                            .advert__block-content
+                              .advert__block-close
+                                +iconClose
+                              .advert__block-info
+                                .advert__block-info__row1
+                                  div
+                                    .advert__block-title 
+                                      a(href="#!") Великолепное кольцо с красивыми бриллиантами
+                                  div
+                                    .advert__block-price 8 500 грн.
+                                .advert__block-info__row2
+                                  .advert__block-info__date C 1 мая по 31 мая 2018 года
+                                  .advert__block-info__links
+                                    div
+                                      a(href="#!").link.link--black
+                                        +iconEdit
+                                        | Редактировать
+                                    div
+                                      a(href="#!").link.link--black
+                                        +iconEye
+                                        | Просмотреть объявление
+                                    div
+                                      a(href="#!").link
+                                        +iconArrowUp2
+                                        | Поднять на верх
+                              .advert__block-statistic
+                                div
+                                  span Статистика:
+                                div
+                                  span 19 просмотров
+                                  span |
+                                  span 5 раз добавлено в избранное
+                                  span |
+                                  span Тел. 
+                                    a(href="tel:") +38 (099) 755 86 95
+                        .advert__block
+                          div
+                            .advert__block-img
+                              a(href="#!")
+                              img(src="./img/catalog/catalog-26.png", alt="")
+                          div
+                            .advert__block-content
+                              .advert__block-close
+                                +iconClose
+                              .advert__block-info
+                                .advert__block-info__row1
+                                  div
+                                    .advert__block-title 
+                                      a(href="#!") Великолепное кольцо с красивыми бриллиантами
+                                  div
+                                    .advert__block-price 8 500 грн.
+                                      s 13 000 грн.
+                                      .catalog__block-sale -25%
+                                .advert__block-info__row2
+                                  .advert__block-info__date C 1 мая по 31 мая 2018 года
+                                  .advert__block-info__links
+                                    div
+                                      a(href="#!").link.link--black
+                                        +iconEdit
+                                        | Редактировать
+                                    div
+                                      a(href="#!").link.link--black
+                                        +iconEye
+                                        | Просмотреть объявление
+                                    div
+                                      a(href="#!").link
+                                        +iconClose
+                                        | Продано
+                                    div
+                                      .advert__block-tariff
+                                        a(href="#!").link.link--black Выбранные тарифы
+                                          +iconArrowFilter
+                                        .tariff__popup
+                                          .tariff__popup-close
+                                            +iconClose
+                                          .tariff__popup-title Выбранные тарифы
+                                          p Разместить объявление на главной странице
+                                            br
+                                            span.span
+                                              strong Оплата: 
+                                              | 23.10.2018
+                                            span.span
+                                              strong Размещение: 
+                                              | 7 дней
+                                            span.span
+                                              strong Осталось: 
+                                                span.color--link 7 дней
+                                            span.span
+                                              strong До: 
+                                              | 30.10.2018
+                                          p Выделить объявление цветом в текущем разделе, с сохранением позиции
+                                            br
+                                            span.span
+                                              strong Оплата: 
+                                              | 23.10.2018
+                                            span.span
+                                              strong Размещение: 
+                                              | 7 дней
+                                            span.span
+                                              strong Осталось: 
+                                                span.color--link 7 дней
+                                            span.span
+                                              strong До: 
+                                              | 30.10.2018
+                                          a(href="#!").btn.btn--color улучшить объявление
+                                          a(href="#!").btn продлить
+                                      
+                              .advert__block-statistic
+                                div
+                                  span Статистика:
+                                div
+                                  span 19 просмотров
+                                  span |
+                                  span 5 раз добавлено в избранное
+                                  span |
+                                  span Тел. 
+                                    a(href="tel:") +38 (099) 755 86 95
+                      
+                  #tab12.tab-pane
+                    
+                    .advert__wrapper
+                      form(method="post", action="")
+                        .advert__wrapper-head
+                          div
+                            .div-table
+                              .div-table-cell
+                                .form-radio
+                                  input(type="radio" name="name12" checked)#radio121
+                                  span
+                                  label(for="radio121") Все объявление
+                              .div-table-cell
+                                .form-radio
+                                  input(type="radio" name="name12")#radio122
+                                  span
+                                  label(for="radio122") Объявление о продаже
+                              .div-table-cell
+                                .form-radio
+                                  input(type="radio" name="name12")#radio123
+                                  span
+                                  label(for="radio123") Бизнес объявление
+                          div
+                            a(href="#!").link.link--black.link--reverse Удалить все объявления
+                        .advert__wrapper-body
+                          .advert__block
+                            div
+                              .advert__block-img
+                                a(href="#!")
+                                img(src="./img/catalog/catalog-27.png", alt="")
+                            div
+                              .advert__block-content
+                                .advert__block-close
+                                  +iconClose
+                                .advert__block-info
+                                  .advert__block-info__row1
+                                    div
+                                      .advert__block-title 
+                                        a(href="#!") Браслет золотой с бриллиантами
+                                    div
+                                      .advert__block-price 10 780 грн.
+                                  .advert__block-info__row2
+                                    .advert__block-info__date C 1 мая по 31 мая 2018 года
+                                    .advert__block-info__links
+                                      div
+                                        a(href="#!").link.link--black
+                                          +iconEdit
+                                          | Редактировать
+                                      div
+                                        a(href="#!").link.link--black
+                                          +iconEye
+                                          | Просмотреть объявление
+                                      div
+                                        a(href="#!").link
+                                          +iconCheck
+                                          | Активировать
+                                .advert__block-statistic
+                                  div
+                                    span Статистика:
+                                  div
+                                    span 19 просмотров
+                                    span |
+                                    span 5 раз добавлено в избранное
+                                    span |
+                                    span Тел. 
+                                      a(href="tel:") +38 (099) 755 86 95
+                          .advert__block
+                            div
+                              .advert__block-img
+                                a(href="#!")
+                                img(src="./img/catalog/catalog-26.png", alt="")
+                            div
+                              .advert__block-content
+                                .advert__block-close
+                                  +iconClose
+                                .advert__block-info
+                                  .advert__block-info__row1
+                                    div
+                                      .advert__block-title 
+                                        a(href="#!") Великолепное кольцо с красивыми бриллиантами
+                                    div
+                                      .advert__block-price 8 500 грн.
+                                  .advert__block-info__row2
+                                    .advert__block-info__date C 1 мая по 31 мая 2018 года
+                                    .advert__block-info__links
+                                      div
+                                        a(href="#!").link.link--black
+                                          +iconEdit
+                                          | Редактировать
+                                      div
+                                        a(href="#!").link.link--black
+                                          +iconEye
+                                          | Просмотреть объявление
+                                      div
+                                        a(href="#!").link
+                                          +iconCheck
+                                          | Активировать
+                                .advert__block-statistic
+                                  div
+                                    span Статистика:
+                                  div
+                                    span 19 просмотров
+                                    span |
+                                    span 5 раз добавлено в избранное
+                                    span |
+                                    span Тел. 
+                                      a(href="tel:") +38 (099) 755 86 95
+                      
+                  #tab13.tab-pane
+                    
+                    .advert__wrapper
+                      form(method="post", action="")
+                        .advert__wrapper-head
+                          div
+                            .div-table
+                              .div-table-cell
+                                .form-radio
+                                  input(type="radio" name="name13" checked)#radio131
+                                  span
+                                  label(for="radio131") Все объявление
+                              .div-table-cell
+                                .form-radio
+                                  input(type="radio" name="name13")#radio132
+                                  span
+                                  label(for="radio132") Объявление о продаже
+                              .div-table-cell
+                                .form-radio
+                                  input(type="radio" name="name13")#radio133
+                                  span
+                                  label(for="radio133") Бизнес объявление
+                          div
+                            a(href="#!").link.link--black.link--reverse Удалить все объявления
+                        .advert__wrapper-body
+                          .advert__block
+                            div
+                              .advert__block-img
+                                a(href="#!")
+                                img(src="./img/catalog/catalog-27.png", alt="")
+                            div
+                              .advert__block-content
+                                .advert__block-close
+                                  +iconClose
+                                .advert__block-info
+                                  .advert__block-info__row1
+                                    div
+                                      .advert__block-title 
+                                        a(href="#!") Браслет золотой с бриллиантами
+                                    div
+                                      .advert__block-price 10 780 грн.
+                                  .advert__block-info__row2
+                                    .advert__block-info__date C 1 мая по 31 мая 2018 года
+                                    .advert__block-info__links
+                                      div
+                                        a(href="#!").link.link--black
+                                          +iconEdit
+                                          | Редактировать
+                                      div
+                                        a(href="#!").link.link--black
+                                          +iconEye
+                                          | Просмотреть объявление
+                                .advert__block-statistic
+                                  div
+                                    .advert__block-moderate Коментарии модератора: товар не соответсвует рубрике товар не соответсвует рубрике товар не соответсвует рубрике товар не соответсвует рубрике
+                                      
+                          .advert__block
+                            div
+                              .advert__block-img
+                                a(href="#!")
+                                img(src="./img/catalog/catalog-26.png", alt="")
+                            div
+                              .advert__block-content
+                                .advert__block-close
+                                  +iconClose
+                                .advert__block-info
+                                  .advert__block-info__row1
+                                    div
+                                      .advert__block-title 
+                                        a(href="#!") Великолепное кольцо с красивыми бриллиантами
+                                    div
+                                      .advert__block-price 8 500 грн.
+                                  .advert__block-info__row2
+                                    .advert__block-info__date C 1 мая по 31 мая 2018 года
+                                    .advert__block-info__links
+                                      div
+                                        a(href="#!").link.link--black
+                                          +iconEdit
+                                          | Редактировать
+                                      div
+                                        a(href="#!").link.link--black
+                                          +iconEye
+                                          | Просмотреть объявление
+                                .advert__block-statistic
+                                  div
+                                    .advert__block-moderate Коментарии модератора:  товар не соответсвует рубрике
+                      
+              #tab2.tab-pane
+                
+                ul.nav-tab.nav-tab--links
+                  li.active(role='presentation')
+                    a(href='#tab21', aria-controls='tab21', role='tab', data-toggle='tab') Полученные
+                  li(role='presentation')
+                    a(href='#tab22', aria-controls='tab22', role='tab', data-toggle='tab') Отправленные
+                  li(role='presentation')
+                    a(href='#tab23', aria-controls='tab23', role='tab', data-toggle='tab') Архив (3)
+                      
+                .tab-content
+                  #tab21.tab-pane.active
+                    
+                    .message__wrapper
+                      .message__list
+                        table.message__list-table
+                          thead
+                            tr
+                              th(align="center" width="40")
+                                label.form-checkbox.form-checkbox--noText
+                                  input(type="checkbox")#checkbox211
+                                  span
+                                    +iconCheck
+                              th(align="left") Пользователь
+                              th(align="left") Объявления
+                              th(align="left")
+                                span Дата
+                                  +iconArrowFilter
+                          tbody
+                            tr.separator
+                              td(colspan="4") &nbsp;
+                            tr
+                              td(align="center" width="40")
+                                label.form-checkbox.form-checkbox--noText
+                                  input(type="checkbox")#checkbox212
+                                  span
+                                    +iconCheck
+                              td(nowrap) Николай
+                              td(width="100%")
+                                a(href="#!") НАБОР СЕРЕБРО С ЗОЛОТЫМИ НАПАЙКАМИ
+                              td(width="160" nowrap)
+                                .message__list-nav
+                                  a(href="#!")
+                                    +iconStar
+                                  a(href="#!")
+                                    +iconStop
+                                  a(href="#!")
+                                    +iconTrash
+                                .message__list-date 5 мая, 12:00
+                            tr
+                              td(align="center" width="40")
+                                label.form-checkbox.form-checkbox--noText
+                                  input(type="checkbox")#checkbox213
+                                  span
+                                    +iconCheck
+                              td(nowrap) Сергей Андреевичь
+                              td(width="100%")
+                                a(href="#!") Бриллиант 1.30 ct
+                              td(width="160" nowrap)
+                                .message__list-nav
+                                  a(href="#!")
+                                    +iconStar
+                                  a(href="#!")
+                                    +iconStop
+                                  a(href="#!")
+                                    +iconTrash
+                                .message__list-date 5 мая, 12:00
+                            tr
+                              td(align="center" width="40")
+                                label.form-checkbox.form-checkbox--noText
+                                  input(type="checkbox")#checkbox214
+                                  span
+                                    +iconCheck
+                              td(nowrap) Иванка Трамп
+                              td(width="100%")
+                                a(href="#!") Бриллиант приносящий любовь.
+                              td(width="160" nowrap)
+                                .message__list-nav
+                                  a(href="#!")
+                                    +iconStar
+                                  a(href="#!")
+                                    +iconStop
+                                  a(href="#!")
+                                    +iconTrash
+                                .message__list-date 12 октября, 10:05
+                      
+                    .clear25
+                    
+                    .message__wrapper
+                      .message__list
+                        .message__document
+                          
+                          form(action="#!")
+                            .advert__block.advert__block--message
+                              div
+                                .advert__block-img
+                                  a(href="#!")
+                                  img(src="./img/catalog/catalog-27.png", alt="")
+                              div
+                                .advert__block-content
+                                  .advert__block-info
+                                    .advert__block-info__row1
+                                      div
+                                        .advert__block-title Бриллиант 1.30 ct
+                                        small
+                                          a(href="#!").link.link--black Перейти к объявлению
+                            
+                            .message__document-form
+                              .message__document-left
+                                
+                                .form-group
+                                  label.label.label--small.color--777 Текст сообщения
+                                  .message__document-textarea
+                                    textarea.form-control
+                                    .form-group.form-group--file
+                                      input#inputfile.inputfile(type='file', name='inputfile', placeholder="Добавить документ")
+                                      label(for='inputfile')
+                                        +iconAttache
+                                        span Добавить документ
+                                        a(href="#!")
+                                          +iconClose
+                                button(type="submit").btn Отправить
+                                
+                              .message__document-right
+                                .message__comments
+                                  .message__comments-question
+                                    .message__comments-title Ваше сообщение
+                                    .clear
+                                    .message__comments-text Добрый день. Я бы купил за 5 тыс.
+                                    .message__comments-date Прочитано 6 мая
+                                  .message__comments-answer
+                                    .message__comments-title Николай
+                                    .message__comments-date 6 мая, 13:12
+                                    .clear
+                                    .message__comments-text Добрый день. 6500 грн
+                    
+                  #tab22.tab-pane 22
+                  #tab23.tab-pane 23
+                  
+              #tab3.tab-pane
+                
+                ul.nav-tab.nav-tab--links
+                  li.active(role='presentation')
+                    a(href='#tab31', aria-controls='tab31', role='tab', data-toggle='tab') 1
+                  li(role='presentation')
+                    a(href='#tab32', aria-controls='tab32', role='tab', data-toggle='tab') 2
+                  li(role='presentation')
+                    a(href='#tab33', aria-controls='tab33', role='tab', data-toggle='tab') 3
+                      
+                .tab-content
+                  #tab31.tab-pane.active 31
+                  #tab32.tab-pane 32
+                  #tab33.tab-pane 33
+          
+          
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    //- script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

@@ -1,0 +1,65 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Обратная связь' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Обратная связь' + ' - Brilicom' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      .content.no--p-top
+        .container-fluid
+          
+          .content__separator.content__separator--thin
+          
+          .content__head.content__head--back
+            div
+              a(href="help.html").btn.btn--default
+                +iconArrowLeft2
+                | Назад
+            div
+              a(href="#!").btn.btn--default
+                +iconMenus
+          
+          hr.hr--100pec
+            
+          h1 Обратная связь
+          
+          form(action="#")
+            fieldset
+              
+              .form-group
+                label.label Ваше имя
+                input(type="text" value="Ваня Петров").form-control
+                span.form-error  
+              .form-group.has-error
+                label.label Ваш Email или номер телефона
+                input(type="text" value="ваволар@li").form-control
+                span.form-error Неправильный формат email 
+              .form-group
+                label.label Сообщение
+                textarea.form-control(rows="8") Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при. Используют потому, что тот обеспечивает более. потому, что тот обеспечивает более или менее Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при. Используют потому, что тот обеспечивает более. потому, что тот обеспечивает более или менее
+              .form-group.form-group--spam
+                label.label АнтиСпам проверка
+                div
+                  img(src="./img/captcha.png", alt="").img-responsive
+              button(type="submit").btn.btn--block.btn--center отправить сообщение
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

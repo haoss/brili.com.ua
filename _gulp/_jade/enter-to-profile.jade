@@ -1,0 +1,93 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Вход в панель пользователя' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Вход в панель пользователя' + ' - Brilicom' //title страницы для генерации верстки  
+  -var header = 'profile 1'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        .content__profile
+          .content__profile-head
+            ul.nav-tab
+              li.active(role='presentation')
+                a(href='#enter', aria-controls='enter', role='tab', data-toggle='tab') Авторизация
+              li(role='presentation')
+                a(href='#register', aria-controls='register', role='tab', data-toggle='tab') Регистрация
+
+          .content__profile-wrapper
+            .tab-content
+              #enter.tab-pane.active
+                form(method="post", action="#!")
+                  .form-group
+                    label Email или номер телефона
+                    input(type="text", placeholder="").form-control
+                  .form-group.form-group--password
+                    label Ваш текущий пароль
+                    input(type="password", placeholder="").form-control
+                    button(type="button")
+                  .form-group.form-group--remember
+                    div
+                      .form-checkbox
+                        input(type="checkbox")#checkbox1
+                        span
+                          +iconCheck
+                        label(for="checkbox1") Запомнить меня
+                    div.text-right
+                      a(href="password-recovery.html").link.link--black Не можете войти?
+                  .text-center
+                    button(type="button").btn Войти
+              #register.tab-pane
+                form(method="post", action="#!")
+                  .form-group
+                    label Укажите Ваш Email или номер телефона
+                    input(type="text", placeholder="").form-control
+                  .form-group.form-group--password
+                    label Пароль
+                    input(type="password", placeholder="").form-control
+                    button(type="button")
+                  .form-group.form-group--password
+                    label Пароль еще раз
+                    input(type="password", placeholder="").form-control
+                    button(type="button")
+                  .form-group
+                    .form-checkbox
+                      input(type="checkbox")#checkbox2
+                      span
+                        +iconCheck
+                      label(for="checkbox2") * Я соглашаюсь с 
+                        a(href="#!" target="_blank") правилами использования сервиса
+                        |, а также с передачей и обработкой моих данных в briilicom.  Я подтверждаю своё совершеннолетие и ответственность за размещение объявления
+                  .clear18
+                  .form-group.form-group--captcha
+                    div
+                      img(src="./img/captcha.png", alt="")
+                  .text-center
+                    button(type="button").btn регистрация
+          
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    //- script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

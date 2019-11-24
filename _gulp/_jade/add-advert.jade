@@ -1,0 +1,531 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Добавить объявление' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Добавить объявление' + ' - Brilicom' //title страницы для генерации верстки  
+  -var header = 'profile 3'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        .content__profile.content__profile--width100per.no--m
+          .content__profile-head
+            ul.nav-tab.nav-tab--v2
+              li.active
+                span 1. Категория
+              li
+                span 2. Описание
+              li
+                span 3. Контакты
+
+          .content__profile-wrapper
+            .tab-content
+              .tab-pane.active
+                
+                p.text--upper Вид объявления:
+                
+                .advert__wrapper-head
+                  div
+                    .div-table
+                      .div-table-cell
+                        .form-radio
+                          input(type="radio" name="name11" checked)#radio111-input
+                          span
+                          label(for="radio111-input") Объявление о продаже
+                      .div-table-cell
+                        .form-radio
+                          input(type="radio" name="name11")#radio112-input
+                          span
+                          label(for="radio112-input") Бизнес объявление
+                
+                #radio-div1
+                  p.text--upper категории:
+                  
+                  .category.category--tab
+                    ul
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-1.svg", alt="")
+                          span Бриллианты
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-3.svg", alt="")
+                          span Драгоценный камень
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-4.svg", alt="")
+                          span Бриллиант в изделии
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-5.svg", alt="")
+                          span Драгоценный камень в изделии
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-6.svg", alt="")
+                          span Ювелирные изделия без камней
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-7.svg", alt="")
+                          span Часы
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-12.svg", alt="")
+                          span Бижутерия
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-11.svg", alt="")
+                          span Серебряные изделия
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-8.svg", alt="")
+                          span Эксклюзивные подарки
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-10.svg", alt="")
+                          span Старинные украшения
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-13.svg", alt="")
+                          span Брендовые изделия
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-9.svg", alt="")
+                          span Монеты и слитки
+          
+                #radio-div2.hidden
+                  p.text--upper Тип организации:
+                  
+                  .category.category--tab
+                    ul
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-1.svg", alt="")
+                          span Ломбард
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-15.svg", alt="")
+                          span Скупка
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-16.svg", alt="")
+                          span Ювелирный магазин
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-17.svg", alt="")
+                          span Ювелирный производитель
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-18.svg", alt="")
+                          span Ювелирная мастерская
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-19.svg", alt="")
+                          span Ювелирный мастер
+                      li.category__li: a(href="#!")
+                        span
+                          img(src="./img/category/category-20.svg", alt="")
+                          span Оценка
+        
+        .clear50
+        
+        .content__profile.content__profile--width100per.no--m
+          .content__profile-head
+            ul.nav-tab.nav-tab--v2
+              li.active
+                span.color--black 1. Категория
+              li.active
+                span 2. Описание
+              li
+                span 3. Контакты
+
+          .content__profile-wrapper
+            .tab-content
+              .tab-pane.active
+                form(action="#")
+                  
+                  .row.row--m30
+                    .row__col-1 &nbsp;
+                    .row__col-5
+                      
+                      fieldset
+                        .form-group
+                          label Заголовок
+                          input(type="text").form-control
+                        .form-group
+                          label Состояние изделия
+                          .clear10
+                          .div-table
+                            .div-table-cell
+                              .form-radio
+                                input(type="radio" name="name11" checked)#radio111
+                                span
+                                label(for="radio111") Новое
+                            .div-table-cell
+                              .form-radio
+                                input(type="radio" name="name11" checked)#radio112
+                                span
+                                label(for="radio112") С пробегом
+                        .div-table.width--100perc
+                          .div-table-cell
+                            .form-group
+                              label Цена
+                              input(type="text").form-control
+                          .div-table-cell.width--165px
+                            .form-group
+                              label Скидка
+                              select.form-control.width--165px
+                                option 0%
+                                option 5%
+                                option 10%
+                                option 15%
+                                option 20%
+                                option 25%
+                        .div-table.div-table--w100perc
+                          .div-table-cell
+                            .form-group
+                              label Масса бриллианта(ов), 
+                                br
+                                | в каратах
+                              input(type="text").form-control
+                          .div-table-cell.width--165px
+                            .form-group
+                              label Диаметр 
+                                br
+                                | бриллианта (мм.)
+                              input(type="text").form-control.width--165px
+                        .div-table
+                          .div-table-cell.width--165px
+                            .form-group
+                              label Количество 
+                                br
+                                | входящих изделий
+                              input(type="text").form-control.width--165px
+                        .form-group
+                          label Описание
+                          textarea(rows="8" placeholder="Введите описание...").form-control
+                        .form-group
+                          label Фотографии (Первое фото титульное)
+                          a(href="#!")
+                            img(src="./img/add-files.png", alt="")
+                      
+                    .row__col-1 &nbsp;
+                    .row__col-4
+                      fieldset
+                        
+                        .div-table
+                          .div-table-cell(valign="top").width--100perc
+                            .form-group
+                              label Сертификат изделия 
+                                br
+                                | (если есть)
+                              a(href="#!")
+                                img(src="./img/add-file.png", alt="")
+                          .div-table-cell(valign="top")
+                            .form-group
+                              label Наличие сертификата качества
+                              select.form-control.width--165px
+                                option Отсутствует
+                                option Присутствует
+                        h2 Характеристики бриллианта
+                        .div-table
+                          .div-table-cell(valign="top").width--100perc
+                            .form-group
+                              label Форма огранки/Shape
+                              select.form-control
+                                option(selected disabled) Выберите
+                                option Круглый бриллиант
+                                option Маркиз
+                                option Груша 
+                                option Овал 
+                                option Принцесса 
+                                option Изумруд 
+                                option Ашер  
+                                option Радиант   
+                                option Сердце    
+                          .div-table-cell(valign="top")
+                            .form-group
+                              label Цвет
+                              select.form-control.width--165px
+                                option(selected disabled) Выберите
+                                option Красный
+                                option Синий
+                                option Зеленый
+                                option Пурпурный
+                                option Черный
+                                option Коричневый
+                        .div-table
+                          .div-table-cell(valign="top").width--100perc
+                            .form-group
+                              label Color
+                              select.form-control
+                                option(selected disabled) Выберите
+                                option 1
+                                option 2
+                                option 3
+                                option 4
+                                option 5
+                          .div-table-cell(valign="top")
+                            .form-group
+                              label Качество
+                              select.form-control.width--165px
+                                option(selected disabled) Выберите
+                                option 1
+                                option 2
+                                option 3
+                                option 4
+                                option 5
+                        .div-table
+                          .div-table-cell(valign="top").width--100perc
+                            .form-group
+                              label Clarity
+                              select.form-control
+                                option(selected disabled) Выберите
+                                option Круглый бриллиант
+                                option Маркиз
+                                option Груша 
+                                option Овал 
+                                option Принцесса 
+                                option Изумруд 
+                                option Ашер  
+                                option Радиант   
+                                option Сердце    
+                          .div-table-cell(valign="top")
+                            .form-group
+                              label Группа огранки
+                              select.form-control.width--165px
+                                option(selected disabled) Выберите
+                                option Красный
+                                option Синий
+                                option Зеленый
+                                option Пурпурный
+                                option Черный
+                                option Коричневый
+                        .div-table
+                          .div-table-cell(valign="top")
+                            .form-group
+                              label Cut grade
+                              select.form-control
+                                option(selected disabled) Выберите
+                                option Круглый бриллиант
+                                option Маркиз
+                                option Груша 
+                                option Овал 
+                                option Принцесса 
+                                option Изумруд 
+                                option Ашер  
+                                option Радиант   
+                                option Сердце    
+                          .div-table-cell(valign="top")
+                            .width--165px
+                        button(type="button").btn СЛЕДУЮЩИЙ ШАГ
+                        
+                    .row__col-1 &nbsp;
+    
+        .clear50
+        
+        .content__profile.content__profile--width100per.no--m
+          .content__profile-head
+            ul.nav-tab.nav-tab--v2
+              li.active
+                span.color--black 1. Категория
+              li.active
+                span 2. Описание
+              li
+                span 3. Контакты
+
+          .content__profile-wrapper
+            .tab-content
+              .tab-pane.active
+                form(action="#")
+                  
+                  .row.row--m30
+                    .row__col-1 &nbsp;
+                    .row__col-5
+                      
+                      fieldset
+                        .form-group
+                          label Заголовок
+                          input(type="text").form-control
+                        .form-group
+                          label Подраздел
+                          select.form-control
+                            option Драгоценные металлы
+                            option Драгоценные металлы
+                            option Драгоценные металлы
+                            option Драгоценные металлы
+                            option Драгоценные металлы
+                            option Драгоценные металлы
+                            option Драгоценные металлы
+                        .form-group
+                          label Месторасположение
+                          select.form-control
+                            option(selected) Укажите месторасположение
+                            option Месторасположение
+                            option Месторасположение
+                            option Месторасположение
+                            option Месторасположение
+                          .clear10
+                          p.form-group__text Расположение определяется автоматически исходя из ваших настроек профиля. Если расположение определилось не правильно укажите его вручную
+                      
+                    .row__col-1 &nbsp;
+                    .row__col-4
+                      fieldset
+                        .form-group
+                          label Описание
+                          textarea(rows="8" placeholder="Введите описание...").form-control
+                        .form-group
+                          label Изображение
+                          .div-table
+                            .div-table-cell(valign="top").width--100perc
+                              p 1  
+                            .div-table-cell(valign="top")
+                              p.form-group__text.width--165px Изображение должно быть качественным, соответствовать тексту объявления и содержимому.
+                      button(type="button").btn СЛЕДУЮЩИЙ ШАГ  
+                        
+                    .row__col-1 &nbsp;
+        
+        .clear50
+        
+        .content__profile.content__profile--width100per.no--m
+          .content__profile-head
+            ul.nav-tab.nav-tab--v2
+              li.active
+                span.color--black 1. Категория
+              li.active
+                span.color--black 2. Описание
+              li.active
+                span 3. Контакты
+
+          .content__profile-wrapper
+            .tab-content
+              .tab-pane.active
+                form(action="#")
+                  
+                  .row.row--m30
+                    .row__col-1 &nbsp;
+                    .row__col-5
+                      
+                      fieldset
+                        .form-group
+                          label Месторасположение
+                          select.form-control
+                            option Выберите город
+                            option Выберите город
+                            option Выберите город
+                            option Выберите город
+                            option Выберите город
+                            option Выберите город
+                        .form-group
+                          label Имя продавца
+                          input(type="text" placeholder="Иван Иванович Петров").form-control
+                        
+                        p.form-group__text
+                          a(href="#!").link.link--black
+                            +iconEye
+                            | Предварительный просмотр объявление
+                        
+                        button(type="button").btn.btn--color разместить объявление
+                          
+                    .row__col-5
+                      
+                      fieldset
+                        .form-group
+                          label Email адрес продавца
+                          input(type="text" placeholder="test@test.ru").form-control
+                        .form-group
+                          label Номер телефона 
+                          input(type="text" placeholder="+38050 485 24 15").form-control
+                        
+                    .row__col-1 &nbsp;
+          
+        
+        .clear50
+        
+        .content__profile.content__profile--width100per.no--m
+          .content__profile-head
+            ul.nav-tab.nav-tab--v2
+              li.active
+                span.color--black 1. Категория
+              li.active
+                span.color--black 2. Описание
+              li.active
+                span 3. Контакты
+
+          .content__profile-wrapper
+            .tab-content
+              .tab-pane.active
+                form(action="#")
+                  
+                  .row.row--m30
+                    .row__col-1 &nbsp;
+                    .row__col-5
+                      
+                      fieldset
+                        p(style="margin-bottom: 13px;") Контактные данные заполняются автоматически исходя из ваших параметров профиля. Для их переопределения в данном объявлении просто укажите необходимые данные в полях ниже:
+                        .form-group
+                          label Имя продавца
+                          input(type="text" placeholder="Иван Иванович Петров").form-control
+                        p.form-group__text
+                          a(href="#!").link.link--black
+                            +iconEye
+                            | Предварительный просмотр объявление
+                        
+                        button(type="button").btn.btn--color разместить объявление
+                          
+                    .row__col-5
+                      
+                      fieldset
+                        .form-group
+                          label Email адрес продавца
+                          input(type="text" placeholder="test@test.ru").form-control
+                        .form-group
+                          label Номер телефона 
+                          input(type="text" placeholder="+38050 485 24 15").form-control
+                        
+                        
+                    .row__col-1 &nbsp;
+    
+        .clear50
+          
+        // Активация пароля
+        .content__profile
+          .content__profile-head
+            ul.nav-tab.nav-tab--once
+              li(role='presentation')
+                span Спасибо за публикацию объявления,
+                  br
+                  | оно скоро появится на сервисе после модерации.
+
+          .content__profile-wrapper
+            .tab-content
+              .tab-pane.active.text-center
+                p Подать 
+                  a(href="add-advert-26102018.html") еще объявление
+                p.no--m Назад на 
+                  a(href="index.html") главную страницу
+          
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    //- script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

@@ -1,0 +1,89 @@
+/* buttons */
+
+.btn
+  display: inline-block
+  padding: 0 19px
+  margin-bottom: 0
+  font-size: 14px
+  font-weight: 400
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  touch-action: manipulation
+  cursor: pointer
+  user-select: none
+  background:
+    image: none
+    color: transparent
+  border: 2px solid $link-color
+  color: $link-color
+  border-radius: 30px
+  height: 48px
+  line-height: 47px
+  text-decoration: none
+  text-transform: uppercase
+  min-width: 233px
+  transition: all 0.35s
+  &:hover
+    outline: none
+    color: $color-white
+    background-color: $link-color
+    border-color: $link-color
+    text-decoration: none
+  &:active, &:focus
+    outline: none !important
+    text-decoration: none
+
+  &--color
+    color: $color-white
+    background-color: $link-color
+    border-color: $link-color
+    &:hover
+      color: $color-white
+      background-color: $link-color-dark
+      border-color: $link-color-dark
+
+  &--block
+    display: block
+    width: 100%
+    max-width: 288px
+  &--center
+    margin: 0 auto 24px
+
+  &--default
+    background: none
+    color: $primary-color
+    min-width: inherit
+    border-radius: 0
+    border: 0
+    padding: 0 5px
+    line-height: 49px
+    text-transform: none
+    &:hover, &:active, &:focus
+      background: none
+      color: $primary-color
+      border: 0
+      box-shadow: none
+
+  .iconArrowLeft2
+    margin-right: 5px
+    display: inline-block
+    vertical-align: -7px
+  .iconMenus
+    vertical-align: -4px
+    display: inline-block
+    margin: 0 5px
+  .iconClose
+    vertical-align: -7px
+
+  &--f16
+    font-size: 16px
+
+  .iconTrash
+    vertical-align: -7px
+    .path-fill
+      fill: rgba($color-black,.54)
+  .iconStop
+    vertical-align: -7px
+  .iconStar
+    vertical-align: -5px

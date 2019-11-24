@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Каталог - Brilicom</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=1176, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
+        <div id="popup" class="popup mfp-hide">
+            <div class="popup__header">
+                <div class="popup__close">
+                            <svg viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg" class="iconClose">
+                                <path d="M7.071 21.213L21.213 7.071M7.071 7.071l14.142 14.142" class="path-stroke"></path>
+                            </svg>
+                </div>
+            </div>
+            <div class="popup__wrapper text-center">
+                <div class="popup__wrapper-title">Войдите, чтобы наблюдать за понравившимся <br>Вам товарами</div><a href="enter-to-profile.html" class="btn btn--color">Авторизация</a>
+                <div class="clear55"></div>
+                <p>Или создать <a href="enter-to-profile.html">учетную запись</a></p>
+            </div>
+            <div class="popup__footer"><a href="index.html">Нет спасибо</a></div>
+        </div>
+        <!-- Header-->
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <ul>
+                        <li><a href="help.html">помощь</a></li>
+                        <li><a href="blog.html">блог</a></li>
+                        <li><a href="manual.html">справочник фирм</a></li>
+                        <li><a href="calendar.html">календарь выставок</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="header__wrapper">
+                    <div>
+                        <div class="header__logo"><a href="index.html"><img src="./img/logo.png" alt=""></a></div>
+                    </div>
+                    <div>
+                        <div class="header__profile">
+                            <div class="header__profile-icon">
+                                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="iconUser">
+                                            <path d="M12 1c6.1 0 11 4.9 11 11s-4.9 11-11 11S1 18.1 1 12 5.9 1 12 1zm0-1C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0z" class="path-fill"></path>
+                                            <path d="M21 19.1c-.2-.1-.3-.2-.5-.2-.5-.1-3.5-1.1-3.6-1.2-.1 0-1.9-1.9-2-2-.4-.4-.1-.7.3-1 .4-.3.5-1.3.7-1.9 0-.1.1-.3.3-.3.1 0 .2-.1.3-.2.1-.4.6-2.4.6-2.5 0-.2-.1-.3-.2-.3s-.2-.1-.2-.3c0-.5 0-2.6-.2-3.2-.3-.7-.9-1.1-1.6-1.5-.6-.3-1.2-.4-1.8-.6-1.3-.3-2.4 0-3.4.9-.2 0-.2.1-.3.2-.1.3-.3.5-.5.6-.8.5-.4 3-.4 3.3 0 .2 0 .3-.2.4-.2 0-.3.2-.3.4s.7 2.7.9 2.8c.1 0 .2.1.2.3 0 .2.4 1.6.7 1.9.3.3.7.7 0 1.3-.1.1-1.9 1.8-2.3 1.9-.2.1-3.8 1.1-4.4 1.6" class="path-stroke"></path>
+                                        </svg>
+                            </div><a href="enter-to-profile.html" class="header__profile-link">Авторизация</a>
+                        </div>
+                    </div>
+                    <div><a href="add-advert-26102018.html" class="btn btn--color">добавить объявление</a></div>
+                    <div>
+                        <div class="header__search">
+                            <div class="header__search-btn">
+                                        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="iconSearch">
+                                            <path d="M7.48 1c1.8 0 3.6.8 4.8 2.1 2.4 2.6 2.3 6.8-.4 9.2-1.2 1.1-2.8 1.7-4.4 1.7-1.8 0-3.6-.8-4.8-2.1-2.4-2.6-2.2-6.7.4-9.2C4.28 1.6 5.88 1 7.48 1zm0-1c-1.8 0-3.6.7-5.1 2-3 2.8-3.2 7.6-.4 10.6 1.5 1.6 3.5 2.4 5.5 2.4 1.8 0 3.6-.7 5.1-2 3-2.8 3.2-7.6.4-10.6C11.48.8 9.48 0 7.48 0z" class="path-fill"></path>
+                                            <path d="M12.28 11.9l-.8.7 6.8 7.4.8-.7-6.8-7.4z" class="path-stroke"></path>
+                                        </svg>
+                            </div>
+                            <div class="header__search-form">
+                                <form method="post">
+                                    <input type="text" placeholder="Что вы ищите?" class="header__search-input">
+                                    <button type="button" class="hidden">Найти</button>
+                                </form>
+                                <div class="header__search-btn">
+                                            <svg viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg" class="iconClose">
+                                                <path d="M7.071 21.213L21.213 7.071M7.071 7.071l14.142 14.142" class="path-stroke"></path>
+                                            </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="container">
+                <div class="content__wrapper">
+                    <div class="breadcrumbs breadcrumbs--document">
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><span>Бриллианты</span></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="row__col-3">
+                            <div class="content__row-left">
+                                <div class="content__head">
+                                    <div class="h1">Фильтр</div>
+                                </div>
+                                <div class="filter">
+                                    <form action="#!">
+                                        <div class="filter__block is-hidden">
+                                            <div class="filter__block-head">
+                                                <div class="span">Категории продаж
+                                                            <svg viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg" class="iconArrowFilter">
+                                                                <path d="M7 7l-.707.707a1 1 0 0 0 1.414 0L7 7zM.293 1.707l6 6 1.414-1.414-6-6L.293 1.707zm7.414 6l6-6L12.293.293l-6 6 1.414 1.414z" class="path-fill"></path>
+                                                            </svg>
+                                                </div>
+                                                <div class="div"><img src="./img/category/category-1.svg" alt=""><span>Бриллианты</span></div>
+                                            </div>
+                                            <div class="filter__block-wrapper">
+                                                <ul>
+                                                    <li class="filter__block-li"><a href="catalog.html"><img src="./img/category/category-1.svg" alt=""><span>Бриллианты</span></a></li>
+                                                    <li class="filter__block-li"><a href="catalog.html"><img src="./img/category/category-3.svg" alt=""><span>Драгоценный камень</span></a></li>
+                                                    <li class="filter__block-li"><a href="catalog.html"><img src="./img/category/category-4.svg" alt=""><span>Бриллиант в изделии</span></a></li>
+                                                    <li class="filter__block-li"><a href="catalog.html"><img src="./img/category/category-5.svg" alt=""><span>Драгоценный камень в изделии</span></a></li>
+                                                    <li class="filter__block-li"><a href="catalog.html"><img src="./img/category/category-6.svg" alt=""><span>Ювелирные изделия без камней</span></a></li>
+                                                    <li class="filter__block-li"><a href="catalog.html"><img src="./img/category/category-7.svg" alt=""><span>Часы</span></a></li>
+                                                    <li class="filter__block-li"><a href="catalog.html"><img src="./img/category/category-12.svg" alt=""><span>Бижутерия</span></a></li>
+                                                    <li class="filter__block-li"><a href="catalog.html"><img src="./img/category/category-11.svg" alt=""><span>Серебряные изделия</span></a></li>
+                                                    <li class="filter__block-li"><a href="catalog.html"><img src="./img/category/category-8.svg" alt=""><span>Эксклюзивные подарки</span></a></li>
+                                                    <li class="filter__block-li"><a href="catalog.html"><img src="./img/category/category-10.svg" alt=""><span>Старинные украшения</span></a></li>
+                                                    <li class="filter__block-li"><a href="catalog.html"><img src="./img/category/category-13.svg" alt=""><span>Брендовые изделия</span></a></li>
+                                                    <li class="filter__block-li"><a href="catalog.html"><img src="./img/category/category-9.svg" alt=""><span>Монеты и слитки</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="filter__block">
+                                            <div class="filter__block-head">Цена</div>
+                                            <div class="filter__block-wrapper">
+                                                <div class="filter__block-range">
+                                                    <div id="filter__range"></div>
+                                                </div>
+                                                <div class="filter__block-price">
+                                                    <div>
+                                                        <input id="priceMin" type="text" value="5000">
+                                                    </div>
+                                                    <div>
+                                                        <input id="priceMax" type="text" value="15000">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__block is-hidden">
+                                            <div class="filter__block-head">
+                                                <div class="span">По региону
+                                                            <svg viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg" class="iconArrowFilter">
+                                                                <path d="M7 7l-.707.707a1 1 0 0 0 1.414 0L7 7zM.293 1.707l6 6 1.414-1.414-6-6L.293 1.707zm7.414 6l6-6L12.293.293l-6 6 1.414 1.414z" class="path-fill"></path>
+                                                            </svg>
+                                                </div>
+                                            </div>
+                                            <div class="filter__block-wrapper">
+                                                <div class="has-hide">
+                                                    <div class="form-checkbox form-checkbox--no-checkbox">
+                                                        <input type="checkbox" id="checkbox31"><span>
+                                                                    <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                        <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                    </svg></span>
+                                                        <label for="checkbox31">Киев</label><sup>1280</sup>
+                                                    </div>
+                                                    <div class="form-checkbox form-checkbox--no-checkbox">
+                                                        <input type="checkbox" id="checkbox32"><span>
+                                                                    <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                        <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                    </svg></span>
+                                                        <label for="checkbox32">Львов</label><sup>580</sup>
+                                                    </div>
+                                                    <div class="form-checkbox form-checkbox--no-checkbox">
+                                                        <input type="checkbox" id="checkbox33"><span>
+                                                                    <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                        <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                    </svg></span>
+                                                        <label for="checkbox33">Днепр</label><sup>510</sup>
+                                                    </div>
+                                                    <div class="form-checkbox form-checkbox--no-checkbox">
+                                                        <input type="checkbox" id="checkbox34"><span>
+                                                                    <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                        <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                    </svg></span>
+                                                        <label for="checkbox34">Харьков</label><sup>450</sup>
+                                                    </div>
+                                                    <div class="form-checkbox form-checkbox--no-checkbox">
+                                                        <input type="checkbox" id="checkbox35"><span>
+                                                                    <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                        <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                    </svg></span>
+                                                        <label for="checkbox35">Одесса</label><sup>80</sup>
+                                                    </div>
+                                                    <div class="form-checkbox form-checkbox--no-checkbox">
+                                                        <input type="checkbox" id="checkbox36"><span>
+                                                                    <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                        <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                    </svg></span>
+                                                        <label for="checkbox36">Николаев</label><sup>56</sup>
+                                                    </div>
+                                                    <div class="form-checkbox form-checkbox--no-checkbox">
+                                                        <input type="checkbox" id="checkbox37"><span>
+                                                                    <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                        <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                    </svg></span>
+                                                        <label for="checkbox37">Ужгород</label><sup>48</sup>
+                                                    </div>
+                                                    <div class="form-checkbox form-checkbox--no-checkbox">
+                                                        <input type="checkbox" id="checkbox38"><span>
+                                                                    <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                        <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                    </svg></span>
+                                                        <label for="checkbox38">Запорожье</label><sup>45</sup>
+                                                    </div>
+                                                    <div class="form-checkbox form-checkbox--no-checkbox">
+                                                        <input type="checkbox" id="checkbox39"><span>
+                                                                    <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                        <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                    </svg></span>
+                                                        <label for="checkbox39">Сумы</label><sup>32</sup>
+                                                    </div>
+                                                    <div class="form-checkbox form-checkbox--no-checkbox">
+                                                        <input type="checkbox" id="checkbox391"><span>
+                                                                    <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                        <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                    </svg></span>
+                                                        <label for="checkbox391">Чернигов</label><sup>31</sup>
+                                                    </div>
+                                                    <div class="form-checkbox form-checkbox--no-checkbox">
+                                                        <input type="checkbox" id="checkbox392"><span>
+                                                                    <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                        <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                    </svg></span>
+                                                        <label for="checkbox392">Полтава</label><sup>28</sup>
+                                                    </div>
+                                                    <div class="form-checkbox form-checkbox--no-checkbox">
+                                                        <input type="checkbox" id="checkbox393"><span>
+                                                                    <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                        <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                    </svg></span>
+                                                        <label for="checkbox393">Кременчуг</label><sup>25</sup>
+                                                    </div>
+                                                    <div class="form-checkbox form-checkbox--no-checkbox">
+                                                        <input type="checkbox" id="checkbox394"><span>
+                                                                    <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                        <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                    </svg></span>
+                                                        <label for="checkbox394">Херсон</label><sup>21</sup>
+                                                    </div>
+                                                    <div class="form-checkbox form-checkbox--no-checkbox">
+                                                        <input type="checkbox" id="checkbox395"><span>
+                                                                    <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                        <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                    </svg></span>
+                                                        <label for="checkbox395">Тернополь</label><sup>5</sup>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__block is-hidden">
+                                            <div class="filter__block-head">
+                                                <div class="span">Категории
+                                                            <svg viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg" class="iconArrowFilter">
+                                                                <path d="M7 7l-.707.707a1 1 0 0 0 1.414 0L7 7zM.293 1.707l6 6 1.414-1.414-6-6L.293 1.707zm7.414 6l6-6L12.293.293l-6 6 1.414 1.414z" class="path-fill"></path>
+                                                            </svg>
+                                                </div>
+                                            </div>
+                                            <div class="filter__block-wrapper">
+                                                <div class="form-checkbox form-checkbox--color">
+                                                    <input type="checkbox" id="checkbox41"><span>
+                                                                <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                    <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                </svg></span>
+                                                    <label for="checkbox41">Серьги</label>
+                                                </div>
+                                                <div class="form-checkbox form-checkbox--color">
+                                                    <input type="checkbox" id="checkbox42"><span>
+                                                                <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                    <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                </svg></span>
+                                                    <label for="checkbox42">Кольцо</label>
+                                                </div>
+                                                <div class="form-checkbox form-checkbox--color">
+                                                    <input type="checkbox" id="checkbox43"><span>
+                                                                <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                    <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                </svg></span>
+                                                    <label for="checkbox43">Колье</label>
+                                                </div>
+                                                <div class="form-checkbox form-checkbox--color">
+                                                    <input type="checkbox" id="checkbox44"><span>
+                                                                <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                    <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                </svg></span>
+                                                    <label for="checkbox44">Кулоны</label>
+                                                </div>
+                                                <div class="form-checkbox form-checkbox--color">
+                                                    <input type="checkbox" id="checkbox45"><span>
+                                                                <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                    <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                </svg></span>
+                                                    <label for="checkbox45">Браслеты</label>
+                                                </div>
+                                                <div class="form-checkbox form-checkbox--color">
+                                                    <input type="checkbox" id="checkbox46"><span>
+                                                                <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                    <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                </svg></span>
+                                                    <label for="checkbox46">Цепи</label>
+                                                </div>
+                                                <div class="form-checkbox form-checkbox--color">
+                                                    <input type="checkbox" id="checkbox47"><span>
+                                                                <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                    <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                </svg></span>
+                                                    <label for="checkbox47">Другое</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__block is-hidden">
+                                            <div class="filter__block-head">
+                                                <div class="span">Опции
+                                                            <svg viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg" class="iconArrowFilter">
+                                                                <path d="M7 7l-.707.707a1 1 0 0 0 1.414 0L7 7zM.293 1.707l6 6 1.414-1.414-6-6L.293 1.707zm7.414 6l6-6L12.293.293l-6 6 1.414 1.414z" class="path-fill"></path>
+                                                            </svg>
+                                                </div>
+                                            </div>
+                                            <div class="filter__block-wrapper">
+                                                <div class="form-checkbox form-checkbox--color">
+                                                    <input type="checkbox" id="checkbox51"><span>
+                                                                <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                    <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                </svg></span>
+                                                    <label for="checkbox51">Со скидкой</label>
+                                                </div>
+                                                <div class="form-checkbox form-checkbox--color">
+                                                    <input type="checkbox" id="checkbox52"><span>
+                                                                <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                    <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                </svg></span>
+                                                    <label for="checkbox52">Новое</label>
+                                                </div>
+                                                <div class="form-checkbox form-checkbox--color">
+                                                    <input type="checkbox" id="checkbox53"><span>
+                                                                <svg viewBox="0 0 8 6" xmlns="http://www.w3.org/2000/svg" class="iconCheck">
+                                                                    <path d="M1 2.714L2.714 5 7 1" class="path-stroke"></path>
+                                                                </svg></span>
+                                                    <label for="checkbox53">С пробегом</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row__col-9">
+                            <div class="content__row-center">
+                                <div class="content__head">
+                                    <div class="h1">Бриллианты</div>
+                                </div>
+                                <div class="sorting">
+                                    <div><span class="sorting__span">Сортировать:</span></div>
+                                    <div><a href="#!" class="sorting__link is-active">дешевые</a></div>
+                                    <div><a href="#!" class="sorting__link">дорогие</a></div>
+                                    <div><a href="#!" class="sorting__link">популярные </a></div>
+                                </div>
+                                <div class="catalog no--p">
+                                    <div class="catalog__wrapper catalog__wrapper--row4"> 
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-no-photo.png" alt="Кольцо с бриллиантами">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Кольцо с бриллиантами</a></div>
+                                                        <div class="catalog__block-price">10 000 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block catalog__block--paid">
+                                                    <div class="catalog__block-img">
+                                                        <div class="catalog__block-sertificate">
+                                                                    <svg viewBox="0 0 21 33" xmlns="http://www.w3.org/2000/svg" class="iconSertificate">
+                                                                        <path d="M4 17v14l6.5-2.8L17 31V17" class="path-stroke"></path>
+                                                                        <circle cx="10.5" cy="10.5" r="9.5" class="path-stroke"></circle>
+                                                                        <circle cx="10.5" cy="10.5" r="4.5" class="path-stroke"></circle>
+                                                                    </svg>
+                                                        </div>
+                                                        <div class="catalog__block-checked">
+                                                                    <svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" class="iconLike">
+                                                                        <path d="M20 8.4c-.5-.5-1.2-.7-1.9-.7h-4V4.4c0-1.3-.4-2.3-1.2-2.9-1.3-.9-3-.4-3-.4-.4.2-.6.4-.6.7v3.4c0 1-.5 2.3-1.5 3-.7.6-1.5.8-1.6.9h-.1c-.2-.3-.6-.5-1-.5H2.4C1.6 8.6 1 9.2 1 10v8.7c0 .8.6 1.4 1.4 1.4h2.7c.3 0 .7-.1.9-.3a3 3 0 0 0 2.1.8h8.4c.8 0 1.6-.2 2.1-.6.7-.5 1.2-1.3 1.3-2.2l1.1-6.7c.1-1-.3-2-1-2.7zM6.4 9.2v11" class="path-stroke"></path>
+                                                                    </svg>
+                                                        </div>
+                                                        <div class="catalog__block-top">
+                                                                    <svg viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg" class="iconStar">
+                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.18 19l-1.635-7.029L20 7.244l-7.191-.617L10 0 7.191 6.627 0 7.244l5.455 4.727L3.82 19 10 15.272 16.18 19z" class="path-fill"></path>
+                                                                    </svg>
+                                                        </div>
+                                                        <div class="catalog__block-sale">-25%</div><a href="product-26102018.html"></a><img src="./img/catalog/catalog-13.png" alt="Серебрянные Шармы Пандора, S925">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Серебрянные Шармы Пандора, S925</a></div>
+                                                        <div class="catalog__block-price">7 999 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-14.png" alt="Pandora браслет,оригинал">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Pandora браслет,оригинал</a></div>
+                                                        <div class="catalog__block-price">11 000 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-no-photo.png" alt="Бриллиант">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Бриллиант</a></div>
+                                                        <div class="catalog__block-price">1 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-15.png" alt="Эксклюзивное колье с подвеской">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Эксклюзивное колье с подвеской</a></div>
+                                                        <div class="catalog__block-price">399 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-16.png" alt="Золотые серьги 5,73г">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Золотые серьги 5,73г</a></div>
+                                                        <div class="catalog__block-price">1 000 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-11-6.png" alt="Великолепная подвеска с бриллиантами">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Великолепная подвеска с бриллиантами</a></div>
+                                                        <div class="catalog__block-price">1 500 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-17.png" alt="Серьги золотые с топазами">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Серьги золотые с топазами</a></div>
+                                                        <div class="catalog__block-price">3 000 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-18.png" alt="Бриллиант">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Бриллиант</a></div>
+                                                        <div class="catalog__block-price">2 600 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-19.png" alt="Часы Emporio Armani Silicone. Хит продаж !!!">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Часы Emporio Armani Silicone. Хит продаж !!!</a></div>
+                                                        <div class="catalog__block-price">18 100 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-20.png" alt="Ожерелье из жемчуга">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Ожерелье из жемчуга</a></div>
+                                                        <div class="catalog__block-price">1 460 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-21.png" alt="Колье из натуральной бирюзы и кораллов">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Колье из натуральной бирюзы и кораллов</a></div>
+                                                        <div class="catalog__block-price">96 250 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-22.png" alt="Колье и браслет серебро 925, украшенные натурально...">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Колье и браслет серебро 925, украшенные натурально...</a></div>
+                                                        <div class="catalog__block-price">233 750 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-23.png" alt="Колье, серьги и кольцо серебро 925">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Колье, серьги и кольцо серебро 925</a></div>
+                                                        <div class="catalog__block-price">0 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-24.png" alt="Перидот. Хризолит.">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Перидот. Хризолит.</a></div>
+                                                        <div class="catalog__block-price">800 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-25.png" alt="ЮВЕЛИРНЫЕ УКРАШЕНИЯ СЕРЕБРА С ЗОЛОТОМ. Хит продаж...">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">ЮВЕЛИРНЫЕ УКРАШЕНИЯ СЕРЕБРА С ЗОЛОТОМ. Хит продаж...</a></div>
+                                                        <div class="catalog__block-price">4 700 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-26.png" alt="Кольцо damiani (копия)">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Кольцо damiani (копия)</a></div>
+                                                        <div class="catalog__block-price">16 000 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-27.png" alt="Браслет золотой с бриллиантами">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Браслет золотой с бриллиантами</a></div>
+                                                        <div class="catalog__block-price">70 000 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-no-photo.png" alt="Бриллианты 2.5">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Бриллианты 2.5</a></div>
+                                                        <div class="catalog__block-price">18 200 грн.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog__block">
+                                                    <div class="catalog__block-img"><a href="product-26102018.html"></a><img src="./img/catalog/catalog-29.png" alt="Продам браслет 750 проба">
+                                                    </div>
+                                                    <div class="catalog__block-content">
+                                                        <div class="catalog__block-title"><a href="product-26102018.html">Продам браслет 750 проба</a></div>
+                                                        <div class="catalog__block-price">8 550 грн.</div>
+                                                    </div>
+                                                </div>
+                                    </div>
+                                </div>
+                                <div class="clear15"></div>
+                                        <div class="pagination">
+                                            <ul>
+                                                <li disabled><span>
+                                                                <svg viewBox="0 0 23 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowLeft">
+                                                                    <path d="M22 6H2" class="path-stroke"></path>
+                                                                    <path d="M7 1L1 6l6 5" stroke-linejoin="round" class="path-stroke"></path>
+                                                                </svg></span></li>
+                                                <li class="active"><span>1</span></li>
+                                                <li><a href="#!">2</a></li>
+                                                <li><a href="#!">3</a></li>
+                                                <li><a href="#!">
+                                                                <svg viewBox="0 0 23 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowRight">
+                                                                    <path d="M1 6h20" class="path-stroke"></path>
+                                                                    <path d="M16 1l6 5-6 5" stroke-linejoin="round" class="path-stroke"></path>
+                                                                </svg></a></li>
+                                            </ul>
+                                        </div>
+                                <div class="clear45"></div>
+                                        <div class="content__seo">
+                                            <div class="content__seo-wrapper">
+                                                <p style="text-align: center">Ювелирная площадка Украины Brilli – все виды драгоценных изделий и камней</p>
+                                                <p>Выбирая подарок близким, а порой и самому себе, нередко люди обращают внимание именно на ювелирные изделия. Драгоценности – это не только солидный и изысканный подарок, а и надежная денежная инвестиция. Для тех, кто ценит свое время была создана площадка по продаже и покупке ювелирных изделий, драгоценных камней и украшений.</p>
+                                                <p>Как продать и купить?</p>
+                                                <p>Ювелирная площадка Украины представляет собой виртуальный магазин, где собраны самые разнообразные драгоценные товары и украшения. Здесь можно приобрести:</p>
+                                                <ul>
+                                                    <li>серьги;</li>
+                                                    <li>браслеты мужские и женские;</li>
+                                                    <li>часы (в том числе раритетные);</li>
+                                                    <li>цепочки и цепи – колье;</li>
+                                                    <li>комплекты украшений.</li>
+                                                </ul>
+                                                <p>Купить ювелирные изделия на нашей площадке может любой желающий. Чтобы найти товар, задайте параметры поиска на сайте и выбирайте. Для приобретения понравившегося изделия достаточно связаться с продавцом (внимание на контактные данные, указанные на сайте).</p>
+                                                <p>Если вы хотите разметить объявление, сначала понадобится зарегистрироваться.</p>
+                                                <p>Для успешной продажи ювелирных изделий в Украине используйте некоторые советы:</p>
+                                                <ul>
+                                                    <li>Подробно описывайте ювелирное изделие – важно указать все его характеристики (проба металла, размер, наличие драгоценных камней и т.д.).</li>
+                                                    <li>Сделайте подробные и качественные фотографии с разных ракурсов.</li>
+                                                    <li>Если украшение определенного бренда, раритетное или коллекционное – укажите это.</li>
+                                                    <li>Разместите информацию о наличии или отсутствии сертификата гомологической экспертизы.</li>
+                                                    <li>Укажите стоимость товара и возможен ли торг.</li>
+                                                    <li>Не забудьте указать контакты для быстрой связи.</li>
+                                                    <li>Безопасность и гарантии</li>
+                                                </ul>
+                                                <p>Торговая площадка Brilli создана для надежной продажи и покупки ювелирных изделий в Украине. При создании доски объявлений ювелирных изделия мы позаботились о многих важных вещах:</p>
+                                                <ul>
+                                                    <li>Продавать без посредников и скрытых комиссий может каждый желающий.</li>
+                                                    <li>После сделки можно оставить подробный отзыв о продавце и купленном товаре.</li>
+                                                    <li>Покупателям обеспечен легкий поиск, огромный выбор украшений и драгоценностей.</li>
+                                                    <li>Возможность приобретения уникальных изделий по выгодной цене.</li>
+                                                    <li>Возможность размещать свою рекламу на нашей торговой площадке.</li>
+                                                    <li>Оптимизированный поиск по нужным разделам (драгоценные металлы, камни, ювелирные изделия и т.д.).</li>
+                                                </ul>
+                                                <p>Ювелирная площадка Украины создана с пониманием, как обеспечить виртуальный комфорт и надежность при покупке или продаже ювелирных украшений. При разработке данного контента были учтены все риски и максимально сведены к нулю.</p>
+                                            </div>
+                                            <div class="content__seo-btn"><a href="#!" class="btn">Подробнее</a></div>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div>
+                        <div class="footer__logo"><img src="./img/footer-logo.png" alt=""></div>
+                        <div class="social"><a href="#!" target="_blank">
+                                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                            <style>.st1{fill:#fff}</style>
+                                            <g id="Background_1_">
+                                                <radialgradient id="SVGID_1_" cx="50.158" cy="15.105" gradientTransform="matrix(.05234 -.9986 .8488 .04449 12 498.8)" gradientUnits="userSpaceOnUse" r="684.445">
+                                                    <stop offset="0" stop-color="#fed576"></stop>
+                                                    <stop offset=".263" stop-color="#f47133"></stop>
+                                                    <stop offset=".609" stop-color="#bc3081"></stop>
+                                                    <stop offset="1" stop-color="#4c63d2"></stop>
+                                                </radialgradient>
+                                                <path d="M18.8 250.1v12.8C22.1 385.3 120.7 483.6 238 492.8h36.1c118-9.3 214.9-108.5 218.1-230.1v-12.6C489 126.3 388.7 25.9 267.9 19.7c-130-6.6-245.5 97.7-249.1 230.4z" fill="url(#SVGID_1_)"></path>
+                                            </g>
+                                            <g id="Symbol">
+                                                <path d="M256.6 138.3c37.7 0 42.2.1 57.1.8 13.8.6 21.2 3 26.2 4.9 6.6 2.6 11.3 5.7 16.2 10.7 4.9 5 8 9.8 10.6 16.5 1.9 5.1 4.2 12.7 4.9 26.7.7 15.2.8 19.7.8 58.1s-.1 42.9-.8 58.1c-.6 14-2.9 21.6-4.9 26.7-2.6 6.7-5.6 11.5-10.6 16.5-4.9 5-9.6 8.1-16.2 10.7-5 2-12.5 4.3-26.2 4.9-14.9.7-19.4.8-57.1.8s-42.2-.1-57.1-.8c-13.8-.6-21.2-3-26.2-4.9-6.6-2.6-11.3-5.7-16.2-10.7-4.9-5-8-9.8-10.6-16.5-1.9-5.1-4.2-12.7-4.9-26.7-.7-15.2-.8-19.7-.8-58.1s.1-42.9.8-58.1c.6-14 2.9-21.6 4.9-26.7 2.6-6.7 5.6-11.5 10.6-16.5 4.9-5 9.6-8.1 16.2-10.7 5-2 12.5-4.3 26.2-4.9 14.9-.6 19.4-.8 57.1-.8m0-25.9c-38.4 0-43.2.2-58.2.9s-25.3 3.1-34.3 6.7c-9.3 3.7-17.2 8.6-25 16.6-7.9 8-12.7 16-16.3 25.5-3.5 9.1-5.9 19.6-6.6 34.9-.7 15.3-.8 20.2-.8 59.2s.2 43.9.8 59.2c.7 15.3 3.1 25.7 6.6 34.9 3.6 9.4 8.4 17.5 16.3 25.5s15.7 12.9 25 16.6c9 3.6 19.3 6 34.3 6.7 15.1.7 19.9.9 58.2.9s43.2-.2 58.2-.9 25.3-3.1 34.3-6.7c9.3-3.7 17.2-8.6 25-16.6 7.9-8 12.7-16 16.3-25.5 3.5-9.1 5.9-19.6 6.6-34.9.7-15.3.8-20.2.8-59.2s-.2-43.9-.8-59.2c-.7-15.3-3.1-25.7-6.6-34.9-3.6-9.4-8.4-17.5-16.3-25.5s-15.7-12.9-25-16.6c-9-3.6-19.3-6-34.3-6.7-15-.7-19.9-.9-58.2-.9z" class="st1"></path>
+                                                <path d="M256.6 182.3c-40.1 0-72.5 33-72.5 73.8s32.5 73.8 72.5 73.8 72.5-33 72.5-73.8-32.5-73.8-72.5-73.8zm0 121.7c-26 0-47.1-21.4-47.1-47.9s21.1-47.9 47.1-47.9 47.1 21.4 47.1 47.9-21.1 47.9-47.1 47.9z" class="st1"></path>
+                                                <ellipse cx="332" cy="179.4" rx="16.9" ry="17.2" class="st1"></ellipse>
+                                            </g>
+                                        </svg></a><a href="#!" target="_blank">
+                                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-rule="evenodd" fill-rule="evenodd">
+                                                <path d="M256.23 512C396.81 512 512 396.81 512 256.23 512 115.184 396.81 0 256.23 0 115.184 0 0 115.184 0 256.23 0 396.81 115.184 512 256.23 512z" fill="#3A5BA2"></path>
+                                                <path d="M224.023 160.085c0-35.372 28.575-63.946 63.938-63.946h48.072v63.946h-32.199c-8.608 0-15.873 7.257-15.873 15.873v32.192h48.072v63.938h-48.072v144.22h-63.938v-144.22h-48.065V208.15h48.065v-48.065z" fill="#FFF"></path>
+                                            </g>
+                                        </svg></a><a href="#!" target="_blank">
+                                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-rule="evenodd" fill-rule="evenodd">
+                                                <path d="M256.23 512C396.81 512 512 396.81 512 256.23 512 115.184 396.81 0 256.23 0 115.184 0 0 115.184 0 256.23 0 396.81 115.184 512 256.23 512z" fill="#1EBEF0"></path>
+                                                <path d="M276.635 137.407c-9.077 6.351-15.873 15.42-20.865 25.396l-2.265 5.898c-1.359 4.077-2.273 8.163-2.726 12.241-.453 2.265-.453 4.085-.906 5.898v3.625l.453 5.898.906 7.71H246.247c-22.224-.453-43.987-5.445-63.04-14.061l-11.334-5.437c-2.265-.914-4.078-2.273-6.351-3.632-12.694-7.257-24.028-16.78-34.012-27.208-6.343-6.804-12.241-14.061-17.232-21.771-5.438 10.437-8.616 22.677-8.616 35.379 0 4.531.453 9.069 1.359 13.6 0 2.265.453 4.085.914 5.898 4.078 13.6 11.334 25.849 21.31 34.918l4.992 4.539-6.351-1.367c-8.163-2.266-16.326-4.984-24.036-8.164.906 16.327 7.257 31.293 17.232 43.089 9.522 11.327 22.224 19.951 36.73 24.028l-16.779.906-14.054-.453c10.429 25.403 34.465 43.995 63.033 46.261-26.302 19.498-58.955 30.388-93.873 30.388 25.849 15.873 55.33 25.841 87.521 27.653h20.865c99.31-5.438 177.77-87.522 177.77-188.199v-9.522c3.625-3.171 7.25-6.343 10.89-9.975 8.608-7.71 16.326-16.78 22.67-26.302-10.437 6.804-22.67 10.429-36.277 10.429h-.906.453c12.232-8.163 21.763-20.404 26.747-34.465-9.515 4.992-20.404 8.616-31.294 11.796l-1.359.453-8.155 1.812c-11.795-12.702-28.575-20.865-47.167-20.865h-1.358c-4.984 0-9.983.453-14.968 1.367-7.249 1.812-14.514 4.984-20.404 8.616l-4.532 3.623z" fill="#FFF"></path>
+                                            </g>
+                                        </svg></a></div>
+                    </div>
+                    <div>
+                        <nav class="footer__nav">
+                            <ul>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Бриллиант</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Сток бриллиантов</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Бриллиант в изделии</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Драгоценный камень</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Драгоценный камень в изделии</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div>
+                        <nav class="footer__nav">
+                            <ul>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Часы</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Бижутерия</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Серебряные изделия</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Эксклюзивные подарки</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Ювелирные изделия без камней</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div>
+                        <nav class="footer__nav">
+                            <ul>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Старинные украшения</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Брендовые изделия</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Монеты и слитки</a></li>
+                                <li><a href="catalog.html">
+                                                <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="iconArrowList">
+                                                    <path d="M1 1l5 5-5 5M6 1l5 5-5 5" class="path-stroke"></path>
+                                                </svg>Распродажа</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="footer__center">
+                    <nav class="footer__links">
+                        <ul>
+                            <li><a href="#!">Оферта</a></li>
+                            <li><a href="#!">Как продавать и покупать</a></li>
+                            <li><a href="help.html">Помощь</a></li>
+                            <li><a href="#!">Реквизиты</a></li>
+                            <li><a href="blog.html">Блог</a></li>
+                            <li><a href="calendar.html">Календарь выставок</a></li>
+                            <li><a href="manual.html">Справочник</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__copyright">Copyright © 2018 Brilicom</div>
+                    <div class="footer__development">Разработка сайта - <a href="#!" target="_blank">DARTC</a></div>
+                </div>
+            </div>
+        </footer><a href="#!" id="link__up" class="link__up">
+                    <svg viewBox="0 0 28 17" xmlns="http://www.w3.org/2000/svg" class="iconArrowUp">
+                        <path d="M2 14.5L14 2l11.5 12.5" class="path-stroke"></path>
+                    </svg></a>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <!-- Load Scripts-->
+        <!-- Footer js-->
+        <script type="application/javascript" src="./js/libs/jquery/jquery-3.3.1.min.js"></script>
+        <script type="application/javascript" src="./js/libs/jquery/jquery-migrate-3.0.1.min.js"></script>
+        <script type="application/javascript" src="./js/libs/plugins-scroll/plugins-scroll.js"></script>
+        <script type="application/javascript" src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script type="application/javascript" src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script type="application/javascript" src="./js/libs/parallax/parallax.min.js"></script>
+        <script type="application/javascript" src="./js/libs/hideShowPassword/hideShowPassword.min.js"></script>
+        <script type="application/javascript" src="./js/libs/slick/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.1/readmore.min.js"></script>
+        <script src="./js/common.js"></script>
+    </body>
+</html>

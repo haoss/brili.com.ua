@@ -1,0 +1,527 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Биржа бриллиантов' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Биржа бриллиантов' + ' - Brilicom' //title страницы для генерации верстки  
+  -var header = 'profile 0'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        .content__wrapper
+          
+          .breadcrumbs.breadcrumbs--document
+            ul
+              li: a(href="index.html") Главная
+              li: span Сток бриллиантов
+              
+          .content__stock
+            .h1 Сток бриллиантов
+            
+            .clear30
+            
+            .stock
+              .stock__menu
+                ul
+                  li.active: span от 0,3 карата
+                  li: a(href="#!") до 0,3 карата
+              .stock__content
+                table.table.text-center.table_diamonds
+                  thead
+                    tr
+                      th.sortable
+                        a(href='#!', data-sort='shape') Огранка
+                      th.sortable.sortActive
+                        a.asc(href='/stock/brilliant.html?sort=-product_weight', data-sort='-product_weight')
+                          | Вес, сt. 
+                          img(src="./img/icons/icon-up.svg", width="10" height="6" alt="")
+                      th.sortable
+                        a(href='/stock/brilliant.html?sort=color_iso', data-sort='color_iso') Color
+                      th.sortable
+                        a(href='/stock/brilliant.html?sort=clarity', data-sort='clarity') Clarity
+                      th.sortable
+                        a(href='/stock/brilliant.html?sort=color', data-sort='color') Цвет
+                      th.sortable
+                        a(href='/stock/brilliant.html?sort=quality', data-sort='quality') Чистота
+                      th.sortable
+                        a(href='/stock/brilliant.html?sort=certificate', data-sort='certificate') Сертификат
+                      th.sortable
+                        a(href='/stock/brilliant.html?sort=price', data-sort='price') Цена, грн.
+                      th.sortable
+                        a(href='/stock/brilliant.html?sort=price', data-sort='price') Price, $
+                      th.sortable
+                        a(href='/stock/brilliant.html?sort=discount', data-sort='discount') Скидка
+                  tbody
+                    tr.in-row(data-key='2344')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.30
+                      td K
+                      td VVS1
+                      td ---
+                      td ---
+                      td
+                        a#certificates-2344.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(2344);', data-certificates='["\/uploads\/certificates\/1536048741hC5d5.jpg"]') GIA
+                      td 13 440.00
+                      td 477.00
+                      td ---
+                    tr.in-row(data-key='2530')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.30
+                      td G
+                      td VVS1
+                      td ---
+                      td ---
+                      td
+                        a#certificates-2530.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(2530);', data-certificates='["\/uploads\/certificates\/1539009400DNMGu.jpg"]') GLES
+                      td 19 700.00
+                      td 700.00
+                      td ---
+                    tr.in-row(data-key='50')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.32
+                      td M
+                      td SI2
+                      td ---
+                      td ---
+                      td
+                        a#certificates-50.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(50);', data-certificates='["\/uploads\/certificates\/2017-12-28-14-52-48_5a44e920cd4e4.jpg"]') GLES
+                      td 7 500.00
+                      td 266.00
+                      td ---
+                    tr.in-row(data-key='2531')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.34
+                      td I
+                      td VS1
+                      td 6
+                      td 5
+                      td ---
+                      td 10 800.00
+                      td 384.00
+                      td
+                        span.table-badge -20%
+                    tr.in-row(data-key='830')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.35
+                      td L
+                      td VVS2
+                      td ---
+                      td ---
+                      td
+                        a#certificates-830.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(830);', data-certificates='["\/uploads\/certificates\/2017-12-28-14-36-29_5a44e54d6381c.jpg"]') GLES
+                      td 12 850.00
+                      td 456.00
+                      td ---
+                    tr.in-row(data-key='2339')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.35
+                      td L
+                      td VS1
+                      td ---
+                      td ---
+                      td
+                        a#certificates-2339.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(2339);', data-certificates='["\/uploads\/certificates\/1535624736q23bR.jpg"]') GLES
+                      td 12 300.00
+                      td 437.00
+                      td ---
+                    tr.in-row(data-key='46')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.37
+                      td J
+                      td VVS2
+                      td ---
+                      td ---
+                      td
+                        a#certificates-46.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(46);', data-certificates='["\/uploads\/certificates\/2017-12-28-16-28-30_5a44ff8e88d58.jpg"]') GLES
+                      td 15 400.00
+                      td 547.00
+                      td ---
+                    tr.in-row(data-key='2340')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.38
+                      td F
+                      td VVS2
+                      td ---
+                      td ---
+                      td
+                        a#certificates-2340.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(2340);', data-certificates='["\/uploads\/certificates\/1535624854qyVH2.jpg"]') GLES
+                      td 24 900.00
+                      td 885.00
+                      td ---
+                    tr.in-row(data-key='1269')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.40
+                      td I
+                      td VS1
+                      td 6
+                      td 4
+                      td ---
+                      td 18 200.00
+                      td 647.00
+                      td ---
+                    tr.in-row(data-key='44')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.42
+                      td M
+                      td SI3
+                      td ---
+                      td ---
+                      td
+                        a#certificates-44.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(44);', data-certificates='["\/uploads\/certificates\/2017-12-28-16-23-14_5a44fe52e9ea3.jpg"]') GLES
+                      td 10 750.00
+                      td 382.00
+                      td ---
+                    tr.in-row(data-key='1268')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.42
+                      td J
+                      td VS2
+                      td 7
+                      td 5
+                      td ---
+                      td 15 400.00
+                      td 547.00
+                      td ---
+                    tr.in-row(data-key='2341')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.44
+                      td E
+                      td VS1
+                      td ---
+                      td ---
+                      td
+                        a#certificates-2341.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(2341);', data-certificates='["\/uploads\/certificates\/1535624990PMnnN.jpg"]') GLES
+                      td 34 400.00
+                      td 1 222.00
+                      td ---
+                    tr.in-row(data-key='2533')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.46
+                      td J
+                      td VS2
+                      td 6
+                      td 5
+                      td ---
+                      td 23 000.00
+                      td 817.00
+                      td ---
+                    tr.in-row(data-key='34')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.49
+                      td D
+                      td VS1
+                      td 1
+                      td 5
+                      td
+                        a#certificates-34.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(34);', data-certificates='["\/uploads\/certificates\/2017-12-28-14-17-14_5a44e0cac8abd.jpg"]') GLES
+                      td 39 500.00
+                      td 1 403.00
+                      td ---
+                    tr.in-row(data-key='2532')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.49
+                      td fancy
+                      td VS1
+                      td Фантазийный
+                      td 4
+                      td ---
+                      td 10 800.00
+                      td 383.00
+                      td
+                        span.table-badge -10%
+                    tr.in-row(data-key='1428')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.50
+                      td F
+                      td VVS2
+                      td 3
+                      td 3
+                      td GIA
+                      td 43 400.00
+                      td 1 542.00
+                      td ---
+                    tr.in-row(data-key='32')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.55
+                      td H
+                      td VS2
+                      td 5
+                      td 5
+                      td
+                        a#certificates-32.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(32);', data-certificates='["\/uploads\/certificates\/2017-12-28-14-17-39_5a44e0e3c5e3c.jpg"]') GLES
+                      td 45 700.00
+                      td 1 623.00
+                      td ---
+                    tr.in-row(data-key='2548')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/pear.png', height='21', width='21', alt='Груша', title='Груша')
+                      td 0.59
+                      td H
+                      td VS1
+                      td 5
+                      td 4
+                      td ---
+                      td 35 000.00
+                      td 1 243.00
+                      td ---
+                    tr.in-row(data-key='2547')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/pear.png', height='21', width='21', alt='Груша', title='Груша')
+                      td 0.69
+                      td I
+                      td VVS1
+                      td 6
+                      td 2
+                      td ---
+                      td 38 000.00
+                      td 1 350.00
+                      td ---
+                    tr.in-row(data-key='849')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.70
+                      td ---
+                      td ---
+                      td 6
+                      td 6
+                      td ---
+                      td 29 000.00
+                      td 1 030.00
+                      td ---
+                    tr.in-row(data-key='1267')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.75
+                      td G
+                      td VVS2
+                      td 4
+                      td 4
+                      td ---
+                      td 61 600.00
+                      td 2 188.00
+                      td ---
+                    tr.in-row(data-key='25')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.86
+                      td I
+                      td I3
+                      td 6
+                      td 11
+                      td
+                        a#certificates-25.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(25);', data-certificates='["\/uploads\/certificates\/2017-12-28-12-44-56_5a44cb284160f.jpg"]') GLES
+                      td 21 000.00
+                      td 746.00
+                      td ---
+                    tr.in-row(data-key='24')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 0.92
+                      td M
+                      td VVS2
+                      td 8
+                      td 4
+                      td
+                        a#certificates-24.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(24);', data-certificates='["\/uploads\/certificates\/2017-12-28-14-51-37_5a44e8d9cd8a4.jpg"]') GLES
+                      td 72 000.00
+                      td 2 558.00
+                      td ---
+                    tr.in-row(data-key='2534')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 1.00
+                      td J
+                      td VS2
+                      td 6
+                      td 5
+                      td ---
+                      td 126 000.00
+                      td 4 476.00
+                      td ---
+                    tr.in-row(data-key='2535')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/oval.svg', height='21', width='21', alt='Овал', title='Овал')
+                      td 1.01
+                      td L
+                      td SI1
+                      td 7
+                      td 6
+                      td ---
+                      td 80 000.00
+                      td 2 842.00
+                      td ---
+                    tr.in-row(data-key='1265')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 1.17
+                      td H
+                      td VS2
+                      td 5
+                      td 5
+                      td
+                        a#certificates-1265.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(1265);', data-certificates='["\/uploads\/certificates\/2017-12-25-12-44-29_5a40d68db97d3.jpeg"]') ГГЦУ
+                      td 182 000.00
+                      td 6 465.00
+                      td ---
+                    tr.in-row(data-key='1853')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 1.17
+                      td F
+                      td VS1
+                      td 3
+                      td 6
+                      td
+                        a#certificates-1853.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(1853);', data-certificates='["\/uploads\/certificates\/15254345954MUle.jpg"]') GLES
+                      td 219 024.00
+                      td 7 781.00
+                      td
+                        span.table-badge -20%
+                    tr.in-row(data-key='19')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 1.24
+                      td E
+                      td VS1
+                      td 2
+                      td 5
+                      td
+                        a#certificates-19.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(19);', data-certificates='["\/uploads\/certificates\/2017-12-28-14-19-47_5a44e16341d85.jpg"]') GLES
+                      td 243 150.00
+                      td 8 638.00
+                      td
+                        span.table-badge -25%
+                    tr.in-row(data-key='18')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 1.36
+                      td F
+                      td VS1
+                      td 3
+                      td 6
+                      td
+                        a#certificates-18.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(18);', data-certificates='["\/uploads\/certificates\/2017-12-28-14-47-05_5a44e7c908b4d.jpg"]') GLES
+                      td 244 275.00
+                      td 8 678.00
+                      td
+                        span.table-badge -25%
+                    tr.in-row(data-key='17')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 1.50
+                      td G
+                      td SI1
+                      td 4
+                      td 6
+                      td
+                        a#certificates-17.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(17);', data-certificates='["\/uploads\/certificates\/2017-12-28-14-20-20_5a44e18448506.jpg"]') GLES
+                      td 260 640.00
+                      td 9 259.00
+                      td
+                        span.table-badge -25%
+                    tr.in-row(data-key='1011')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 1.51
+                      td D
+                      td VVS1
+                      td ---
+                      td ---
+                      td
+                        a#certificates-1011.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(1011);', data-certificates='["\/uploads\/certificates\/2017-11-18-21-11-05_5a1085c98edde.jpg","\/uploads\/certificates\/2017-11-18-21-11-05_5a1085c99622b.jpg","\/uploads\/certificates\/2017-11-18-21-11-06_5a1085ca13700.jpg"]') GIA
+                      td 810 000.00
+                      td 28 774.00
+                      td ---
+                    tr.in-row(data-key='784')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 1.93
+                      td black
+                      td I3
+                      td Черный
+                      td 12
+                      td
+                        a#certificates-784.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(784);', data-certificates='["\/uploads\/certificates\/2017-10-02-21-33-23_59d2867322420.jpg"]') GIL
+                      td 3 900.00
+                      td 139.00
+                      td ---
+                    tr.in-row(data-key='835')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/round.svg', height='21', width='21', alt='Круглая', title='Круглая')
+                      td 2.04
+                      td N
+                      td SI1
+                      td ---
+                      td ---
+                      td
+                        a#certificates-835.certificate-view-link(href='javascript: void(0)', onclick='viewCertificateImages(835);', data-certificates='["\/uploads\/certificates\/2017-12-28-14-31-09_5a44e40dda056.jpg"]') GLES
+                      td 211 820.00
+                      td 7 525.00
+                      td
+                        span.table-badge -15%
+                    tr.in-row(data-key='921')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/radiant.svg', height='21', width='21', alt='Радиант', title='Радиант')
+                      td 4.01
+                      td G
+                      td VS2
+                      td ---
+                      td ---
+                      td ---
+                      td 1 335 000.00
+                      td 47 425.00
+                      td ---
+                    tr.in-row(data-key='920')
+                      td
+                        img.brilliantIcon(src='./img/diamant_icons/oval.svg', height='21', width='21', alt='Овал', title='Овал')
+                      td 6.00
+                      td H
+                      td SI2
+                      td ---
+                      td ---
+                      td ---
+                      td 1 600 000.00
+                      td 56 838.00
+                      td ---
+
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    //- script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

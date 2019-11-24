@@ -1,0 +1,153 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Карточка товара' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Карточка товара' + ' - Brilicom' //title страницы для генерации верстки  
+  -var header = 'profile 0'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        .content__wrapper
+          
+          .breadcrumbs.breadcrumbs--document
+            ul
+              li: a(href="index.html") Главная
+              li: a(href="catalog.html") Бриллианты
+              li: span Кольцо с сердоликом
+          
+          .content__product
+            .row
+              .row__col-9
+                .content__product-left
+                  .product__content-gallery
+                    div
+                      .product__gallery.gallery
+                        div
+                          a(href="./img/gallery/gallery-image.png").product__gallery-block.gallery-item
+                            img(src="./img/gallery/gallery-image.png", alt="")
+                        div
+                          a(href="./img/gallery/gallery-image.png").product__gallery-block.gallery-item
+                            img(src="./img/gallery/gallery-image.png", alt="")
+                        div
+                          a(href="./img/gallery/gallery-image.png").product__gallery-block.gallery-item
+                            img(src="./img/gallery/gallery-image.png", alt="")
+                        div
+                          a(href="./img/gallery/gallery-image.png").product__gallery-block.gallery-item
+                            img(src="./img/gallery/gallery-image.png", alt="")
+                        div
+                          a(href="./img/gallery/gallery-image.png").product__gallery-block.gallery-item
+                            img(src="./img/gallery/gallery-image.png", alt="")
+                          
+                    div
+                      .product__gallery-vertical
+                        div
+                          img(src="./img/gallery/gallery-image.png", alt="")
+                        div
+                          img(src="./img/gallery/gallery-image.png", alt="")
+                        div
+                          img(src="./img/gallery/gallery-image.png", alt="")
+                        div
+                          img(src="./img/gallery/gallery-image.png", alt="")
+                        div
+                          img(src="./img/gallery/gallery-image.png", alt="")
+                          
+                  .product__content
+                    .product__content-top
+                      div
+                        .product__content-title
+                          h1 Кольцо с сердоликом
+                      div
+                        +iconShare
+                    .product__content-label
+                      div
+                        a(href="#!")
+                          +iconHeart
+                      div
+                        .product__label.product__label--new Новое
+                    .product__content-statistic
+                      span 19 просмотров
+                      span |
+                      span Объявление из Херсона (Украина)
+                      span |
+                      span На сайте 25 дней
+                    p Кольцо с сердоликом размер 18,проба 925 сзади на изделии,ручная работа.Есть под кольцо кулон.
+                  
+              .row__col-3
+                .content__product-right
+                  .product__about
+                    .product__price 420
+                      small грн.
+                  
+                  .product__about-btn
+                    .product__phone
+                      +iconPhone
+                      span(data-phone="063 555 55 55") 06x xxx xx xx
+                      a(href="#!") показать
+                    a(href="#!").btn.btn--color
+                      +iconMail
+                      | Написать автору
+                  
+                  .product__favorite
+                    a(href="favorites.html").header__favorites
+                      +iconHeart
+                      span Избранное
+                  
+                  .product__profile
+                    .product__profile-icon
+                      img(src="./img/icons/icon-user.svg", alt="")
+                    .product__profile-title Людмила
+                    .product__profile-date На BRILI с сентября 2017
+                    a(href="#!").link.link--black Все объявления автора
+    
+        .clear24
+    
+        .content__wrapper
+          .content__wrapper-title Похожие объявления
+          .content__wrapper-body
+            .similar
+              .similar__carousel
+                div
+                  +catalogBlock('Кольцо с бриллиантами', false, false, '10 000 грн.', false, false, false)
+                div
+                  +catalogBlock('Серебрянные Шармы Пандора, S925', './img/catalog/catalog-13.png', false, '7 999 грн.', false, false, false)
+                div
+                  +catalogBlock('Pandora браслет,оригинал', './img/catalog/catalog-14.png', false, '11 000 грн.', false, false, false)
+                div
+                  +catalogBlock('Бриллиант', false, false, '1 грн.', false, false, false)
+                div
+                  +catalogBlock('Эксклюзивное колье с подвеской', './img/catalog/catalog-15.png', false, '399 грн.', false, false, false)
+                div
+                  +catalogBlock('Золотые серьги 5,73г', './img/catalog/catalog-16.png', false, '1 000 грн.', false, false, false)
+                div
+                  +catalogBlock('Великолепная подвеска с бриллиантами', './img/catalog/catalog-11-6.png', false, '1 500 грн.', false, false, false)
+                div
+                  +catalogBlock('Серьги золотые с топазами', './img/catalog/catalog-17.png', false, '3 000 грн.', false, false, false)
+                div
+                  +catalogBlock('Бриллиант', './img/catalog/catalog-18.png', false, '2 600 грн.', false, false, false)
+                div
+                  +catalogBlock('Часы Emporio Armani Silicone. Хит продаж !!!', './img/catalog/catalog-19.png', false, '18 100 грн.', false, false, false)
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    //- script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

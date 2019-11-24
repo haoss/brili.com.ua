@@ -1,0 +1,170 @@
+// Header
+
+if header == 'profile 1'
+  header.header
+
+    .header__top
+      .container
+        
+        ul
+          li: a(href="help.html") помощь
+          li: a(href="blog.html") блог
+          li: a(href="manual.html") справочник фирм
+          li: a(href="calendar.html") календарь выставок
+          
+    .container
+      .header__wrapper
+        div
+          .header__logo
+            a(href="index.html")
+              img(src="./img/logo.png", alt="")
+        div
+          .header__search
+            .header__search-btn
+              +iconSearch
+            .header__search-form
+              form(method="post")
+                input(type="text", placeholder="Что вы ищите?").header__search-input
+                button(type="button").hidden Найти
+              .header__search-btn
+                +iconClose
+                
+else if header == 'profile 2'
+  header.header
+
+    .header__top
+      .container
+        
+        ul
+          li: a(href="help.html") помощь
+          li: a(href="blog.html") блог
+          li: a(href="manual.html") справочник фирм
+          li: a(href="calendar.html") календарь выставок
+          
+    .container
+      .header__wrapper
+        div
+          .header__logo
+            a(href="index.html")
+              img(src="./img/logo.png", alt="")
+        div
+          a(href="favorites.html").header__favorites
+            +iconHeart
+            i 125
+            span Избранное
+        div
+          .header__profile
+            .header__profile-wrapper
+              div
+                +iconUser
+              div
+                span.header__profile-link
+                  span Вован Молодец
+                  +iconArrowFilter
+            .header__profile-popup
+              ul
+                li: a(href="admin-1.html") Мои объявления
+                li: a(href="admin-1.html") Мои сообщения
+                li: a(href="admin-1.html") Мои организации
+                li.separator
+                li: a(href="#!") Платежи
+                li: a(href="settings.html") Настройки
+                li.separator
+                li: a(href="#!").link
+                  +iconExit
+                  span Выйти
+        div
+          a(href="add-advert-26102018.html").btn.btn--color добавить объявление
+        div
+          .header__search
+            .header__search-btn
+              +iconSearch
+            .header__search-form
+              form(method="post")
+                input(type="text", placeholder="Что вы ищите?").header__search-input
+                button(type="button").hidden Найти
+              .header__search-btn
+                +iconClose
+                
+else if header == 'profile 3'
+  header.header
+
+    .header__top
+      .container
+        
+        ul
+          li: a(href="help.html") помощь
+          li: a(href="blog.html") блог
+          li: a(href="manual.html") справочник фирм
+          li: a(href="calendar.html") календарь выставок
+          
+    .container
+      .header__wrapper
+        div
+          .header__logo
+            a(href="index.html")
+              img(src="./img/logo.png", alt="")
+        div
+          a(href="favorites.html").header__favorites
+            +iconHeart
+            i 125
+            span Избранное
+        div
+          .header__profile
+            .header__profile-wrapper
+              div
+                +iconUser
+              div
+                span.header__profile-link
+                  span Вован Молодец
+                  +iconArrowFilter
+            .header__profile-popup
+              ul
+                li: a(href="admin-1.html") Мои объявления
+                li: a(href="admin-1.html") Мои сообщения
+                li: a(href="admin-1.html") Мои организации
+                li.separator
+                li: a(href="#!") Платежи
+                li: a(href="settings.html") Настройки
+                li.separator
+                li: a(href="#!").link
+                  +iconExit
+                  span Выйти
+else
+  header.header
+
+    .header__top
+      .container
+        
+        ul
+          li: a(href="help.html") помощь
+          li: a(href="blog.html") блог
+          li: a(href="manual.html") справочник фирм
+          li: a(href="calendar.html") календарь выставок
+          
+    .container
+      .header__wrapper
+        div
+          .header__logo
+            a(href="index.html")
+              img(src="./img/logo.png", alt="")
+        div
+          .header__profile
+            .header__profile-icon
+              +iconUser
+            a(href="enter-to-profile.html").header__profile-link Авторизация
+        div
+          a(href="add-advert-26102018.html").btn.btn--color добавить объявление
+        div
+          .header__search
+            .header__search-btn
+              +iconSearch
+            .header__search-form
+              form(method="post")
+                input(type="text", placeholder="Что вы ищите?").header__search-input
+                button(type="button").hidden Найти
+              .header__search-btn
+                +iconClose
+            
+      
+      

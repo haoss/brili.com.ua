@@ -1,0 +1,181 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Выбор тарифа' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Выбор тарифа' + ' - Brilicom' //title страницы для генерации верстки  
+  -var header = 'profile 2'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        .content__wrapper
+          
+          .breadcrumbs.breadcrumbs--document
+            ul
+              li: a(href="index.html") Главная
+              li: a(href="#!") Личный кабинет
+              li: a(href="#!") Выбор тарифа
+              li: span Тестовый бриллиант
+              
+          .content__help
+            
+            .content__head
+              .h1 Дополнительные услуги для объявления 
+                br
+                | “Тестовый бриллиант”, ID: 2557
+            
+            .tariff
+              .tariff__row.row
+                .col-lg-3.col-md-6.col-sm-6.col-xs-12
+                  form.tariff__block(action='#!', method='post')
+                    input(type='hidden', name='_csrf', value='q-G76zVmQfl2HDi3LbTr13COO7cczfjuUuqpwFIrmCPMsNOsQ1MZjCNLQs9PgIitAu9wmmy_qaR_ueeZBGfvEw==')
+                    .tariff__block-top
+                      div Разместить объявление на главной странице
+                    .tariff__block-forms
+                      div
+                        label.tariff__block-label
+                          input(name='model', value='1', type='radio', checked='')
+                          span.tariff__block-label-input
+                          span.tariff__block-label-name
+                            | на 1                                                              день
+                          span.tariff__block-label-price
+                            b 1 грн
+                        label.tariff__block-label
+                          input(name='model', value='2', type='radio')
+                          span.tariff__block-label-input
+                          span.tariff__block-label-name
+                            | на 3                                                              дня
+                          span.tariff__block-label-price
+                            b 3 грн
+                        label.tariff__block-label
+                          input(name='model', value='3', type='radio')
+                          span.tariff__block-label-input
+                          span.tariff__block-label-name
+                            | на 7                                                              дней
+                          span.tariff__block-label-price
+                            b 5 грн
+                    .tariff__block-button
+                      button.btn.btn--color(type='submit')
+                        i.fa.fa-check
+                        |  Выбрать
+                .col-lg-3.col-md-6.col-sm-6.col-xs-12
+                  form.tariff__block(action='#!', method='post')
+                    input(type='hidden', name='_csrf', value='q-G76zVmQfl2HDi3LbTr13COO7cczfjuUuqpwFIrmCPMsNOsQ1MZjCNLQs9PgIitAu9wmmy_qaR_ueeZBGfvEw==')
+                    .tariff__block-top
+                      div Выделить объявление цветом в текущем разделе, с сохранением позиции
+                    .tariff__block-forms
+                      div
+                        label.tariff__block-label
+                          input(name='model', value='10', type='radio', checked='')
+                          span.tariff__block-label-input
+                          span.tariff__block-label-name
+                            | на 1                                                              день
+                          span.tariff__block-label-price
+                            b 1 грн
+                        label.tariff__block-label
+                          input(name='model', value='11', type='radio')
+                          span.tariff__block-label-input
+                          span.tariff__block-label-name
+                            | на 3                                                              дня
+                          span.tariff__block-label-price
+                            b 3 грн
+                        label.tariff__block-label
+                          input(name='model', value='12', type='radio')
+                          span.tariff__block-label-input
+                          span.tariff__block-label-name
+                            | на 7                                                              дней
+                          span.tariff__block-label-price
+                            b 5 грн
+                    .tariff__block-button
+                      button.btn.btn--color(type='submit')
+                        i.fa.fa-check
+                        |  Выбрать
+                .col-lg-3.col-md-6.col-sm-6.col-xs-12
+                  form.tariff__block(action='#!', method='post')
+                    input(type='hidden', name='_csrf', value='q-G76zVmQfl2HDi3LbTr13COO7cczfjuUuqpwFIrmCPMsNOsQ1MZjCNLQs9PgIitAu9wmmy_qaR_ueeZBGfvEw==')
+                    .tariff__block-top
+                      div Разместить объявление из раздела Бриллиантов в таблице
+                    .tariff__block-forms
+                      div
+                        label.tariff__block-label
+                          input(name='model', value='7', type='radio', checked='')
+                          span.tariff__block-label-input
+                          span.tariff__block-label-name
+                            | на 1                                                              день
+                          span.tariff__block-label-price
+                            b 1 грн
+                        label.tariff__block-label
+                          input(name='model', value='8', type='radio')
+                          span.tariff__block-label-input
+                          span.tariff__block-label-name
+                            | на 3                                                              дня
+                          span.tariff__block-label-price
+                            b 3 грн
+                        label.tariff__block-label
+                          input(name='model', value='9', type='radio')
+                          span.tariff__block-label-input
+                          span.tariff__block-label-name
+                            | на 7                                                              дней
+                          span.tariff__block-label-price
+                            b 5 грн
+                    .tariff__block-button
+                      button.btn.btn--color(type='submit')
+                        i.fa.fa-check
+                        |  Выбрать
+                .col-lg-3.col-md-6.col-sm-6.col-xs-12
+                  form.tariff__block(action='#!', method='post')
+                    input(type='hidden', name='_csrf', value='q-G76zVmQfl2HDi3LbTr13COO7cczfjuUuqpwFIrmCPMsNOsQ1MZjCNLQs9PgIitAu9wmmy_qaR_ueeZBGfvEw==')
+                    .tariff__block-top
+                      div Поднять объявление в ТОП текущего раздела
+                    .tariff__block-forms
+                      div
+                        label.tariff__block-label
+                          input(name='model', value='4', type='radio', checked='')
+                          span.tariff__block-label-input
+                          span.tariff__block-label-name
+                            | на 1                                                              день
+                          span.tariff__block-label-price
+                            b 1 грн
+                        label.tariff__block-label
+                          input(name='model', value='5', type='radio')
+                          span.tariff__block-label-input
+                          span.tariff__block-label-name
+                            | на 3                                                              дня
+                          span.tariff__block-label-price
+                            b 3 грн
+                        label.tariff__block-label
+                          input(name='model', value='6', type='radio')
+                          span.tariff__block-label-input
+                          span.tariff__block-label-name
+                            | на 7                                                              дней
+                          span.tariff__block-label-price
+                            b 5 грн
+                    .tariff__block-button
+                      button.btn.btn--color(type='submit')
+                        i.fa.fa-check
+                        |  Выбрать
+
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    //- script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

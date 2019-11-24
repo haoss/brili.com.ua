@@ -1,0 +1,1929 @@
+/* modules */
+
+.catalog
+  padding-bottom: 95px
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    border: 1px solid transparent
+    &--row4
+      .catalog__block
+        width: 25%
+  &__block
+    width: 20%
+    background: $color-white
+    height: 276px
+    border: 1px solid #C4C4C4
+    margin: -1px -1px 0 0
+    font-size: 14px
+    color: #302E2E
+    box-shadow: 0px 0 0 rgba(0, 0, 0, 0.25)
+    position: relative
+    &:hover
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25)
+      // z-index: 5
+      .catalog__block-img
+        img
+          opacity: 0.7
+    &-img
+      height: 167px
+      overflow: hidden
+      background: $color-gray
+      display: flex
+      justify-content: center
+      align-items: center
+      position: relative
+      a
+        position: absolute
+        z-index: 10
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+      img
+        display: block
+        opacity: 1
+        transition: opacity 0.35s
+        max-width: 195px
+        max-height: 167px
+        object-fit: cover
+    &-city
+      font-size: 16px
+      font-family: $font-lato-bd
+      color: $link-color
+    &-price
+      font-size: 16px
+      font-family: $font-lato-bd
+      color: $link-color
+      s
+        display: block
+        font-size: 12px
+        color: #302E2E
+    &-content
+      padding: 12px
+    &-title
+      line-height: 17px
+      height: 42px
+      margin-bottom: 16px
+      a
+        color: #302E2E
+        text-decoration: none
+        &:hover, &:focus
+          text-decoration: none
+          color: $link-color
+    &-sale
+      height: 17px
+      line-height: 18px
+      color: $color-white
+      background: $link-color
+      padding: 0 5px
+      font-size: 12px
+      font-family: $font-lato-bd
+      position: absolute
+      bottom: 0
+      left: 11px
+      z-index: 5
+    &-sertificate
+      background: $link-color
+      z-index: 5
+      position: absolute
+      top: 0
+      left: 11px
+      width: 43px
+      height: 39px
+      .iconSertificate
+        width: 21px
+        height: 33px
+        display: block
+        margin: 3px auto 0
+      &+.catalog__block-checked
+        margin-top: 39px
+    &-top
+      position: absolute
+      right: 5px
+      top: 5px
+      z-index: 5
+      .iconStar
+        width: 24px
+        height: 24px
+        .path-fill
+          fill: $link-color
+    &-favorite
+      position: absolute
+      right: 16px
+      bottom: 17px
+      z-index: 10
+      .iconRemoveFavorite
+        width: 24px
+        height: 24px
+        display: block
+      &:hover
+        .catalog__block-tooltip
+          opacity: 1
+          visibility: visible
+    &-checked
+      background: $link-color
+      z-index: 5
+      position: absolute
+      top: 0
+      left: 11px
+      width: 43px
+      height: 39px
+      .iconLike
+        width: 22px
+        height: 22px
+        display: block
+        margin: 8px auto 0
+    &-tooltip
+      position: absolute
+      background: $color-white
+      color: $color-black
+      left: -11px
+      white-space: nowrap
+      padding: 13px 15px
+      bottom: calc(100% + 5px)
+      opacity: 0
+      visibility: hidden
+      filter: drop-shadow(0 6px 5px rgba($link-color,.5))
+      &::before
+        content: ''
+        position: absolute
+        left: 19px
+        bottom: -5px
+        width: 0
+        height: 0
+        border-left: 5px solid transparent
+        border-right: 5px solid transparent
+        border-top: 5px solid $color-white
+    &--paid
+      background: #FFFBF3
+  &__not-found
+    text-align: center
+    .iconCatalogNotFound
+      display: block
+      margin: 0 auto -30px
+
+.social
+  &>a
+    display: inline-block
+    &+a
+      margin-left: 10px
+  svg
+    display: block
+    width: 30px
+    height: 30px
+
+.content
+  padding-top: 28px
+  padding-bottom: 47px
+  &__wrapper
+    background: $color-gray
+    position: relative
+    +clearfix
+    &-title
+      font-size: 24px
+      border-bottom: 1px solid #cecdcd
+      height: 65px
+      line-height: 65px
+      padding: 0 34px
+      font-family: $font-lato-bd
+    &-body
+      padding: 36px 32px
+      p
+        &:last-child
+          margin-bottom: 0
+      +clearfix
+  &__main
+    padding: 48px 83px 70px
+  &__seo
+    &-wrapper
+      height: 120px
+      overflow: hidden
+      position: relative
+      font-size: 14px
+      margin-bottom: 12px
+      color: #686565
+      &::after
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        content: ''
+        height: 96px
+        background: linear-gradient(180deg, rgba(241, 241, 241, 0) 0%, rgba(241, 241, 241, 0.88) 54.7%, #F1F1F1 100%)
+        pointer-events: none
+        opacity: 1
+      p
+        line-height: 17px
+    &.is-active
+      .content__seo
+        &-wrapper
+          height: 100%
+          &::after
+            opacity: 0
+    &-btn
+      text-align: center
+  &__head
+    &--blog
+      .h1, h1
+        margin-bottom: 10px
+  &__document
+    max-width: 754px
+    margin: 0 auto
+    padding-top: 28px
+    padding-bottom: 50px
+    h1, .h1
+      margin-bottom: 13px
+    img
+      max-width: 100%
+      display: block
+      height: auto
+      margin: 0 auto 8px
+      &+small
+        font-size: 16px
+        color: #777777
+        display: block
+        margin-bottom: 35px
+    &-share
+      display: flex
+      align-items: center
+      &>div
+        &+div
+          padding-left: 35px
+  &__close
+    position: absolute
+    right: 0
+    top: 0
+    &>a
+      height: 60px
+      width: 60px
+      border-left: 1px solid #CECDCD
+      border-bottom: 1px solid #CECDCD
+      display: block
+      .iconClose
+        width: 25px
+        height: 25px
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%)
+        .path-stroke
+          stroke: #CECDCD
+          stroke-width: 2
+  &__row
+    &-left
+      padding: 25px 15px 84px 33px
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        right: -15px
+        top: 0
+        bottom: 0
+        width: 1px
+        background: #CECDCD
+    &-center
+      padding: 25px 30px 84px 46px
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        left: -16px
+        top: 0
+        bottom: 0
+        width: 1px
+        background: #CECDCD
+  &__profile, &__payment
+    background: #F1F1F1
+    max-width: 620px
+    margin: 36px auto 47px
+    &-wrapper
+      padding: 40px 30px 48px 30px
+    &--width100per
+      max-width: inherit
+    &-back
+      border-top: 1px solid #CECDCD
+      padding-top: 30px
+      margin-bottom: -8px
+  &__help, &__stock
+    padding: 26px 33px 60px 33px
+    &-form
+      padding-left: 33px
+  &__product
+    +clearfix
+    &-left
+      padding-top: 36px
+      padding-bottom: 50px
+      position: relative
+      +clearfix
+      &::before
+        position: absolute
+        content: ''
+        width: 1px
+        height: auto
+        top: 0
+        bottom: 0
+        background: #CECDCD
+        right: -31px
+    &-right
+      padding: 36px 15px 50px 15px
+      position: relative
+      +clearfix
+      &::before
+        position: absolute
+        content: ''
+        width: 1px
+        height: auto
+        top: 0
+        bottom: 0
+        background: #CECDCD
+        left: 0
+  &__payment
+    max-width: 754px
+    &-wrapper
+      padding-left: 196px
+      .iconPaymentOrder
+        position: absolute
+        margin-left: -110px
+
+.scene
+  position: absolute
+  z-index: 10
+  min-height: 1000px
+  width: 100%
+  overflow: hidden
+  pointer-events: none
+  &__img
+    position: absolute
+    top: 0 !important
+    &--1
+      left: -140px !important
+      top: 329px !important
+    &--2
+      right: -140px !important
+      left: inherit !important
+      top: 233px !important
+    &--3
+      right: -70px !important
+      left: inherit !important
+      top: 353px !important
+    &--4
+      right: -41px !important
+      left: inherit !important
+      top: 158px !important
+    &--5
+      right: -107px !important
+      left: inherit !important
+      top: 419px !important
+    &--6
+      left: -126px !important
+      top: 435px !important
+    &--7
+      left: -147px !important
+      top: 80px !important
+    &--8
+      left: -88px !important
+      top: 250px !important
+
+.info-widget
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-bottom: 95px
+  &>div
+    height: 60px
+    padding: 7px 0
+    &+div
+      border-left: 1px solid $link-color
+      padding-left: 50px
+      margin-left: 34px
+  &__block
+    display: flex
+    p
+      margin: 0
+      line-height: 24px
+    &>div
+      &+div
+        padding-left: 30px
+
+.row
+  margin: 0 -15px
+  &--m30
+    margin: 0 -30px
+  +clearfix
+  &>[class*='__col']
+    padding: 0 15px
+    float: left
+  &__col
+    &-1
+      width: calc(100% / 12)
+    &-2
+      width: calc(100% / 12 * 2)
+    &-3
+      width: calc(100% / 12 * 3)
+    &-4
+      width: calc(100% / 12 * 4)
+    &-5
+      width: calc(100% / 12 * 5)
+    &-6
+      width: calc(100% / 12 * 6)
+    &-7
+      width: calc(100% / 12 * 7)
+    &-8
+      width: calc(100% / 12 * 8)
+    &-9
+      width: calc(100% / 12 * 9)
+    &-10
+      width: calc(100% / 12 * 10)
+    &-11
+      width: calc(100% / 12 * 11)
+    &-12
+      width: 100%
+
+.breadcrumbs
+  font-size: 16px
+  font-family: $font-lato-r
+  color: $link-color
+  margin-bottom: 20px
+  +clearfix
+  ul
+    margin: 0
+    padding: 0
+    li
+      list-style: none
+      margin: 0 0 10px 0
+      display: inline-block
+      &:not(:first-child)
+        &::before
+          content: '/'
+          display: inline-block
+          margin: 0 6px 0 3px
+          color: $color-black
+      a
+        color: $color-black
+        text-decoration: none
+        &:hover
+          color: $link-color-hover
+          text-decoration: underline
+  &--leftCol
+    margin-left: 48px
+    margin-top: 43px
+  &--document
+    border-bottom: 1px solid #CECDCD
+    height: 60px
+    line-height: 60px
+    padding-left: 32px
+    margin-bottom: 0
+    ul
+      white-space: nowrap
+      overflow: hidden
+      padding-right: 90px
+      text-overflow: ellipsis
+      li
+        margin: 0
+
+.blog
+  &__block
+    background: $color-gray
+    margin-bottom: 24px
+    &-wrapper
+      font-size: 12px
+      font-family: $font-lato-m
+      padding: 20px 25px 20px 27px
+      p
+        line-height: 18px
+        margin-bottom: 5px
+    &-head
+      padding: 16px 25px 14px 27px
+      font-size: 12px
+      color: #777
+      font-family: $font-lato-m
+      border-bottom: 1px solid #CECDCD
+    &-title
+      a
+        color: $color-black
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+          color: $link-color
+    &-more
+      color: #777777
+      display: inline-block
+      line-height: 18px
+
+.pagination
+  display: block
+  text-align: center
+  font-size: 16px
+  padding-top: 10px
+  +clearfix
+  ul
+    margin: 0
+    padding: 0
+    display: inline-block
+    vertical-align: middle
+    li
+      float: left
+      margin: 0
+      list-style: none
+      &>a, &>span
+        color: $color-black
+        text-decoration: none
+        display: inline-block
+        line-height: 24px
+        padding: 0 5px
+      &>a
+        &:hover
+          color: $link-color
+      &.active
+        &>a, &>span
+          color: $link-color
+      &[disabled]
+        display: none
+  .iconArrowLeft, .iconArrowRight
+    width: 21px
+    height: 10px
+
+.calendar
+  &__block
+    display: block
+    margin-left: auto
+    width: 362px
+    font-size: 12px
+    &+div
+      margin-top: -35px
+    &:nth-child(odd)
+      margin-left: inherit
+      margin-right: auto
+    &-info
+      line-height: 24px
+      font-size: 16px
+    &-time
+      margin-bottom: 8px
+      div
+        display: inline-block
+        color: $color-white
+        background: $link-color
+        min-width: 132px
+        padding: 4px 12px 0 12px
+        height: 84px
+        margin-bottom: 12px
+        position: relative
+        font-family: $font-lato-m
+        font-size: 40px
+        &::before
+          content: ''
+          width: 0
+          height: 0
+          position: absolute
+          left: 0
+          bottom: -12px
+          border-right: 12px solid transparent
+          border-top: 12px solid $link-color
+        small
+          font-size: 16px
+          display: block
+    &-title
+      font-size: 40px
+      line-height: 41px
+      font-family: $font-lato-m
+      margin-bottom: 12px
+      display: block
+      a
+        text-decoration: none
+        color: $color-black
+        &:hover
+          color: $link-color
+          text-decoration: none
+
+.sorting
+  display: flex
+  margin-bottom: 18px
+  &>div
+    &:first-child
+      padding-right: 10px
+  &__span, &__link
+    display: inline-block
+    line-height: 24px
+  &__link
+    padding-left: 13px
+    padding-right: 13px
+    color: $color-black
+    background: transparent
+    text-decoration: none
+    &:active, &:focus
+      text-decoration: none
+      color: $color-black
+    &.is-active
+      background: #CECDCD
+
+.tab-pane
+  overflow: hidden
+  height: 0
+  opacity: 0
+  visibility: hidden
+  transition: all 0.35s
+  +clearfix
+  &.active
+    opacity: 1
+    height: auto
+    visibility: visible
+    overflow: visible
+
+.advert
+  &__add
+    text-align: center
+    padding: 20px 0 36px 0
+    .iconAdvertAdd
+      display: block
+      width: 96px
+      height: 96px
+      margin: 0 auto 24px
+    &-text
+      font-size: 24px
+      font-family: $font-lato-m
+      line-height: 24px
+      margin-bottom: 30px
+  &__wrapper
+    padding: 0 65px
+    &-head
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 28px
+  &__block
+    height: 168px
+    background: $color-white
+    border: 1px solid #CECDCD
+    display: table
+    table-layout: fixed
+    width: 100%
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.25)
+    transition: box-shadow 0.35s
+    margin-bottom: 36px
+    position: relative
+    &>div
+      display: table-cell
+      vertical-align: top
+      width: 100%
+      &:first-child
+        width: 165px
+    &:nth-last-child(1)
+      margin-bottom: 0
+    &:hover
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+      .advert__block
+        &-close
+          opacity: 1
+          visibility: visible
+        &-info
+          &__date
+            opacity: 0
+            visibility: hidden
+          &__links
+            opacity: 1
+            visibility: visible
+    &-img
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      overflow: hidden
+      width: 165px
+      height: 166px
+      background: $color-gray
+      border-right: 1px solid #CECDCD
+      flex-shrink: 0
+      a
+        position: absolute
+        z-index: 10
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+      img
+        display: block
+        opacity: 1
+        transition: opacity .35s
+        max-width: 195px
+        max-height: 167px
+        object-fit: cover
+    &-close
+      position: absolute
+      right: 8px
+      top: 5px
+      cursor: pointer
+      opacity: 0
+      visibility: hidden
+      .iconClose
+        width: 25px
+        height: 25px
+        .path-stroke
+          stroke: $color-black
+    &-content
+      flex-grow: 1
+      display: flex
+      flex-direction: column
+    &-info
+      padding: 30px 30px 20px 30px
+      height: 106px
+      &__row1
+        display: flex
+        &>div
+          &:first-child
+            flex: 1
+            min-width: 0
+          &+div
+            padding-left: 15px
+      &__row2
+        margin-top: 17px
+        height: 17px
+        font-size: 14px
+      &__date
+        position: absolute
+        color: #777777
+        line-height: 17px
+      &__links
+        opacity: 0
+        visibility: hidden
+        display: flex
+        align-items: center
+        position: absolute
+        &>div
+          &+div
+            padding-left: 15px
+        a
+          display: inline-block
+          line-height: 17px
+          text-decoration: none
+          svg
+            vertical-align: middle
+            margin-right: 5px
+          &:hover
+            color: $link-color
+          .iconEdit
+            width: 15px
+            height: 15px
+          .iconEye
+            width: 16px
+            height: 7px
+            vertical-align: 2px
+          .iconCheck
+            width: 17px
+            height: 12px
+            vertical-align: -1px
+            .path-stroke
+              stroke-linecap: inherit
+              stroke-linejoin: inherit
+          .iconArrowUp2
+            width: 11px
+            height: 13px
+            vertical-align: 0
+          .iconClose
+            width: 22px
+            height: 22px
+            path
+              stroke-width: 3
+              stroke: $link-color
+          .iconArrowFilter
+            width: 14px
+            height: 8px
+            margin-right: 0
+            margin-left: 5px
+            path
+              fill: $primary-color
+    &-price
+      white-space: nowrap
+      font-size: 16px
+      position: relative
+      s
+        position: absolute
+        left: 0
+        font-size: 12px
+        margin-top: 25px
+        font-family: $font-lato-bd
+      .catalog__block-sale
+        left: 0
+        bottom: inherit
+        margin-top: 25px
+    &-title
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      a
+        display: inline-block
+        text-decoration: none
+        color: $primary-color
+        &:hover
+          color: $link-color
+    &-moderate
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+    &-statistic
+      flex-shrink: 0
+      display: flex
+      height: 60px
+      border-top: 1px solid #CECDCD
+      padding: 0 10px 0 30px
+      align-items: center
+      font-size: 14px
+      &>div
+        &:first-child
+          min-width: 0
+        &+div
+          padding-left: 40px
+          span
+            display: inline-block
+            padding-right: 5px
+          a
+            text-decoration: none
+            color: $primary-color
+            &:hover
+              color: $link-color
+    &-tariff
+      position: relative
+    &--message
+      background: #EEEEEE
+      height: 96px
+      margin-bottom: 20px !important
+      &:hover
+        box-shadow: none
+      .advert__block
+        font-size: 14px
+        &-img
+          height: 96px
+        &-info
+          padding-top: 20px
+          height: 96px
+        &-title
+          margin-bottom: 9px
+
+.div-table
+  display: table
+  &-cell
+    display: table-cell
+    vertical-align: middle
+    &[valign="top"]
+      vertical-align: top
+    &+div
+      padding-left: 24px
+  &--w100perc
+    width: 100%
+
+.message
+  &__wrapper
+    padding: 0 40px
+  &__list
+    min-height: 300px
+    background: $color-white
+    border: 1px solid #CECDCD
+    font-size: 16px
+    &-table
+      width: 100%
+      border-collapse: collapse
+      thead
+        &>tr
+          &>th
+            font-weight: 400
+            color: #777777
+            height: 60px
+            border-bottom: 1px solid #CECDCD
+            padding: 10px
+            .form-checkbox
+              display: inline-block
+            .iconArrowFilter
+              width: 12px
+              height: 7px
+              vertical-align: 1px
+              .path-fill
+                fill: #777777
+      tbody
+        &>tr
+          &>td
+            font-weight: 400
+            padding: 10px
+            font-size: 14px
+            .form-checkbox
+              display: inline-block
+              vertical-align: -1px
+            a
+              color: $primary-color
+              text-decoration: none
+              &:hover
+                color: $link-color
+          &:hover
+            &>td
+              background: #EEEEEE
+              .message__list-date
+                opacity: 0
+                visibility: hidden
+              .message__list-nav
+                opacity: 1
+                visibility: visible
+          &.separator
+            td
+              height: 0
+              font-size: 0
+            &:hover
+              td
+                background: transparent
+    &-nav
+      position: absolute
+      white-space: nowrap
+      margin-top: -4px
+      opacity: 0
+      visibility: hidden
+      a
+        font-size: 0
+        text-decoration: none
+        display: inline-block
+        vertical-align: middle
+        &+a
+          margin-left: 24px
+      .iconStar
+        width: 21px
+        height: 21px
+      .iconStop
+        width: 24px
+        height: 24px
+      .iconTrash
+        width: 24px
+        height: 24px
+  &__document
+    padding: 40px 30px
+    &-form
+      display: flex
+      &>div
+        width: 50%
+        position: relative
+    &-right
+      padding-left: 15px
+      padding-top: 12px
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        bottom: 0
+        width: 1px
+        background: #cecdcd
+    &-left
+      padding-right: 15px
+      &::after
+        content: ''
+        position: absolute
+        right: -1px
+        top: 0
+        bottom: 0
+        width: 1px
+        background: #cecdcd
+    &-textarea
+      position: relative
+      background: #F5F5F5
+      padding-bottom: 50px
+      .form-control
+        background: none
+        border: 0
+  &__comments
+    +clearfix
+    &-title
+      font-size: 10px
+      margin-bottom: 4px
+    &-text
+      display: inline-block
+      font-size: 16px
+      min-width: 360px
+      padding: 11px 13px 11px 20px
+      background: #F4ECE4
+      margin-bottom: 4px
+    &-date
+      font-family: $font-lato-bd
+    &-question, &-answer
+      margin-bottom: 22px
+      +clearfix
+    &-answer
+      float: right
+      .message__comments
+        &-title
+          float: left
+          color: $link-color
+        &-date
+          float: right
+          color: #777777
+          font-size: 10px
+          font-family: $font-lato-r
+        &-text
+          background: #EEEEEE
+
+.settings
+  &__title
+    font-size: 24px
+    border-bottom: 1px solid #CECDCD
+    height: 65px
+    line-height: 65px
+    padding: 0 34px
+    font-family: $font-lato-m
+  &__wrapper
+    padding: 43px 20px 33px 20px
+    &-row
+      display: flex
+      margin-left: -20px
+      &>div
+        flex-grow: 1
+        &:first-child
+          width: 166px
+          flex-grow: 0
+          flex-shrink: 1
+        &+div
+          padding-left: 30px
+    &-right
+      padding-left: 98px
+    &-left
+      legend
+        padding-left: 13px
+  &__image
+    position: relative
+    width: 166px
+    margin: 0
+    text-align: center
+    padding-top: 5px
+    &-div
+      width: 96px
+      height: 96px
+      border-radius: 50%
+      background: #f3f4f7
+      position: relative
+      overflow: hidden
+      display: flex
+      justify-content: center
+      align-items: center
+      cursor: pointer
+      margin: 0 auto 8px
+      img
+        display: block
+        height: 96px
+        width: 96px
+        object-fit: contain
+  &__file
+    &-upload
+      display: none !important
+    &-link
+      cursor: pointer
+      right: 0
+      bottom: 0
+      white-space: nowrap
+      color: $primary-color
+      line-height: 24px
+      display: inline-block
+
+.faq
+  max-width: 492px
+  &__block
+    font-size: 16px
+    &.is-active
+      .faq__block-title
+        color: $primary-color
+        background: #fafafa
+        box-shadow: 0 0px 0px rgba($color-red,.74)
+        i
+          &::before
+            display: none
+    p
+      line-height: 22px
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+    &.is-active
+      margin-bottom: 10px
+    &-answer
+      padding: 20px 0 0 0
+      display: none
+      font-family: $font-lato-r
+      p
+        line-height: 24px
+        margin-bottom: 15px
+        &:last-child
+          margin-bottom: 0
+    &-title
+      background: $color-white
+      transition: background 0.35s
+      font-family: $font-lato-m
+      color: $primary-color
+      padding: 19px 60px 17px 23px
+      cursor: pointer
+      position: relative
+      line-height: 24px
+      font-size: 24px
+      min-height: 60px
+      i
+        position: absolute
+        width: 20px
+        height: 20px
+        right: 24px
+        top: 20px
+        &::after, &::before
+          position: absolute
+          content: ''
+          background: $color-black
+        &::after
+          width: 20px
+          height: 4px
+          left: 0
+          top: 8px
+        &::before
+          left: 8px
+          height: 20px
+          width: 4px
+    &+.faq__block
+      margin-top: 36px
+
+.category
+  ul
+    margin: 0
+    padding: 0
+    display: flex
+    flex-wrap: wrap
+  &__li
+    margin: 0
+    padding: 0
+    list-style: none
+    flex-basis: 192.2px
+    flex-shrink: 0
+    height: 181px
+    border: 1px solid $color-white
+    margin-bottom: -1px
+    margin-right: -1px
+    &>a
+      height: 100%
+      display: block
+      color: $primary-color
+      text-align: center
+      text-decoration: none
+      display: flex
+      justify-content: center
+      align-items: center
+      &:hover
+        color: $primary-color
+        background: $color-white
+      &>span
+        img
+          display: block
+          margin: 20px auto 8px
+          width: 39px
+          height: 30px
+        &>span
+          display: inline-block
+          height: 47px
+          padding: 0 15px
+  &--tab
+    margin: 0 -31px 0 -31px
+
+.stock
+  &__content
+    background: $color-white
+    padding: 23px 21px
+  &__menu
+    font-size: 16px
+    +clearfix
+    ul
+      margin: 0
+      padding: 0
+      li
+        list-style: none
+        float: left
+        &>a, &>span
+          display: block
+          background: transparent
+          height: 37px
+          line-height: 37px
+          color: $color-black
+          width: 242px
+          text-align: center
+          text-decoration: none
+        &>a
+          &:hover
+            color: $link-color
+        &.active
+          &>a, &>span
+            background: $color-white
+
+.table
+  border: 0
+  border-collapse: collapse
+  width: 100%
+  font-size: 12px
+  color: $color-black
+  font-family: $font-lato-m
+  border-bottom: 1px solid #CECDCD
+  &>thead
+    &>tr
+      &>th
+        font-weight: 400
+        padding: 10px
+        color: $color-white
+        background: $link-color
+        border-right: 1px solid #CECDCD
+        border-left: 1px solid #CECDCD
+        border-bottom: 0
+        &:first-child
+          border-left-color: $link-color
+        &:last-child
+          border-right-color: $link-color
+        a
+          color: $color-white
+          text-decoration: none
+  &>tbody
+    &>tr
+      &:first-child
+        &>td
+          border-top: 0
+      &>td
+        padding: 10px
+        border-right: 1px solid #CECDCD
+        border-left: 1px solid #CECDCD
+        vertical-align: middle
+      &:hover
+        &>td
+          background-color: #EEEEEE
+  .table-badge
+    color: $link-color
+  .brilliantIcon
+    display: block
+    margin: 0 auto
+
+.product
+  &__about
+    text-align: center
+    &-btn
+      padding-bottom: 5px
+      .btn
+        margin-bottom: 24px
+  &__price
+    font-size: 24px
+    font-family: $font-lato-m
+    text-align: center
+    margin-bottom: 24px
+    line-height: 24px
+    small
+      font-size: 12px
+      display: inline-block
+      margin-left: 5px
+  &__phone
+    display: inline-block
+    padding: 0 5px
+    margin-bottom: 0
+    font-size: 16px
+    font-weight: 400
+    text-align: center
+    white-space: nowrap
+    vertical-align: middle
+    touch-action: manipulation
+    user-select: none
+    color: $color-white
+    background-color: $link-color
+    border-color: $link-color
+    border-radius: 30px
+    height: 48px
+    line-height: 51px
+    text-decoration: none
+    text-transform: uppercase
+    min-width: 233px
+    transition: all 0.35s
+    margin-bottom: 24px
+    text-align: center
+    white-space: nowrap
+    a
+      color: $color-white
+      font-size: 12px
+      display: inline-block
+      margin-left: 10px
+      text-transform: lowercase
+      vertical-align: 1px
+      &:hover
+        text-decoration: none
+    .iconPhone
+      width: 16px
+      height: 16px
+      margin-right: 12px
+      vertical-align: -2px
+  &__favorite
+    margin-bottom: 30px
+    text-align: center
+    svg
+      width: 20px
+      height: 20px
+    .header__favorites
+      height: 20px
+      line-height: 22px
+      padding-left: 30px
+  &__profile
+    text-align: center
+    &-title
+      font-size: 24px
+      line-height: 24px
+      font-family: $font-lato-m
+      margin-bottom: 5px
+    &-date
+      font-size: 16px
+      line-height: 24px
+      color: #686565
+      margin-bottom: 20px
+    &-icon
+      position: relative
+      background: $color-white
+      height: 48px
+      width: 48px
+      border-radius: 50%
+      margin: 0 auto 5px
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        width: 48px
+        height: 48px
+        object-fit: contain
+        &[src*="icon-user.svg"]
+          width: 24px
+          height: 24px
+  &__content
+    padding: 24px 26px 0 33px
+    &-top
+      display: flex
+      &>div
+        &:first-child
+          flex-grow: 1
+        &+div
+          padding-left: 15px
+      .iconShare
+        width: 16px
+        height: 18px
+    &-title
+      .h1, h1
+        font-size: 24px
+        line-height: 24px
+        margin-bottom: 10px
+    &-label
+      display: flex
+      margin-bottom: 7px
+      &>div
+        &+div
+          padding-left: 24px
+      .iconHeart
+        width: 20px
+        height: 20px
+        vertical-align: -7px
+        display: inline-block
+        .path-stroke
+          stroke-width: 2
+    &-statistic
+      margin-bottom: 24px
+      &>span
+        display: inline-block
+        padding-right: 10px
+      a
+        color: $color-black
+        text-decoration: none
+        &:hover
+          color: $link-color
+    &-gallery
+      display: flex
+      &>div
+        &:first-child
+          width: 655px
+        &+div
+          padding-left: 30px
+    &-favorite
+      position: relative
+      z-index: 10
+      .catalog__block-tooltip
+        left: -14px
+      &:hover
+        .catalog__block-tooltip
+          opacity: 1
+          visibility: visible
+
+  &__gallery
+    position: relative
+    &-block
+      height: 408px
+      width: 655px
+      background: #CECDCD
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        max-height: 408px
+        max-width: 655px
+        object-fit: contain
+    .slick-arrow
+      position: absolute
+      top: 0
+      bottom: 0
+      width: 50px
+      border: 0
+      background: none
+      padding: 0
+      z-index: 15
+      svg
+        display: block
+        position: absolute
+        top: 50%
+        transform: translate(-50%,-50%)
+        left: 50%
+        width: 18px
+        height: 31px
+    .slick-next
+      right: 0px
+    .slick-prev
+      left: 0px
+    &-vertical
+      width: 166px
+      overflow: hidden
+      height: 408px
+      .slick-slide
+        width: 140px !important
+        height: 110px !important
+        margin-bottom: 12px
+        &:focus
+          outline: none
+        img
+          width: 140px
+          cursor: pointer
+          height: 110px
+          object-fit: cover
+          display: block
+  &__label
+    display: inline-block
+    font-size: 16px
+    text-transform: lowercase
+    &--new
+      height: 24px
+      line-height: 24px
+      background: #CECDCD
+      padding: 0 10px
+      color: $color-black
+
+.similar
+  &__carousel
+    .catalog__block
+      margin-top: 1px
+      width: 195px
+    .slick-prev, .slick-next
+      position: absolute
+      top: -101px
+      right: -32px
+      padding: 0
+      width: 132px
+      text-align: center
+      height: 64px
+      border: 0
+      background: transparent
+      border-left: 1px solid #CECDCD
+      svg
+        display: inline-block
+        vertical-align: -3px
+        width: 8px
+        height: 14px
+    .slick-prev
+      right: 100px
+
+.mfp
+  &-bg.custom.mfp-ready
+    background: $color-white
+
+.popup
+  position: relative
+  margin: 20px auto
+  background: #F1F1F1
+  width: 618px
+  &__header
+    position: relative
+    height: 60px
+    border-bottom: 1px solid #CECDCD
+  &__footer
+    height: 60px
+    line-height: 57px
+    position: relative
+    text-align: center
+    border-top: 1px solid #CECDCD
+  &__close
+    position: absolute
+    right: 0
+    width: 60px
+    height: 60px
+    top: 0
+    border-left: 1px solid #CECDCD
+    cursor: pointer
+    svg
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      display: block
+      width: 24px
+      height: 24px
+      .path-stroke
+        stroke: #CECDCD
+    &:hover
+      svg
+        .path-stroke
+          stroke: $color-black
+  &__wrapper
+    padding: 70px 10px 50px 10px
+    p
+      &:last-child
+        margin-bottom: 0
+    &-title
+      font-size: 24px
+      line-height: 24px
+      margin-bottom: 30px
+
+.filter
+  &__block
+    border-bottom: 1px solid #CECDCD
+    padding-bottom: 30px
+    ul
+      padding: 0
+      margin: 0
+    &-head
+      font-size: 16px
+      color: $color-black
+      line-height: 24px
+      margin-bottom: 16px
+      padding-top: 30px
+      &>.span
+        cursor: pointer
+        position: relative
+        svg
+          transform-origin: 50% 50%
+          position: absolute
+          right: 0
+          top: 8px
+          width: 14px
+          height: 8px
+          transform: rotate(-180deg)
+          // transition: transform 0.35s
+      &>.div
+        background: #CECDCD
+        padding: 5px 12px
+        line-height: 20px
+        margin-top: 5px
+        position: relative
+        &+.div
+          margin-top: 12px
+        img
+          position: absolute
+          left: 5px
+          top: 7px
+          height: 15px
+          width: 20px
+          &+span
+            display: inline-block
+            padding-left: 20px
+    &-price
+      display: flex
+      &>div
+        width: 50%
+        input
+          height: 36px
+          border: 1px solid #CECDCD
+          font-size: 16px
+          font-family: $font-lato-r
+          color: $color-black
+          padding: 0
+          width: 100%
+          text-align: center
+          background: transparent
+        &+div
+          input
+            border-left: 0
+    &-range
+      padding: 5px 0
+      margin-bottom: 12px
+      .ui-slider-horizontal
+        height: 0px
+        background: $link-color
+      .ui-widget.ui-widget-content
+        border-color: $link-color
+      .ui-slider .ui-slider-handle
+        height: 12px
+        width: 12px
+        border-radius: 50%
+        top: -6px
+        cursor: pointer
+        &:focus
+          outline: none
+    &-wrapper
+      .form-checkbox
+        margin-bottom: 5px
+        &:last-child
+          margin-bottom: 0
+        input[type=checkbox]
+          &~span
+            background: #f1f1f1
+            left: 0px
+            &~label
+              padding-left: 36px
+          &:checked
+            &~span
+              background: $link-color
+    &-li
+      list-style: none
+      margin: 0 0 11px 0
+      &:last-child
+        margin-bottom: 0
+      &>a, &>span
+        display: block
+        padding-left: 37px
+        position: relative
+        min-height: 24px
+        text-decoration: none
+        color: $primary-color
+        line-height: 24px
+        img
+          position: absolute
+          left: 5px
+          top: 5px
+          height: 15px
+          width: 20px
+      &>a
+        &:hover
+          color: $link-color
+    &.is-hidden
+      padding-bottom: 0
+      .filter
+        &__block
+          &-wrapper
+            height: 0
+            overflow: hidden
+          &-head
+            padding: 30px 0
+            margin-bottom: 0
+            &>.span
+              svg
+                transform: rotate(0deg)
+  &__more
+    padding-top: 10px
+    padding-left: 14px
+
+.has-hide
+  overflow: hidden
+
+/**/
+.additional
+  &__row
+    margin-bottom: 30px
+    &-title
+      margin-bottom: 10px
+      font-weight: 400
+      font-size: 16px
+      font-family: $font-lato-bd
+    &-list
+      overflow: hidden
+      margin: 0
+      padding: 20px 0
+      border: 1px solid $link-color
+      &>li
+        float: left
+        width: 33.3%
+        padding: 0 15px
+        margin: -1px 0 0 0
+        list-style: none
+        &>span
+          border-top: 1px solid #CECDCD
+          border-bottom: 1px solid #CECDCD
+          position: relative
+          display: block
+          overflow: hidden
+          &>span
+            &:first-child
+              float: left
+            display: block
+            line-height: 34px
+            &:last-child
+              float: right
+          a
+            color: $primary-color
+            text-decoration: none
+            &:hover
+              color: $link-color
+          strong
+            font-weight: 400
+            font-family: $font-lato-r
+        &:first-child, &:nth-child(2), &:nth-child(3)
+          &>span
+            border-top-color: transparent
+        &:last-child, &:nth-last-child(2), &:nth-last-child(3)
+          &>span
+            border-bottom-color: transparent
+
+/**/
+.tariff
+  &__row
+    margin: 0
+    &>div
+      padding: 0
+      margin: 0
+      &:nth-child(odd)
+        .tariff__block-top
+          background: rgba($link-color,.8)
+      &:last-child
+        .tariff__block
+          border-right: 1px solid #CECDCD
+  &__block
+    background: #fff
+    box-shadow: none
+    transition: all 0.35s
+    margin: 0 auto 25px
+    border: 1px solid #CECDCD
+    border-right: 0
+    &-top
+      padding: 0 14px
+      font-size: 15px
+      text-align: center
+      transition: all 0.35s
+      color: $color-white
+      background: $link-color
+      font-size: 14px
+      &>div
+        height: 70px
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        transition: all 0.35s
+        line-height: 17px
+        max-width: 190px
+    &-forms
+      padding: 0 20px
+      &>div
+        padding: 30px 0
+    &-button
+      padding: 0 20px 36px 20px
+      text-align: center
+      .btn
+        min-width: 211px
+    &-btn
+      color: #68c37a
+      background: #fff
+      text-align: center
+      border: 1px solid #68c37a
+      border-bottom-width: 2px
+      border-radius: 7px
+      height: 40px
+      line-height: 38px
+      font-size: 16px
+      display: block
+      font-weight: 600
+      display: block
+      width: 100%
+      &:hover
+        color: #fff
+        background: #68c37a
+    &-label
+      display: block
+      width: 100%
+      font-weight: 400
+      cursor: pointer
+      position: relative
+      line-height: 1 !important
+      padding-left: 24px !important
+      overflow: hidden
+      font-size: 16px !important
+      margin: 0
+      &+.tariff__block-label
+        margin-top: 16px
+      &-input
+        position: absolute
+        left: 0
+        top: 0
+        width: 16px
+        height: 16px
+        background: #fff
+        border: 1px solid #cecdcd
+        border-radius: 50%
+        &::after
+          content: ''
+          position: absolute
+          left: 3px
+          top: 3px
+          background: #000
+          border-radius: 50%
+          width: 8px
+          height: 8px
+          display: none
+      input
+        display: none
+        &:checked ~
+          .tariff__block-label-input
+            border-color: #CECDCD
+            background: $link-color
+            box-shadow: 0 0 0 3px #fff inset
+          .tariff__block-label-name, .tariff__block-label-price
+            color: $link-color
+      &-name
+        float: left
+      &-price
+        float: right
+        s
+          font-size: 12px
+          display: inline-block
+          margin-right: 15px
+          font-style: italic
+      b
+        font-weight: 400
+        font-family: $font-lato-r
+  &-senks
+    max-width: 555px
+    margin: 0 auto 20px
+    color: #444
+    &__title
+      font-size: 18px
+      font-weight: 600
+      text-align: center
+      margin-bottom: 15px
+      padding-bottom: 15px
+      border-bottom: 1px solid #e7e7e7
+    &__body
+      font-size: 14px
+      border-bottom: 1px solid #e7e7e7
+      p
+        line-height: 22px
+    &__info
+      text-align: center
+      font-size: 14px
+      color: #999999
+      border-bottom: 1px solid #e7e7e7
+      padding: 5px 0
+      &>div
+        display: inline-block
+        max-width: 420px
+        line-height: 22px
+      .fa
+        margin-right: 5px
+      a
+        text-decoration: underline
+        &:hover
+          text-decoration: none
+    &__bottom
+      text-align: center
+      padding: 20px 0
+      a
+        color: #666666
+        background: #fff
+        text-align: center
+        border: 1px solid #cfcfcf
+        border-bottom-width: 2px
+        border-radius: 5px
+        height: 36px
+        line-height: 33px
+        font-size: 16px
+        display: block
+        font-weight: 600
+        width: 145px
+        display: inline-block
+        + a
+          margin-left: 40px
+        &:hover
+          background: #cfcfcf
+          color: #666
+  &__popup
+    display: none
+    position: absolute
+    min-width: 588px
+    height: auto
+    right: -5px
+    top: -5px
+    background: $color-white
+    box-shadow: 0 3px 19px rgba($link-color,.3)
+    z-index: 100
+    padding: 23px
+    font-size: 14px
+    &.is-active
+      display: block
+    .btn
+      line-height: 47px
+      &:hover
+        color: $color-white
+      &+.btn
+        margin-left: 20px
+    &-title
+      color: $link-color
+      margin-bottom: 20px
+    p
+      white-space: nowrap
+      &>.span
+        display: inline-block
+        &+span
+          margin-left: 10px
+    &-close
+      position: absolute
+      right: 10px
+      top: 10px
+      z-index: 10
+      cursor: pointer
+      svg
+        width: 24px
+        height: 24px
+        .path-stroke
+          stroke: $primary-color

@@ -1,0 +1,207 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Все объявления' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Все объявления' + ' - Brilicom' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      .content.no--p-top
+        .container-fluid
+          
+          .content__separator.content__separator--thin
+            
+          .content__head.content__head--back
+            div
+              a(href="account.html").btn.btn--default.btn--f16
+                +iconArrowLeft2
+                | Все объявления
+            div
+              a(href="#!").btn.btn--default
+                +iconMenus
+          
+          form(action="#!")
+            .form-group
+              label.label Вид объявления
+              select.form-control
+                option Все объявления
+                option Все объявления 2
+                option Все объявления 3 
+                option Все объявления 4
+              
+              .clear15  
+              a(href="#!").link.link--black
+                +iconTrash
+                | Удалить все объявления
+          
+          .content__separator.no--m-bottom
+          
+          .advert__block
+            
+            .advert__block-img
+              img(src="./img/gallery/gallery-image.png", alt="").img-responsive
+            
+            .advert__block-info__links
+              div
+                a(href="#!").link
+                  +iconClose
+                  | Продано
+            
+            .product__content-title
+              h1 ПРОДАМ ЗОЛОТОЙ КРЕСТИК С БРИЛЛИАНТАМИ
+            
+            .product__content-price
+              strong 7 950
+              |  грн.
+              s 13 000 грн.
+              .catalog__block-sale -25%
+              
+            .advert__block-info__links
+              div
+                a(href="#!").link.link--black
+                  +iconEdit
+                  | Редактировать
+              div
+                a(href="#!").link.link--black
+                  +iconEye
+                  | Просмотреть объявление
+              div
+                .advert__block-tariff
+                  a(href="#tariff-list1").link.link--black Выбранные тарифы
+                    +iconArrowFilter
+            
+            hr
+            
+            .product__content-statistic
+              div 19 просмотров
+              div 5 раз добавлено в избранное
+              div Тел. +38 (099) 755 86 95
+            
+            hr
+            
+            a(href="#!").link.link--black
+              +iconTrash
+              | Удалить объявление
+            .clear15
+            
+          .content__separator.no--m-bottom
+          
+          .advert__block
+            
+            .advert__block-img
+              img(src="./img/gallery/gallery-image.png", alt="").img-responsive
+            
+            .advert__block-info__links
+              div
+                a(href="#!").link
+                  +iconClose
+                  | Продано
+            
+            .product__content-title
+              h1 ПРОДАМ ЗОЛОТОЙ КРЕСТИК С БРИЛЛИАНТАМИ
+            
+            .product__content-price
+              strong 7 950
+              |  грн.
+              s 13 000 грн.
+              .catalog__block-sale -25%
+              
+            .advert__block-info__links
+              div
+                a(href="#!").link.link--black
+                  +iconEdit
+                  | Редактировать
+              div
+                a(href="#!").link.link--black
+                  +iconEye
+                  | Просмотреть объявление
+              div
+                .advert__block-tariff
+                  a(href="#tariff-list2").link.link--black Выбранные тарифы
+                    +iconArrowFilter
+            
+            hr
+            
+            .product__content-statistic
+              div 19 просмотров
+              div 5 раз добавлено в избранное
+              div Тел. +38 (099) 755 86 95
+            
+            hr
+            
+            a(href="#!").link.link--black
+              +iconTrash
+              | Удалить объявление
+            .clear15
+    
+    #tariff-list1.filter.modal
+      .filter__wrapper
+        .filter__head
+          div
+            a(href="#!").filter__head-btn.filter__head-btn--close Закрыть
+        .filter__head-separator
+        .filter__body
+          .filter__body-wrapper
+            .h1 Выбранные тарифы
+            p Разместить объявление на главной странице
+              div.span
+                strong Оплата: 
+                | 23.10.2018
+              div.span
+                strong Размещение: 
+                | 7 дней
+              div.span
+                strong Осталось: 
+                  span.color--link 7 дней
+              div.span
+                strong До: 
+                | 30.10.2018
+            
+            hr
+            p Выделить объявление цветом в текущем разделе, с сохранением позиции
+              div.span
+                strong Оплата: 
+                | 23.10.2018
+              div.span
+                strong Размещение: 
+                | 7 дней
+              div.span
+                strong Осталось: 
+                  span.color--link 7 дней
+              div.span
+                strong До: 
+                | 30.10.2018
+            
+            
+            a(href="#!").btn.btn--color.btn--block.btn--center улучшить объявление
+            a(href="#!").btn.btn--block.btn--center продлить
+            
+    #tariff-list2.filter.modal
+      .filter__wrapper
+        .filter__head
+          div
+            a(href="#!").filter__head-btn.filter__head-btn--close Закрыть
+        .filter__head-separator
+        .filter__body
+          .filter__body-wrapper
+            p 2
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

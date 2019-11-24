@@ -1,0 +1,77 @@
+/* footer */
+.footer
+  color: #777
+  padding-bottom: 70px
+  font-size: 14px
+  a
+    color: #777
+    text-decoration: none
+    &:hover
+      color: $link-color
+      text-decoration: underline
+  &__top
+    display: flex
+    padding-bottom: 40px
+    margin: 0 -15px
+    &>div
+      width: 25%
+      padding: 0 15px
+  &__center
+    font-size: 14px
+    padding: 19px 0
+    border-top: 1px solid $color-gray
+  &__nav
+    ul
+      margin: 0
+      padding: 0
+      overflow: hidden
+      li
+        display: block
+        list-style: none
+        a
+          position: relative
+          padding-left: 24px
+          display: inline-block
+          line-height: 24px
+          svg
+            position: absolute
+            left: 0
+            top: 6px
+            width: 10px
+            height: 10px
+  &__links
+    text-align: center
+    ul
+      margin: 0
+      padding: 0
+      overflow: hidden
+      display: inline-block
+      vertical-align: middle
+      li
+        list-style: none
+        float: left
+        margin: 0 23px 0 0
+        line-height: 20px
+        +clearfix
+        &::before
+          content: '|'
+          float: left
+          margin-right: 23px
+        &:first-child
+          &::before
+            display: none
+        .iconArrowList
+          position: absolute
+  &__bottom
+    border-top: 1px solid #F1F1F1
+    padding-top: 22px
+    font-size: 14px
+    +clearfix
+  &__copyright
+    float: left
+  &__development
+    float: right
+  &__logo
+    margin-bottom: 25px
+    img
+      display: block

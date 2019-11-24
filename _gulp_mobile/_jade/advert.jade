@@ -1,0 +1,321 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Объявление о продаже' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Объявление о продаже' + ' - Brilicom' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      .content.no--p-top
+        .container-fluid
+          
+          .content__separator.content__separator--thin
+          
+          .content__head.content__head--advert
+            div
+              a(href="#!").btn.btn--default
+                +iconArrowLeft2
+                | Объявление о продаже
+            div
+              a(href="#!").btn.btn--default
+                +iconMenus
+          
+          .content__separator
+            
+          form(action="#!")
+            .filter__wrapper.filter__wrapper--advert
+              .filter__body
+                
+                .filter__body-wrapper
+                  .filter__block.is-hidden
+                    .filter__block-head
+                      .span Категории
+                        +iconArrowFilter
+                        
+                    .filter__block-wrapper
+                      ul
+                        li.filter__block-li: a(href="catalog.html")
+                          img(src="./img/category/category-1.svg", alt="")
+                          span Бриллианты
+                        li.filter__block-li: a(href="catalog.html")
+                          img(src="./img/category/category-3.svg", alt="")
+                          span Драгоценный камень
+                        li.filter__block-li: a(href="catalog.html")
+                          img(src="./img/category/category-4.svg", alt="")
+                          span Бриллиант в изделии
+                        li.filter__block-li: a(href="catalog.html")
+                          img(src="./img/category/category-5.svg", alt="")
+                          span Драгоценный камень в изделии
+                        li.filter__block-li: a(href="catalog.html")
+                          img(src="./img/category/category-6.svg", alt="")
+                          span Ювелирные изделия без камней
+                        li.filter__block-li: a(href="catalog.html")
+                          img(src="./img/category/category-7.svg", alt="")
+                          span Часы
+                        li.filter__block-li: a(href="catalog.html")
+                          img(src="./img/category/category-12.svg", alt="")
+                          span Бижутерия
+                        li.filter__block-li: a(href="catalog.html")
+                          img(src="./img/category/category-11.svg", alt="")
+                          span Серебряные изделия
+                        li.filter__block-li: a(href="catalog.html")
+                          img(src="./img/category/category-8.svg", alt="")
+                          span Эксклюзивные подарки
+                        li.filter__block-li: a(href="catalog.html")
+                          img(src="./img/category/category-10.svg", alt="")
+                          span Старинные украшения
+                        li.filter__block-li: a(href="catalog.html")
+                          img(src="./img/category/category-13.svg", alt="")
+                          span Брендовые изделия
+                        li.filter__block-li: a(href="catalog.html")
+                          img(src="./img/category/category-9.svg", alt="")
+                          span Монеты и слитки
+            
+                  .content__separator
+
+                  .filter__block.no--p-bottom
+                    .filter__block-title
+                      .span Описание
+                    .filter__block-wrapper
+                      .form-group
+                        label.label Заголовок
+                        input(type="text").form-control
+                      
+                  hr.filter__separator
+                  
+                  .filter__block.no--p-bottom
+                    .filter__block-wrapper
+                      .form-group
+                        label.label Фотографии
+                          br
+                          | (Первое фото титульное)
+                        a(href="#!")
+                          img(src="./img/add-group-photo.png", alt="")
+                        
+                        .clear16
+                        a(href="#!") Как правильно подготовить фото
+                      
+                  hr.filter__separator
+                    
+                  .filter__block.no--p-bottom
+                    .filter__block-wrapper
+                      .form-group
+                        label.label Сертификат изделия (если есть)
+                        a(href="#!")
+                          img(src="./img/add-photo.png", alt="")
+                        
+                        .clear16
+                        label.label Наличие сертификата качества
+                        select.form-control
+                          option Отсутствует
+                          option Присутствует
+                          
+                  hr.filter__separator
+                  
+                  .filter__block.no--p-bottom
+                    .filter__block-wrapper
+                      .form-group
+                        label.label Цена
+                        input(type="text").form-control
+                        
+                        .clear10
+                        
+                        label.label Скидка
+                        select.form-control
+                          option 0%
+                          option 5%
+                          option 10%
+                          option 15%
+                          option 20%
+                          option 25%
+                  
+                  hr.filter__separator.no--m-bottom
+                  
+                  .filter__block.is-hidden
+                    .filter__block-head
+                      .span Состояние изделия
+                        +iconArrowFilter
+                        
+                    .filter__block-wrapper
+                      .form-radio
+                        input(type="radio" name="name11" checked)#radio111
+                        span
+                        label(for="radio111") Новое
+                      
+                      .clear10
+                      
+                      .form-radio
+                        input(type="radio" name="name11" checked)#radio112
+                        span
+                        label(for="radio112") С пробегом
+                  
+                  hr.filter__separator
+                    
+                  .filter__block.no--p-bottom
+                    .filter__block-wrapper
+                      .form-group
+                        label.label Масса бриллианта(ов), в каратах
+                        input(type="text").form-control
+                        .clear16
+                        label.label Диаметр бриллианта (мм.)
+                        input(type="text").form-control
+                        .clear16
+                        label.label Количество входящих изделий
+                        input(type="text").form-control
+                        
+                  hr.filter__separator
+                    
+                  .filter__block.no--p-bottom
+                    .filter__block-wrapper
+                      .form-group
+                        label.label Описание
+                        textarea(rows="8" placeholder="Введите описание...").form-control
+                        
+                  hr.filter__separator.no--m-bottom
+                    
+                  .filter__block.no--p-bottom
+                    .filter__block-title.no--border.no--m
+                      .span Характеристика бриллианта
+                    .filter__block-wrapper
+                      .form-group
+                        label.label Форма огранки/Shape
+                        select.form-control
+                          option(selected disabled) Выберите
+                          option Круглый бриллиант
+                          option Маркиз
+                          option Груша 
+                          option Овал 
+                          option Принцесса 
+                          option Изумруд 
+                          option Ашер  
+                          option Радиант   
+                          option Сердце
+                      
+                        .clear16
+                        label.label Color
+                        select.form-control
+                          option(selected disabled) Выберите
+                          option Красный
+                          option Синий
+                          option Зеленый
+                          option Пурпурный
+                          option Черный
+                          option Коричневый
+                          
+                        .clear16
+                        label.label Clarity
+                        select.form-control
+                          option(selected disabled) Выберите
+                          option Круглый бриллиант
+                          option Маркиз
+                          option Груша 
+                          option Овал 
+                          option Принцесса 
+                          option Изумруд 
+                          option Ашер  
+                          option Радиант   
+                          option Сердце 
+                          
+                        .clear16
+                        label.label Cut grade
+                        select.form-control
+                          option(selected disabled) Выберите
+                          option Круглый бриллиант
+                          option Маркиз
+                          option Груша 
+                          option Овал 
+                          option Принцесса 
+                          option Изумруд 
+                          option Ашер  
+                          option Радиант   
+                          option Сердце
+                          
+                        .clear16
+                        label.label Цвет
+                        select.form-control
+                          option(selected disabled) Выберите
+                          option Красный
+                          option Синий
+                          option Зеленый
+                          option Пурпурный
+                          option Черный
+                          option Коричневый
+                          
+                        .clear16
+                        label.label Качество
+                        select.form-control
+                          option(selected disabled) Выберите
+                          option 1
+                          option 2
+                          option 3
+                          option 4
+                          option 5
+                          
+                        .clear16
+                        label.label Группа огранки
+                        select.form-control
+                          option(selected disabled) Выберите
+                          option Красный
+                          option Синий
+                          option Зеленый
+                          option Пурпурный
+                          option Черный
+                          option Коричневый
+    
+                  hr.filter__separator.no--m-bottom
+                    
+                  .filter__block.no--p-bottom
+                    .filter__block-title.no--border.no--m
+                      .span Контакты
+                    .filter__block-wrapper
+                      
+                      .form-group
+                        label.label Месторасположение
+                        select.form-control
+                          option(selected) Укажите месторасположение
+                          option Месторасположение
+                          option Месторасположение
+                          option Месторасположение
+                          option Месторасположение
+                          
+                        .clear16
+                        label.label Имя продавца
+                        input(type="text" placeholder="Иван Иванович Петров").form-control
+                        
+                        .clear16
+                        label.label Email адрес продавца
+                        input(type="text" placeholder="test@test.ru").form-control
+                        
+                        .clear16
+                        label.label Номер телефона 
+                        input(type="text" placeholder="+38050 485 24 15").form-control
+    
+                  .content__separator
+                    
+                  p.form-group__text.text-center
+                    a(href="#!").link.link--black
+                      +iconEye
+                      | Предварительный просмотр объявление
+                  
+                  .clear11
+                  button(type="button").btn.btn--color.btn--block.btn--center разместить объявление
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

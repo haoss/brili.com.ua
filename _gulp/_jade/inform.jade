@@ -1,0 +1,99 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Инфо блоки' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Инфо блоки' + ' - Brilicom' //title страницы для генерации верстки  
+  -var header = 'profile 0'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      .container
+        
+        // Страница 404
+        .content__profile
+          .content__profile-wrapper
+            
+            .text-center
+              +page404
+              .clear12
+              .h2 Ой, такой страницы нет
+              p.no--m Перейдите пожалуйста на 
+                a(href="index.html") главную страницу
+        
+        .clear
+        
+        // Оплата прошла успешно
+        .content__profile
+          .content__profile-wrapper
+            
+            .text-center
+              +iconCheckRound
+              .clear12
+              .h2 Оплата прошла успешно !
+              p.no--m Теперь можно вернуться в 
+                a(href="admin-1.html") личный кабинет
+                    
+        .clear
+        
+        // Оплата прошла успешно
+        .content__payment
+          .content__payment-wrapper
+                
+            +iconPaymentOrder
+            .h2 Проверка заказа и переход к оплате
+            p
+              strong Выбранный тариф: 
+              | Разместить объявление на главной странице
+              br
+              strong Номер заказа: 
+              | #110
+              br
+              strong Номер объявления: 
+              | #2557
+              br
+              strong Сумма к оплате: 
+              | 5 грн.
+              br
+              strong Период размещения: 
+              | на 7 дней
+              br
+              strong Дата формирования счета: 
+              | 23 октября 2018, 15:54
+            
+            .text-center
+              .alert.alert-warning
+                small Если у Вас возникли вопросы, пожалуйста, свяжитесь с нами 
+                  br
+                  | через форму обратной связи. 
+                  br
+                  | Или напишите на адресс 
+                  a(href="mailto:") support@brili.com.ua
+              a(href="#!").btn.btn--color ОПЛАТИТЬ
+              .clear20
+              a(href="#!") Вернуться назад
+                    
+          
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    //- script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

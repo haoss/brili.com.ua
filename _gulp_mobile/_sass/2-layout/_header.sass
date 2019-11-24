@@ -1,0 +1,63 @@
+/* header */
+.header
+  background-color: $color-white
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  height: 56px
+  z-index: 1000
+  box-shadow: 0 0 0 rgba($color-black,.24)
+  transition: box-shadow 0.35s
+  &>.container
+    position: relative
+    height: 56px
+  &-separator
+    height: 56px
+  &__search
+    position: absolute
+    right: 65px
+    padding: 5px
+    top: 14px
+    svg
+      display: block
+  &__nav
+    display: none
+    position: fixed
+    top: 56px
+    left: 0
+    right: 0
+    bottom: 0
+    background: $color-white
+    font-size: 16px
+    text-transform: uppercase
+    padding: 15px
+    overflow-y: auto
+    text-align: center
+    &.is-active
+      display: block
+    ul
+      margin: 0
+      padding: 0
+      display: inline-block
+      text-align: left
+      li
+        margin: 0 0 10px 0
+        display: block
+        list-style: none
+        &>a, &>span
+          text-decoration: none
+          color: $color-black
+          display: inline-block
+          line-height: 24px
+  &__btn
+    position: absolute
+    right: 15px
+    top: 15px
+    width: 24px
+    height: 24px
+  &__logo
+    float: left
+    margin-top: 13px
+  &.is-scroll
+    box-shadow: 0 4px 4px rgba($color-black,.24)

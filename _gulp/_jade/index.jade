@@ -1,0 +1,203 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Главная' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Главная' + ' - Brilicom' //title страницы для генерации верстки  
+  -var header = 'profile 0'
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      
+      .scene
+        .container
+          #scene__wrapper.scene__wrapper
+            img(src="./img/brili/brili-2.png", alt="" data-depth="0.6").scene__img.scene__img--1
+            img(src="./img/brili/brili-2-1.png", alt="" data-depth="0.2").scene__img.scene__img--2
+            img(src="./img/brili/brili-2-2.png", alt="" data-depth="0.8").scene__img.scene__img--3
+            img(src="./img/brili/brili-3.png", alt="" data-depth="0.6").scene__img.scene__img--4
+            img(src="./img/brili/brili-4.png", alt="" data-depth="0.2").scene__img.scene__img--5
+            img(src="./img/brili/brili-5.png", alt="" data-depth="0.3").scene__img.scene__img--6
+            img(src="./img/brili/brili-6.png", alt="" data-depth="0.2").scene__img.scene__img--7
+            img(src="./img/brili/brili-7.png", alt="" data-depth="0.8").scene__img.scene__img--8
+      
+      .navigation
+        .container
+          nav
+            ul
+              li.navigation__li: a(href="catalog.html")
+                span
+                  img(src="./img/category/category-1.svg", alt="")
+                  span Бриллианты
+              li.navigation__li: a(href="catalog.html")
+                span
+                  img(src="./img/category/category-3.svg", alt="")
+                  span Драгоценный камень
+              li.navigation__li: a(href="catalog.html")
+                span
+                  img(src="./img/category/category-4.svg", alt="")
+                  span Бриллиант в изделии
+              li.navigation__li: a(href="catalog.html")
+                span
+                  img(src="./img/category/category-5.svg", alt="")
+                  span Драгоценный камень в изделии
+              li.navigation__li: a(href="catalog.html")
+                span
+                  img(src="./img/category/category-6.svg", alt="")
+                  span Ювелирные изделия без камней
+              li.navigation__li: a(href="catalog.html")
+                span
+                  img(src="./img/category/category-7.svg", alt="")
+                  span Часы
+              li.navigation__li: a(href="catalog.html")
+                span
+                  img(src="./img/category/category-12.svg", alt="")
+                  span Бижутерия
+              li.navigation__li: a(href="catalog.html")
+                span
+                  img(src="./img/category/category-11.svg", alt="")
+                  span Серебряные изделия
+              li.navigation__li: a(href="catalog.html")
+                span
+                  img(src="./img/category/category-8.svg", alt="")
+                  span Эксклюзивные подарки
+              li.navigation__li: a(href="catalog.html")
+                span
+                  img(src="./img/category/category-10.svg", alt="")
+                  span Старинные украшения
+              li.navigation__li: a(href="catalog.html")
+                span
+                  img(src="./img/category/category-13.svg", alt="")
+                  span Брендовые изделия
+              li.navigation__li: a(href="catalog.html")
+                span
+                  img(src="./img/category/category-9.svg", alt="")
+                  span Монеты и слитки
+              li.navigation__li.navigation__li--sale: a(href="catalog.html")
+                span
+                  img(src="./img/category/category-14.svg", alt="")
+                  span Распродажа
+              li.navigation__li.navigation__li--stock: a(href="stock.html")
+                span
+                  img(src="./img/category/category-2.svg", alt="")
+                  span Биржа бриллиантов
+                
+      .container
+        .content__wrapper
+          .content__main
+            
+            .info-widget
+              div
+                .info-widget__block
+                  div
+                    img(src="./img/widgets/widget-logo-1.png", alt="")
+                  div
+                    p 999'
+                      br
+                      | $ 38.16
+                  div
+                    p 750'
+                      br
+                      | $ 28.65
+                  div
+                    p 585'
+                      br
+                      | $ 22.34
+              div
+                .info-widget__block
+                  div
+                    img(src="./img/widgets/widget-logo-2.png", alt="")
+                  div
+                    p Покупка:
+                      br
+                      | Продажа:
+                  div
+                    p $ 27.35 
+                      br
+                      | $ 27.60
+                  div
+                    p € 30.95
+                      br
+                      | € 31.60
+            
+            .content__head
+              .h1 Бизнес объявления
+            
+            .clear15
+            
+            .catalog
+              .catalog__wrapper
+                +catalogBlock('Эксклюзивные ювелирные изделия', './img/catalog/catalog-1.png', 'Харьков', false, false, false, false)
+                +catalogBlock('Эксклюзивные ювелирные изделия', './img/catalog/catalog-2.png', 'Харьков', false, false, false, false)
+                +catalogBlock('Эксклюзивные ювелирные изделия', './img/catalog/catalog-3.png', 'Харьков', false, false, false, false)
+            
+            .content__head
+              .h1 Ювелирные изделия - доска объявлений
+            
+            .clear15
+            
+            .catalog
+              .catalog__wrapper
+                +catalogBlock('Кольцо с бриллиантами', false, false, '10 000 грн.', false, false, false)
+                +catalogBlock('Серебрянные Шармы Пандора, S925', './img/catalog/catalog-13.png', false, '7 999 грн.', false, false, false)
+                +catalogBlock('Pandora браслет,оригинал', './img/catalog/catalog-14.png', false, '11 000 грн.', false, false, false)
+                +catalogBlock('Бриллиант', false, false, '1 грн.', false, false, false)
+                +catalogBlock('Эксклюзивное колье с подвеской', './img/catalog/catalog-15.png', false, '399 грн.', false, false, false)
+                
+                +catalogBlock('Золотые серьги 5,73г', './img/catalog/catalog-16.png', false, '1 000 грн.', false, false, false)
+                +catalogBlock('Великолепная подвеска с бриллиантами', './img/catalog/catalog-11-6.png', false, '1 500 грн.', false, false, false)
+                +catalogBlock('Серьги золотые с топазами', './img/catalog/catalog-17.png', false, '3 000 грн.', false, false, false)
+                +catalogBlock('Бриллиант', './img/catalog/catalog-18.png', false, '2 600 грн.', false, false, false)
+                +catalogBlock('Часы Emporio Armani Silicone. Хит продаж !!!', './img/catalog/catalog-19.png', false, '18 100 грн.', false, false, false)
+                
+                +catalogBlock('Ожерелье из жемчуга', './img/catalog/catalog-20.png', false, '1 460 грн.', false, false, false)
+                +catalogBlock('Колье из натуральной бирюзы и кораллов', './img/catalog/catalog-21.png', false, '96 250 грн.', false, false, false)
+                +catalogBlock('Колье и браслет серебро 925, украшенные натурально...', './img/catalog/catalog-22.png', false, '233 750 грн.', false, false, false)
+                +catalogBlock('Колье, серьги и кольцо серебро 925', './img/catalog/catalog-23.png', false, '0 грн.', false, false, false)
+                +catalogBlock('Перидот. Хризолит.', './img/catalog/catalog-24.png', false, '800 грн.', false, false, false)
+                
+                +catalogBlock('ЮВЕЛИРНЫЕ УКРАШЕНИЯ СЕРЕБРА С ЗОЛОТОМ. Хит продаж...', './img/catalog/catalog-25.png', false, '4 700 грн.', false, false, false)
+                +catalogBlock('Кольцо damiani (копия)', './img/catalog/catalog-26.png', false, '16 000 грн.', false, false, false)
+                +catalogBlock('Браслет золотой с бриллиантами', './img/catalog/catalog-27.png', false, '70 000 грн.', false, false, false)
+                +catalogBlock('Бриллианты 2.5', false, false, '18 200 грн.', false, false, false)
+                +catalogBlock('Продам браслет 750 проба', './img/catalog/catalog-29.png', false, '8 550 грн.', false, false, false)
+                
+                +catalogBlock('Очень срочно продам старинное кольцо', './img/catalog/catalog-30.png', false, '15 300 грн.', false, false, false)
+                +catalogBlock('Ювелирные украшения серебра с золотом. Качество 10...', './img/catalog/catalog-31.png', false, '1 620 грн.', false, false, false)
+                +catalogBlock('Перстень с сапфиром и бриллиантами', './img/catalog/catalog-32.png', false, '10 000 грн.', false, false, false)
+                +catalogBlock('Эксклюзивные ювелирные изделия ', './img/catalog/catalog-33.png', false, '15 000 грн.', '13 000 грн.', true, true)
+                +catalogBlock('Золотой перстень с рубином (проба - 583; вес - 14...', false, false, '10 200 грн.', false, false, false)
+    
+            +contentSeo
+
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    //- script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    script().
+      (function(){
+        var scene = document.getElementById('scene__wrapper');
+        var parallax = new Parallax(scene, {
+          scalarX: 2,
+          scalaY: 2
+        });
+      })();
+      

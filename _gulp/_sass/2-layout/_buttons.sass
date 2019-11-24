@@ -1,0 +1,49 @@
+/* buttons */
+
+.btn
+  display: inline-block
+  padding: 0 25px
+  margin-bottom: 0
+  font-size: 14px
+  font-weight: 400
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  touch-action: manipulation
+  cursor: pointer
+  user-select: none
+  background:
+    image: none
+    color: transparent
+  border: 2px solid $link-color
+  color: $link-color
+  border-radius: 30px
+  height: 48px
+  line-height: 47px
+  text-decoration: none
+  text-transform: uppercase
+  min-width: 233px
+  transition: all 0.35s
+  &:hover
+    outline: none
+    color: $color-white
+    background-color: $link-color
+    border-color: $link-color
+    text-decoration: none
+  &:active, &:focus
+    outline: none !important
+    text-decoration: none
+
+  &--color
+    color: $color-white
+    background-color: $link-color
+    border-color: $link-color
+    &:hover
+      color: $color-white
+      background-color: $link-color-dark
+      border-color: $link-color-dark
+  .iconMail
+    width: 16px
+    height: 13px
+    margin-right: 12px
+    vertical-align: -1px

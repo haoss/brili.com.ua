@@ -1,0 +1,74 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Календарь' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Календарь' + ' - Brilicom' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      .content.no--p-top
+        .container-fluid
+          
+          .content__separator.content__separator--thin
+          
+          .calendar
+            .calendar__block
+              .calendar__block-time
+                div 11-14 
+                  small октября 2018 
+              .calendar__block-info Будет в Стамбуле (Турция) через 68 дней
+              .calendar__block-title
+                a(href="calendar-document.html") Istanbul Jewelry Show 2018
+              a(href="calendar-document.html")
+                small Читать далее
+              
+            .calendar__block
+              .calendar__block-time
+                div 11-17 
+                  small октября 2018 
+              .calendar__block-info Будет в Дубае (ОАЭ) через 86 дней
+              .calendar__block-title
+                a(href="calendar-document.html") Vod Dubai International Jewellery Show 2018
+              a(href="calendar-document.html")
+                small Читать далее
+              
+            .calendar__block
+              .calendar__block-time
+                div 13-16 
+                  small декабря 2018 
+              .calendar__block-info Будет в Одессе (Украина) через 102 дня
+              .calendar__block-title
+                a(href="calendar-document.html") «Ювелирный Салон» (Зима)
+              a(href="calendar-document.html")
+                small Читать далее
+              
+            .calendar__block
+              .calendar__block-time
+                div 21-13 
+                  small декабрь 2018 
+              .calendar__block-info Будет в Киеве (Украина) через 118 дня
+              .calendar__block-title
+                a(href="calendar-document.html") «Ювелир Экспо» (Рождество)
+              a(href="calendar-document.html")
+                small Читать далее
+
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

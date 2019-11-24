@@ -1,0 +1,87 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Информ блоки' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Информ блоки' + ' - Brilicom' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+      
+      .content
+        .container-fluid
+          
+          .content__separator.content__separator--thin
+          
+          .text-center
+            +iconCheckRound
+            .clear12
+            p Оплата прошла успешно !
+            .clear10
+            a(href="#!").btn.btn--color.btn--block.btn--center ПЕРЕЙТИ В ЛИЧНЫЙ КАБИНЕТ
+            
+          .clear50
+            
+          .text-center
+            +page404
+            .clear12
+            p Ой, такой страницы нет
+            .clear10
+            a(href="#!").btn.btn--color.btn--block.btn--center ПЕРЕЙТИ НА ГЛАВНУЮ
+          
+          .clear50
+          
+          .text-center
+            +iconPaymentOrder
+            .clear10 
+            .h1 Проверка заказа и переход к оплате
+            p
+              strong Выбранный тариф: 
+              | Разместить объявление на главной странице
+              br
+              strong Номер заказа: 
+              | #110
+              br
+              strong Номер объявления: 
+              | #2557
+              br
+              strong Сумма к оплате: 
+              | 5 грн.
+              br
+              strong Период размещения: 
+              | на 7 дней
+              br
+              strong Дата формирования счета: 
+              | 23 октября 2018, 15:54
+            
+            .text-center
+              .alert.alert-warning
+                small Если у Вас возникли вопросы, пожалуйста, свяжитесь с нами 
+                  br
+                  | через форму обратной связи. 
+                  br
+                  | Или напишите на адресс 
+                  a(href="mailto:") support@brili.com.ua
+              a(href="#!").btn.btn--color ОПЛАТИТЬ
+              .clear20
+              a(href="#!") Вернуться назад
+          
+          
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
